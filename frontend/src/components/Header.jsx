@@ -14,7 +14,7 @@ export default function Header({ onBookClick }) {
 
         {/* The Exact Same Header Bar: Logo, Notch with S-curves & Button (Never Changes Design on Scroll) */}
         <div className="relative w-full bg-[#FAF2F7] rounded-t-[20px] sm:rounded-t-[32px] border-t border-[#F0D5E6]/80 border-b border-[#F0D5E6]/60 shadow-[0_8px_20px_-6px_rgba(36,17,50,0.06)]">
-          <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10">
+          <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
             <div className="relative w-full flex items-center justify-between py-2 sm:py-2.5">
 
               {/* Left: Official Sequel IVF Logo Badge */}

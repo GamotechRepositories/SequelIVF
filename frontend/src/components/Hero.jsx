@@ -22,9 +22,8 @@ export default function Hero({ onBookClick }) {
       </div>
 
       {/* ── Hero Main Content ── */}
-      <div className="relative z-10 px-4 sm:px-8 lg:px-12 xl:px-14">
-        <div className="mx-auto max-w-[1380px]">
-          <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+      <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center">
 
             {/* Left Column: Heading, Subtext, CTAs */}
             <div className="lg:col-span-6 pt-1 sm:pt-2">
@@ -102,7 +101,6 @@ export default function Hero({ onBookClick }) {
 
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   )
 }
