@@ -1,0 +1,320 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ivf-purple:       #A21CAF;
+  --color-ivf-purple-dark:  #261132;
+  --color-ivf-purple-light: #C026D3;
+  --color-ivf-magenta:      #B81D76;
+  --color-ivf-pink:         #E879F9;
+  --color-ivf-pink-light:   #FCE7F3;
+  --color-ivf-blush:        #FAF2F7;
+  --color-ivf-lavender:     #F3E8FF;
+  --color-ivf-soft:         #FDF7FA;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: #261132;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+::selection {
+  background: #A21CAF;
+  color: #fff;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f0e6ff; }
+::-webkit-scrollbar-thumb { background: #7C3AED; border-radius: 3px; }
+
+/* ─── Gradient utilities ─── */
+.grad-purple-magenta {
+  background: linear-gradient(135deg, #3A006F 0%, #5B0EA6 45%, #C2185B 100%);
+}
+
+.grad-purple-magenta-soft {
+  background: linear-gradient(135deg, #5B0EA6 0%, #8B3AC9 50%, #E91E8C 100%);
+}
+
+.grad-text {
+  background: linear-gradient(135deg, #7C3AED 0%, #C2185B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grad-text-light {
+  background: linear-gradient(135deg, #D8B4FE 0%, #F9A8D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Blob shapes ─── */
+.blob-shape {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+/* ─── Card glass effect ─── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  box-shadow: 0 8px 32px rgba(91, 14, 166, 0.08);
+}
+
+.glass-card-dark {
+  background: rgba(58, 0, 111, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(194, 24, 91, 0.25);
+}
+
+/* ─── Reveal animations ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-48px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(48px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* ─── Floating animation ─── */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-10px) rotate(1deg); }
+  66%       { transform: translateY(-5px) rotate(-1deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
+  50%       { box-shadow: 0 0 40px rgba(194, 24, 91, 0.5); }
+}
+
+@keyframes wave-drift {
+  0%   { transform: translateX(-5%) scaleY(1); }
+  50%  { transform: translateX(2%) scaleY(1.04); }
+  100% { transform: translateX(-5%) scaleY(1); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes counter-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+@keyframes dot-ping {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.4); opacity: 0.6; }
+}
+
+.float-gentle  { animation: float-gentle 6s ease-in-out infinite; }
+.float-slow    { animation: float-slow 8s ease-in-out infinite; }
+.pulse-glow    { animation: pulse-glow 3s ease-in-out infinite; }
+.wave-drift    { animation: wave-drift 10s ease-in-out infinite; }
+.spin-slow     { animation: spin-slow 20s linear infinite; }
+.counter-spin  { animation: counter-spin 15s linear infinite; }
+.dot-ping      { animation: dot-ping 2s ease-in-out infinite; }
+
+/* ─── Hero wave SVG ─── */
+.hero-wave {
+  animation: wave-drift 12s ease-in-out infinite;
+}
+
+/* ─── Stat counter ─── */
+.stat-ring-rotate {
+  transform-origin: 50% 50%;
+  animation: spin-slow 20s linear infinite;
+}
+
+/* ─── Button styles ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #5B0EA6, #C2185B);
+  color: #fff;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 4px 20px rgba(91, 14, 166, 0.35);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(194, 24, 91, 0.45);
+  background: linear-gradient(135deg, #7C3AED, #E91E8C);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.72rem 1.8rem;
+  background: transparent;
+  color: #5B0EA6;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  border-radius: 50px;
+  border: 2px solid #5B0EA6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: #5B0EA6;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.72rem 1.8rem;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline-white:hover {
+  background: rgba(255,255,255,0.28);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ─── Section badge ─── */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 1rem;
+  background: linear-gradient(135deg, rgba(91,14,166,0.1), rgba(194,24,91,0.1));
+  border: 1px solid rgba(91,14,166,0.2);
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5B0EA6;
+  font-family: 'Exo 2', sans-serif;
+}
+
+/* ─── Decorative dots grid ─── */
+.dots-pattern {
+  background-image: radial-gradient(circle, rgba(91,14,166,0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ─── Chevrons ─── */
+.chevrons::after {
+  content: '›› ›› ';
+  color: rgba(194,24,91,0.4);
+  letter-spacing: 4px;
+  font-size: 1.2rem;
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  .float-gentle, .float-slow, .pulse-glow, .wave-drift,
+  .spin-slow, .counter-spin, .dot-ping, .hero-wave,
+  .stat-ring-rotate, .reveal, .reveal-left, .reveal-right, .reveal-scale {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
