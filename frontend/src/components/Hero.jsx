@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Hero({ onBookClick }) {
   return (
-    <section className="w-full bg-[#FAF2F7] relative overflow-hidden pt-4 sm:pt-6 lg:pt-8 pb-12 sm:pb-16 border-b border-[#F0D5E6]/60">
+    <section className="w-full bg-[#FAF2F7] relative overflow-hidden pt-3 sm:pt-5 lg:pt-8 pb-12 sm:pb-16 border-b border-[#F0D5E6]/60">
       {/* Radiating Wave Rings & Ambient Glow behind everything in the Card */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <svg
@@ -23,27 +23,44 @@ export default function Hero({ onBookClick }) {
 
       {/* ── Hero Main Content ── */}
       <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+        <div className="grid lg:grid-cols-12 lg:gap-x-8 items-center">
 
-            {/* Left Column: Heading, Subtext, CTAs */}
-            <div className="lg:col-span-6 pt-1 sm:pt-2">
-
-              {/* Eyebrow Pill with Location */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F5D8EA]/80 border border-[#EDBFDD] text-[#86198F] text-[11px] sm:text-xs font-extrabold uppercase tracking-wider mb-3">
-                <span className="w-2 h-2 rounded-full bg-[#A21CAF] animate-pulse" />
+            {/* 1. Headline: order-1 on mobile (above image), Desktop Col 1-6 Row 1 */}
+            <div className="order-1 lg:col-span-6 lg:col-start-1 lg:row-start-1 pt-1 sm:pt-2 text-center lg:text-left">
+              {/* Tagline without button shape */}
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#86198F] mb-2 sm:mb-2.5">
+                <span className="w-2 h-2 rounded-full bg-[#A21CAF] animate-pulse shrink-0" />
                 <span>YOUR JOURNEY, OUR CARE</span>
-                <span className="text-[#EDBFDD] font-normal">|</span>
+                <span className="text-[#C5A0BD] font-light">|</span>
                 <span className="text-[#6E4276]">HADAPSAR, PUNE</span>
               </div>
 
               {/* Main Headline */}
-              <h1 className="font-heading font-extrabold text-[34px] sm:text-[44px] lg:text-[48px] xl:text-[54px] leading-[1.08] tracking-[-0.02em] text-[#241132] mb-4">
+              <h1 className="font-heading font-extrabold text-[32px] sm:text-[44px] lg:text-[48px] xl:text-[54px] leading-[1.08] tracking-[-0.02em] text-[#241132] mb-3 lg:mb-4">
                 <span className="text-[#A21CAF] block sm:inline">Where Hope Grows</span>{' '}
                 Into Happiness
               </h1>
+            </div>
 
+            {/* 2. Fertility Puzzle Family Portrait: order-2 on mobile (under headline), Desktop Col 7-12 Rows 1-2 */}
+            <div className="order-2 lg:col-span-6 lg:col-start-7 lg:row-start-1 lg:row-span-2 lg:self-center relative flex justify-center lg:justify-end my-3 sm:my-4 lg:my-0">
+              <div className="relative w-full max-w-[480px] sm:max-w-[560px] lg:max-w-[680px] xl:max-w-[760px]">
+                <div className="absolute inset-0 m-auto w-[92%] h-[92%] rounded-full bg-gradient-to-tr from-[#FCE4F2]/80 to-[#FAF2F7]/50 -z-10 scale-105 blur-md" />
+                <div className="relative flex justify-center lg:justify-end items-end">
+                  <img
+                    src="/images/fertility_puzzle.png"
+                    alt="Sequeli IVF fertility puzzle family portrait - joyful couple with IVF journey pieces and baby"
+                    className="w-full max-w-[480px] sm:max-w-[560px] lg:max-w-[680px] xl:max-w-[760px] h-auto object-contain drop-shadow-[0_25px_35px_rgba(80,20,65,0.14)] transition-transform duration-500 hover:scale-[1.02]"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* 3. Subtext & CTAs: order-3 on mobile (below image), Desktop Col 1-6 Row 2 */}
+            <div className="order-3 lg:col-span-6 lg:col-start-1 lg:row-start-2 text-center lg:text-left">
               {/* Subtext */}
-              <div className="space-y-2.5 max-w-xl text-[#53385E] text-[14px] sm:text-[15.5px] leading-relaxed mb-4">
+              <div className="space-y-2.5 max-w-xl mx-auto lg:mx-0 text-[#53385E] text-[14px] sm:text-[15.5px] leading-relaxed mb-4">
                 <p>
                   Every parenthood journey is unique. We bring together advanced fertility technology, personalized treatment plans, and compassionate care to help you take the next step with confidence.
                 </p>
@@ -53,7 +70,7 @@ export default function Hero({ onBookClick }) {
               </div>
 
               {/* CTAs */}
-              <div className="mt-5 flex flex-wrap items-center gap-3 sm:gap-4">
+              <div className="mt-5 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4">
                 <button
                   type="button"
                   onClick={onBookClick}
@@ -79,22 +96,6 @@ export default function Hero({ onBookClick }) {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                   </svg>
                   <span>Location: Hadapsar, Pune</span>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Right Column: Fertility Puzzle Family Portrait */}
-            <div className="lg:col-span-6 relative flex justify-center lg:justify-end mt-4 lg:mt-0">
-              <div className="relative w-full max-w-[680px] xl:max-w-[760px]">
-                <div className="absolute inset-0 m-auto w-[92%] h-[92%] rounded-full bg-gradient-to-tr from-[#FCE4F2]/80 to-[#FAF2F7]/50 -z-10 scale-105 blur-md" />
-                <div className="relative flex justify-center lg:justify-end items-end">
-                  <img
-                    src="/images/fertility_puzzle.png"
-                    alt="Sequeli IVF fertility puzzle family portrait - joyful couple with IVF journey pieces and baby"
-                    className="w-full max-w-[680px] xl:max-w-[760px] h-auto object-contain drop-shadow-[0_25px_35px_rgba(80,20,65,0.14)] transition-transform duration-500 hover:scale-[1.02]"
-                    loading="eager"
-                  />
                 </div>
               </div>
             </div>
