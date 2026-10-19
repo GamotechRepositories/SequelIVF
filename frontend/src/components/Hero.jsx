@@ -11,18 +11,9 @@ export default function Hero({ onBookClick }) {
     {
       value: '2,00,000+',
       label: 'Couples Treated',
-      badgeBg: 'bg-[#FAF0F7]',
-      borderHover: 'hover:border-[#A21CAF]/40',
+      subtag: 'Joyful Families',
       icon: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-5 h-5 text-[#A21CAF]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
+        <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-5.5 sm:h-5.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
           <circle cx="9" cy="7" r="4" />
           <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
@@ -33,18 +24,9 @@ export default function Hero({ onBookClick }) {
     {
       value: '39+ Yrs',
       label: 'Fertility Experience',
-      badgeBg: 'bg-[#FEF6EE]',
-      borderHover: 'hover:border-[#F59E0B]/40',
+      subtag: 'Pioneering Care',
       icon: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-5 h-5 text-[#D97706]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
+        <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-5.5 sm:h-5.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
           <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
           <path d="M4 22h16" />
@@ -56,61 +38,22 @@ export default function Hero({ onBookClick }) {
     {
       value: '95+',
       label: 'Centres Across India',
-      badgeBg: 'bg-[#F5F3FF]',
-      borderHover: 'hover:border-[#7C3AED]/40',
+      subtag: 'Nationwide Labs',
       icon: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-5 h-5 text-[#7C3AED]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
+        <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-5.5 sm:h-5.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 2C7.58 2 4 5.58 4 10c0 5.25 8 12 8 12s8-6.75 8-12c0-4.42-3.58-8-8-8z" />
-          <path d="M12 7v6m-3-3h6" strokeWidth="2" />
+          <circle cx="12" cy="10" r="3" />
         </svg>
       ),
     },
     {
       value: '8',
       label: 'Languages Supported',
-      badgeBg: 'bg-[#FDF2F8]',
-      borderHover: 'hover:border-[#EC4899]/40',
+      subtag: 'Multilingual Care',
       icon: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-5 h-5 text-[#DB2777]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
+        <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-5.5 sm:h-5.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-          <path d="M8 11.5h8M8 8.5h5" strokeLinecap="round" />
-        </svg>
-      ),
-    },
-    {
-      value: '75+',
-      label: 'Awards Won',
-      badgeBg: 'bg-[#FEFCE8]',
-      borderHover: 'hover:border-[#EAB308]/40',
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-5 h-5 text-[#CA8A04]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="12" cy="8" r="6" />
-          <path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11" />
-          <path d="m9 8 2 2 4-4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M8 11.5h8M8 8.5h5" />
         </svg>
       ),
     },
@@ -199,13 +142,19 @@ export default function Hero({ onBookClick }) {
               <div className="order-2 lg:col-span-6 lg:col-start-7 lg:row-start-1 lg:row-span-2 lg:self-center relative flex justify-center lg:justify-end my-1 sm:my-3 lg:my-0">
                 <div className="relative w-full max-w-[240px] min-[360px]:max-w-[280px] sm:max-w-[540px] lg:max-w-[680px] xl:max-w-[760px]">
                   <div className="absolute inset-0 m-auto w-[92%] h-[92%] rounded-full bg-gradient-to-tr from-[#FCE4F2]/80 to-[#FAF2F7]/50 -z-10 scale-105 blur-md" />
-                  <div className="relative flex justify-center lg:justify-end items-end">
+                  <div className="relative flex justify-center lg:justify-end items-end overflow-hidden">
                     <img
                       src="/images/fertility_puzzle.png"
                       alt="Sequeli IVF fertility puzzle family portrait - joyful couple with IVF journey pieces and baby"
                       className="w-full h-auto object-contain drop-shadow-[0_20px_30px_rgba(80,20,65,0.14)] transition-transform duration-500 hover:scale-[1.02]"
+                      style={{
+                        maskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
+                        WebkitMaskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
+                      }}
                       loading="eager"
                     />
+                    {/* Subtle bottom gradient overlay for gentle edge softening */}
+                    <div className="absolute inset-x-0 bottom-0 h-8 sm:h-12 bg-gradient-to-t from-[#FAF2F7] via-[#FAF2F7]/50 to-transparent pointer-events-none" />
                   </div>
                 </div>
               </div>
@@ -293,13 +242,19 @@ export default function Hero({ onBookClick }) {
               <div className="order-2 lg:col-span-6 lg:col-start-7 lg:row-start-1 lg:row-span-2 lg:self-center relative flex justify-center lg:justify-end my-1 sm:my-2 lg:my-0">
                 <div className="relative w-full max-w-[240px] min-[360px]:max-w-[290px] sm:max-w-[440px] lg:max-w-[520px] xl:max-w-[580px]">
                   <div className="absolute inset-0 m-auto w-[90%] h-[90%] rounded-full bg-gradient-to-tr from-[#FCE4F2]/80 to-[#FAF2F7]/50 -z-10 scale-105 blur-md" />
-                  <div className="relative flex justify-center lg:justify-end items-end">
+                  <div className="relative flex justify-center lg:justify-end items-end overflow-hidden">
                     <img
                       src="/images/image copy 3.png"
                       alt="Experienced fertility specialist doctors and care team at Sequel IVF"
                       className="w-full h-auto max-h-[340px] sm:max-h-[420px] lg:max-h-[460px] object-contain drop-shadow-[0_16px_30px_rgba(80,20,65,0.14)] transition-transform duration-500 hover:scale-[1.02]"
+                      style={{
+                        maskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
+                        WebkitMaskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
+                      }}
                       loading="eager"
                     />
+                    {/* Subtle bottom gradient overlay for gentle edge softening */}
+                    <div className="absolute inset-x-0 bottom-0 h-8 sm:h-12 bg-gradient-to-t from-[#FAF2F7] via-[#FAF2F7]/50 to-transparent pointer-events-none" />
                   </div>
                 </div>
               </div>
@@ -409,36 +364,55 @@ export default function Hero({ onBookClick }) {
       </div>
 
       {/* ── Trusted by families across India (Seamless inside Hero, exact same #FAF2F7 bg, no divider line) ── */}
-      <div className="relative z-10 mx-auto max-w-[1400px] px-3.5 sm:px-6 lg:px-10 mt-4 sm:mt-6 pt-1 sm:pt-2">
+      <div className="relative z-10 mx-auto max-w-[1400px] px-3.5 sm:px-6 lg:px-10 mt-5 sm:mt-7 pt-2">
         <div className="text-center mb-4 sm:mb-5">
-          <h3 className="font-heading font-extrabold text-base sm:text-lg lg:text-xl text-[#241132] tracking-tight leading-tight">
-            Trusted by families across India
+          <h3 className="font-heading font-extrabold text-xl sm:text-2xl lg:text-[27px] text-[#241132] tracking-tight leading-tight">
+            Trusted by Families Across India
           </h3>
+          <p className="text-xs sm:text-[13.5px] text-[#6E4276] max-w-lg mx-auto mt-1 font-medium leading-relaxed">
+            Leading fertility expertise delivering joy, confidence, and high clinical success.
+          </p>
         </div>
 
-        {/* 5 Compact Metrics Cards on Hero's natural background */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3.5 lg:gap-4">
-          {STATS.map((item, idx) => (
+        {/* 4 Luxury Elevated Metrics Cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-4 xl:gap-5">
+          {STATS.map((item) => (
             <div
               key={item.label}
-              className={`group bg-white rounded-xl sm:rounded-2xl px-3 py-3 sm:px-4 sm:py-3.5 border border-[#F0D5E6]/80 shadow-[0_4px_12px_-4px_rgba(36,17,50,0.05)] hover:shadow-[0_10px_22px_-6px_rgba(36,17,50,0.1)] transition-all duration-200 hover:-translate-y-0.5 ${item.borderHover} flex flex-col items-center text-center justify-center ${
-                idx === 4 ? 'col-span-2 sm:col-span-1' : ''
-              }`}
+              className="group relative rounded-2xl bg-gradient-to-b from-white via-white/95 to-[#FCF7FA] p-3.5 sm:p-4 lg:p-4 xl:p-5 border border-[#F0D5E6] hover:border-[#A21CAF]/50 shadow-[0_6px_20px_-6px_rgba(36,17,50,0.06)] hover:shadow-[0_16px_32px_-8px_rgba(162,28,175,0.2)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col lg:flex-row items-center text-center lg:text-left gap-2.5 sm:gap-3 lg:gap-3.5 xl:gap-4 overflow-hidden cursor-default"
             >
-              {/* Professional Medical SVG Icon Badge */}
+              {/* Top Accent Gradient Bar */}
+              <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#A21CAF] to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+
+              {/* Ambient Radial Dark Glow in top corner */}
               <div
-                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl ${item.badgeBg} border border-black/[0.04] flex items-center justify-center shadow-2xs mb-2 transition-transform duration-200 group-hover:scale-108 shrink-0`}
-              >
+                className="absolute -top-10 -right-10 w-24 h-24 rounded-full blur-2xl pointer-events-none opacity-15 group-hover:opacity-30 transition-opacity duration-500"
+                style={{ background: '#241132' }}
+              />
+
+              {/* Subtle Watermark Icon in background */}
+              <div className="absolute -right-2 -bottom-2 w-14 h-14 pointer-events-none text-[#241132]/[0.025] group-hover:text-[#A21CAF]/[0.06] transition-all duration-500 group-hover:scale-125 transform">
                 {item.icon}
               </div>
 
-              {/* Stat Value & Label */}
-              <div className="w-full">
-                <span className="block font-heading font-black text-lg sm:text-xl lg:text-2xl text-[#241132] tracking-tight leading-none mb-1">
+              {/* Uniform Dark Icon Pod (Same dark background for all icons) */}
+              <div className="relative shrink-0 my-0.5">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#2D133D] via-[#241132] to-[#1A0A26] text-white flex items-center justify-center shadow-md shadow-[#241132]/25 ring-2 ring-white/90 group-hover:scale-105 group-hover:bg-[#A21CAF] transition-all duration-300">
+                  {item.icon}
+                </div>
+              </div>
+
+              {/* Stat Value, Label, and Subtag (Horizontally aligned with icon on desktop view) */}
+              <div className="w-full flex-1 min-w-0 flex flex-col justify-center text-center lg:text-left relative z-10">
+                <span className="block font-heading font-black text-xl sm:text-2xl lg:text-[21px] xl:text-[24px] tracking-tight text-[#241132] group-hover:text-[#A21CAF] transition-colors duration-200 leading-none">
                   {item.value}
                 </span>
-                <span className="block text-[11px] sm:text-xs font-semibold text-[#6E4276] leading-tight">
+                <span className="block text-xs sm:text-[12.5px] lg:text-[11.5px] xl:text-[12.5px] font-bold text-[#4A235A] leading-tight mt-1">
                   {item.label}
+                </span>
+                <span className="inline-flex items-center justify-center lg:justify-start gap-1 text-[9.5px] xl:text-[10.5px] font-semibold text-[#86198F] mt-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#A21CAF] shrink-0 animate-pulse" />
+                  <span className="truncate">{item.subtag}</span>
                 </span>
               </div>
             </div>

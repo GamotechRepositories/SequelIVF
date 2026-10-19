@@ -10,21 +10,14 @@ export default function FertilityServices({ onBookClick }) {
       title: 'In-Vitro Fertilization (IVF)',
       desc: "At Sequel IVF, we understand that you aren't just looking for a treatment, but a pathway to your family dream. Our advanced IVF programs combine individualized protocols with highest cleanroom embryology standards.",
       icon: (
-        /* 1. IVF: Egg Cell with Suction Pipette & ICSI Micro-injection Needle */
+        /* 1. IVF: Clinical Embryology Microscope */
         <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          {/* Egg Cell / Ovum */}
-          <circle cx="13" cy="12.5" r="6.5" />
-          {/* Dividing Blastomeres Inside */}
-          <circle cx="11.5" cy="11.2" r="1.8" fill="currentColor" fillOpacity="0.3" />
-          <circle cx="14.5" cy="11.2" r="1.8" fill="currentColor" fillOpacity="0.3" />
-          <circle cx="13" cy="14" r="1.8" fill="currentColor" fillOpacity="0.3" />
-          {/* Suction Pipette holding the egg from left */}
-          <path d="M2 10.5h4.5v4H2" />
-          {/* Micro-injection Needle fertilizing from top-right */}
-          <path d="M22 4.5l-6 5.5" strokeWidth="2.2" />
-          <path d="M16 10l-2.5 2" strokeWidth="2.5" />
-          {/* Sparkle of life */}
-          <path d="M21 17v2.5m-1.2-1.2h2.4" />
+          <path d="M6 18h8" />
+          <path d="M3 22h18" />
+          <path d="M14 22a7 7 0 1 0 0-14h-1" />
+          <path d="M9 14h2" />
+          <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z" />
+          <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
         </svg>
       ),
     },
@@ -33,20 +26,11 @@ export default function FertilityServices({ onBookClick }) {
       title: 'Semen Analysis & Advanced Andrology',
       desc: 'At Sequel IVF, we ensure this essential test is handled with the highest clinical accuracy, evaluating sperm count, motility, vitality, morphology, and DNA fragmentation.',
       icon: (
-        /* 2. Andrology: Sperm Motility & Laboratory Diagnostic Analysis */
+        /* 2. Andrology: Diagnostic Laboratory Conical Flask */
         <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          {/* Primary Motile Sperm: Oval Head */}
-          <path d="M6 8.5C6 7.12 7.12 6 8.5 6s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5S6 9.88 6 8.5z" fill="currentColor" fillOpacity="0.35" />
-          {/* Smooth S-curve Motility Tail */}
-          <path d="M11 8.5c2.5 0 3.8 2.5 6 2.5s3.5-2 5-2" />
-          {/* Secondary Motile Sperm Cell */}
-          <path d="M4 16c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5S4 16.83 4 16z" fill="currentColor" fillOpacity="0.35" />
-          <path d="M7 16c1.8 0 2.5 1.5 4 1.5s2.5-1 3.5-1" />
-          {/* Diagnostic Crosshair Lens */}
-          <circle cx="18" cy="6" r="3.5" strokeDasharray="1.5 1.5" />
-          <path d="M18 4.5v3m-1.5-1.5h3" />
-          {/* Clinical Motility Marker */}
-          <path d="M15 19.5h5m-2.5-2.5v5" />
+          <path d="M10 2v7.31L4.15 19.3A2 2 0 0 0 5.86 22h12.28a2 2 0 0 0 1.71-2.7L14 9.31V2" />
+          <path d="M8.5 2h7" />
+          <path d="M6.5 16h11" />
         </svg>
       ),
     },
@@ -55,20 +39,14 @@ export default function FertilityServices({ onBookClick }) {
       title: 'Laser-Assisted Hatching (LAH)',
       desc: 'Laser-Assisted Hatching (LAH) is an advanced embryology laboratory technique used during IVF to thin the outer shell of the embryo, significantly enhancing implantation rates.',
       icon: (
-        /* 3. LAH: Precision Laser Beam thinning Embryo Shell */
+        /* 3. LAH: Precision Optical Laser Target Focus */
         <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          {/* Outer Embryo Zona Shell with Breach */}
-          <path d="M16.5 8A7 7 0 1 0 17 15" />
-          {/* Developing Embryo Cells inside */}
-          <circle cx="10.5" cy="11.5" r="3.8" fill="currentColor" fillOpacity="0.25" />
-          <circle cx="10.5" cy="11.5" r="1.8" fill="currentColor" />
-          {/* Precision Laser Emitter Device */}
-          <path d="M22 3.5l-4 4" strokeWidth="2.4" />
-          <path d="M21.5 2l-1.5-1.5-2 2 1.5 1.5z" fill="currentColor" />
-          {/* Concentrated Laser Beam Impulse */}
-          <path d="M18 7.5l-3.5 3.5" strokeDasharray="1.5 1.5" strokeWidth="1.8" />
-          {/* Laser Ablation Micro-Sparks */}
-          <path d="M14.5 9.5l.8-1.5m.7 2.2l1.5-.5" />
+          <circle cx="12" cy="12" r="10" />
+          <line x1="22" x2="18" y1="12" y2="12" />
+          <line x1="6" x2="2" y1="12" y2="12" />
+          <line x1="12" x2="12" y1="6" y2="2" />
+          <line x1="12" x2="12" y1="22" y2="18" />
+          <circle cx="12" cy="12" r="3" fill="currentColor" fillOpacity="0.25" />
         </svg>
       ),
     },
@@ -77,18 +55,14 @@ export default function FertilityServices({ onBookClick }) {
       title: 'Endometrial Receptivity Assay (ERA)',
       desc: 'A successful pregnancy requires a beautifully synchronized dialogue between a healthy embryo and a receptive endometrial lining to identify your personalized window of implantation.',
       icon: (
-        /* 4. ERA: Uterus Anatomy & Implantation Window Timing */
+        /* 4. ERA: Implantation Window Timing Calendar Clock */
         <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          {/* Uterus & Cervix Outline */}
-          <path d="M12 21c-3.5-3-5.5-6.5-5.5-10.5 0-2.5 1-4 3-4.5 1.5-.4 2.5.5 2.5 1.5 0-1 1-1.9 2.5-1.5 2 .5 3 2 3 4.5 0 4-2 7.5-5.5 10.5z" />
-          {/* Fallopian Tubes */}
-          <path d="M6.5 10.5C5 9.5 3.5 9.5 2 11c0-3 2.5-5 5-5" />
-          <path d="M17.5 10.5c1.5-1 3-1 4.5.5 0-3-2.5-5-5-5" />
-          {/* Receptive Implantation Window: Timing Dial in Endometrium */}
-          <circle cx="12" cy="13" r="3" fill="currentColor" fillOpacity="0.25" />
-          <path d="M12 11.5V13l1 .8" strokeWidth="1.6" />
-          {/* Synchronization Sparkle */}
-          <path d="M19 4v2.5m-1.2-1.2h2.4" />
+          <path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" />
+          <path d="M16 2v4" />
+          <path d="M8 2v4" />
+          <path d="M3 10h18" />
+          <circle cx="16" cy="16" r="6" />
+          <path d="M16 14v2l1.5 1" />
         </svg>
       ),
     },
@@ -97,17 +71,11 @@ export default function FertilityServices({ onBookClick }) {
       title: 'Psychological & Emotional Counseling',
       desc: 'At Sequel IVF, we believe that emotional care is not secondary to medical treatment. Our dedicated counselors support you through every emotional phase of your fertility journey.',
       icon: (
-        /* 5. Counseling: Patient Emotional Wellbeing & Compassionate Care */
+        /* 5. Counseling: Heart Handshake Compassionate Support */
         <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          {/* Person / Patient */}
-          <path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20" />
-          <circle cx="10" cy="9" r="3.5" />
-          {/* Healing Heart & Compassionate Care */}
-          <path d="M18.5 7.5c-.8-.9-2.2-.7-2.7.3-.5-1-1.9-1.2-2.7-.3-.9 1 .1 2.3 2.7 4 2.6-1.7 3.6-3 2.7-4z" fill="currentColor" fillOpacity="0.3" />
-          {/* Calming Support Waves */}
-          <path d="M20.5 5.5c.8.8 1.2 1.8 1.2 2.5s-.4 1.7-1.2 2.5" />
-          {/* Support Plus Sign */}
-          <path d="M17 17.5h4m-2-2v4" />
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+          <path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.86.86 2.22.86 3.08 0L15 8" />
+          <path d="m14 10 1.5 1.5a2.17 2.17 0 0 0 3.08 0c.86-.86.86-2.22 0-3.08L17 7" />
         </svg>
       ),
     },
@@ -116,21 +84,11 @@ export default function FertilityServices({ onBookClick }) {
       title: 'Comprehensive Fertility Evaluation',
       desc: 'At Sequel IVF, we look at fertility evaluations not just as a set of diagnostic tests, but as an essential roadmap to understanding your complete reproductive health.',
       icon: (
-        /* 6. Evaluation: Targeted Assessment Target Bullseye with Precision Arrow */
+        /* 6. Evaluation: Clinical Checklist Diagnostic Evaluation */
         <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          {/* Outer Target Circle */}
-          <circle cx="11.5" cy="12.5" r="8.5" />
-          {/* Middle Target Circle */}
-          <circle cx="11.5" cy="12.5" r="5.5" strokeDasharray="2 2" />
-          {/* Bullseye Center */}
-          <circle cx="11.5" cy="12.5" r="2.5" fill="currentColor" fillOpacity="0.3" />
-          <circle cx="11.5" cy="12.5" r="1" fill="currentColor" />
-          {/* Precision Arrow Hitting Bullseye from Top-Right */}
-          <path d="M21 3l-8.5 8.5" strokeWidth="2.2" />
-          {/* Arrow Flights */}
-          <path d="M17 3h4v4" />
-          {/* Accuracy Sparkle */}
-          <path d="M4 5.5v2m-1-1h2" />
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+          <path d="m9 14 2 2 4-4" />
         </svg>
       ),
     },
@@ -162,7 +120,7 @@ export default function FertilityServices({ onBookClick }) {
   }
 
   return (
-    <section id="treatments" className="bg-white py-14 sm:py-20 border-t border-[#F5E8F0] relative overflow-hidden">
+    <section id="treatments" className="bg-[#FAF2F7] py-14 sm:py-20 relative overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
 
         {/* Section Header: Dual-tone heading + close description */}
@@ -187,21 +145,21 @@ export default function FertilityServices({ onBookClick }) {
           </div>
         </div>
 
-        {/* 6 Service Cards: Sharp rectangular shape, 4 cards visible on desktop */}
+        {/* 6 Service Cards: Sharp rectangular shape, 4 cards visible on desktop, compact on mobile */}
         <div
           ref={scrollRef}
           onScroll={handleScrollTrack}
-          className="flex overflow-x-auto pb-4 pt-2 gap-6 snap-x snap-mandatory scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex overflow-x-auto pb-4 pt-2 gap-4 sm:gap-6 snap-x snap-mandatory scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {SERVICES.map((s) => (
             <div
               key={s.id}
-              className="w-full sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-72px)/4)] shrink-0 snap-start rounded-none overflow-hidden transition-all duration-300 flex flex-col justify-between group bg-white text-[#241132] border border-[#E5DFE4] shadow-sm hover:bg-[#7E1286] hover:border-[#7E1286] hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
+              className="w-[82vw] max-w-[310px] sm:w-[calc((100%-24px)/2)] sm:max-w-none lg:w-[calc((100%-72px)/4)] shrink-0 snap-start rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between group bg-white text-[#241132] border border-[#F0D5E6] shadow-[0_4px_16px_-4px_rgba(36,17,50,0.06)] hover:bg-[#7E1286] hover:border-[#7E1286] hover:shadow-2xl hover:-translate-y-2 cursor-pointer [perspective:1000px]"
             >
               {/* Card Body */}
-              <div className="p-6 sm:px-6 sm:pt-8 sm:pb-7 flex flex-col items-center text-center flex-1">
-                {/* Top Circle Icon: purple default -> white on card hover */}
-                <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-6 transition-all duration-300 shrink-0 bg-[#7E1286] text-white shadow-sm group-hover:bg-white group-hover:text-[#7E1286] group-hover:scale-105">
+              <div className="p-5 sm:px-6 sm:pt-8 sm:pb-7 flex flex-col items-center text-center flex-1">
+                {/* Top Circle Icon: 3D Flip 360 on card hover + purple/white color swap */}
+                <div className="service-icon-flip w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-6 shrink-0 bg-[#7E1286] text-white shadow-sm group-hover:bg-white group-hover:text-[#7E1286]">
                   {s.icon}
                 </div>
 
@@ -216,11 +174,11 @@ export default function FertilityServices({ onBookClick }) {
                 </p>
               </div>
 
-              {/* Bottom Bar: READ MORE Button with sharp corners */}
+              {/* Bottom Bar: READ MORE Button */}
               <button
                 type="button"
                 onClick={() => onBookClick && onBookClick(s.title)}
-                className="w-full py-3.5 bg-[#5D3A20] hover:bg-[#482B15] active:bg-[#3D230F] text-white text-xs font-bold uppercase tracking-widest transition-colors duration-200 cursor-pointer text-center select-none rounded-none shrink-0"
+                className="w-full py-3.5 bg-[#5D3A20] hover:bg-[#482B15] active:bg-[#3D230F] text-white text-xs font-bold uppercase tracking-widest transition-colors duration-200 cursor-pointer text-center select-none rounded-b-2xl shrink-0"
               >
                 READ MORE
               </button>
@@ -244,7 +202,7 @@ export default function FertilityServices({ onBookClick }) {
             </button>
 
             {/* Pagination Dots for all 6 cards */}
-            <div className="flex items-center gap-2 px-3.5 py-2.5 bg-[#FAF2F7] rounded-full border border-[#F0D5E6]">
+            <div className="flex items-center gap-2 px-3.5 py-2.5 bg-white rounded-full border border-[#F0D5E6] shadow-2xs">
               {SERVICES.map((s, idx) => (
                 <button
                   key={s.id}

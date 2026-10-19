@@ -89,23 +89,23 @@ export default function TrustAccreditation() {
 
           {/* Right Badges Grid (8 cols): 2 rows of 3 logos matching reference */}
           <div className="lg:col-span-8">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8 items-start sm:items-center">
               {BADGES.map((b) => (
                 <div
                   key={b.title}
-                  className="flex items-center gap-3.5 p-3 rounded-2xl hover:bg-[#FAF4F8] transition-colors duration-200 group cursor-default"
+                  className="flex flex-col items-center text-center sm:flex-row sm:items-center sm:text-left gap-2 sm:gap-3.5 p-2.5 sm:p-3 rounded-2xl hover:bg-[#FAF4F8] transition-colors duration-200 group cursor-default"
                 >
-                  <div className="shrink-0 p-2 rounded-xl bg-[#FAF0F7] group-hover:bg-[#F5E3EF] transition-colors">
+                  <div className="shrink-0 p-2 sm:p-2.5 rounded-xl bg-[#FAF0F7] group-hover:bg-[#F5E3EF] transition-colors flex items-center justify-center">
                     {b.icon}
                   </div>
-                  <div>
-                    <span className="block font-heading font-extrabold text-[15px] text-[#241132] leading-tight">
+                  <div className="text-center sm:text-left">
+                    <span className="block font-heading font-extrabold text-[14px] sm:text-[15px] text-[#241132] leading-tight">
                       {b.code}
                     </span>
-                    <span className="block text-[11px] font-medium text-[#7C6285] leading-tight mt-0.5 line-clamp-1">
+                    <span className="block text-[11px] font-medium text-[#7C6285] leading-tight mt-1 sm:mt-0.5 line-clamp-2 sm:line-clamp-1">
                       {b.title}
                     </span>
-                    <span className="block text-[10px] text-gray-400 leading-tight">
+                    <span className="block text-[10px] text-gray-400 leading-tight mt-0.5">
                       {b.subtitle}
                     </span>
                   </div>

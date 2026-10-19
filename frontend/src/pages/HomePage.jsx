@@ -4,6 +4,7 @@ import WelcomeSection from '../components/WelcomeSection.jsx'
 import DoctorsSection from '../components/DoctorsSection.jsx'
 import FertilityServices from '../components/FertilityServices.jsx'
 import TrustAccreditation from '../components/TrustAccreditation.jsx'
+import FAQSection from '../components/FAQSection.jsx'
 import Contact from '../components/Contact.jsx'
 import Footer from '../components/Footer.jsx'
 
@@ -15,8 +16,9 @@ export default function HomePage({ onBookClick }) {
       <DoctorsSection />
       <FertilityServices onBookClick={onBookClick} />
       <TrustAccreditation />
+      <FAQSection onBookClick={onBookClick} />
       <Contact />
-      <Footer />
+      <Footer onBookClick={onBookClick} />
     </>
   )
 }

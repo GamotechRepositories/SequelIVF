@@ -46,10 +46,6 @@ export default function Contact() {
 
             {/* Left info */}
             <div>
-              <span className="reveal inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-white/15 text-white border border-white/25 mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-pink-400 dot-ping" />
-                Get In Touch
-              </span>
               <h2 className="reveal reveal-delay-1 font-heading font-800 text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
                 Begin Your <span className="grad-text-light">Free</span> Consultation
               </h2>
@@ -58,22 +54,62 @@ export default function Contact() {
               </p>
 
               {/* Contact details */}
-              <div className="reveal reveal-delay-3 space-y-5">
+              <div className="reveal reveal-delay-3 space-y-4 sm:space-y-5">
                 {[
-                  { icon: '📞', label: 'Helpline', value: '+91 9665 279 369', href: 'tel:+919665279369' },
-                  { icon: '📧', label: 'Email', value: 'info@sequelivf.com', href: 'mailto:info@sequelivf.com' },
-                  { icon: '📍', label: 'Address', value: '103-104, Yash Complex, Near Bhosale Garden, Hadapsar, Pune – 411028', href: 'https://maps.google.com/?q=Sequel+IVF+Hadapsar+Pune' },
-                  { icon: '🕐', label: 'Hours', value: 'Mon–Sat: 10:00 AM – 07:00 PM · Sunday: Closed', href: '#' },
+                  {
+                    label: 'Helpline',
+                    value: '+91 9665 279 369',
+                    href: 'tel:+919665279369',
+                    icon: (
+                      <svg viewBox="0 0 24 24" className="w-5 h-5 text-white group-hover:text-white" fill="currentColor">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                      </svg>
+                    ),
+                  },
+                  {
+                    label: 'Email',
+                    value: 'info@sequelivf.com',
+                    href: 'mailto:info@sequelivf.com',
+                    icon: (
+                      <svg viewBox="0 0 24 24" className="w-5 h-5 text-white group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                      </svg>
+                    ),
+                  },
+                  {
+                    label: 'Address',
+                    value: '103-104, Yash Complex, Near Bhosale Garden, Hadapsar, Pune – 411028',
+                    href: 'https://maps.google.com/?q=Sequel+IVF+Hadapsar+Pune',
+                    icon: (
+                      <svg viewBox="0 0 24 24" className="w-5 h-5 text-white group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                    ),
+                  },
+                  {
+                    label: 'Hours',
+                    value: 'Mon–Sat: 10:00 AM – 07:00 PM · Sunday: Closed',
+                    href: '#',
+                    icon: (
+                      <svg viewBox="0 0 24 24" className="w-5 h-5 text-white group-hover:text-white" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="9"/>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 3"/>
+                      </svg>
+                    ),
+                  },
                 ].map((item) => (
-                  <a key={item.label} href={item.href}
-                    className="flex items-center gap-4 group">
-                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl shrink-0"
-                      style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.18)' }}>
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="flex items-center gap-4 group"
+                  >
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/12 border border-white/20 group-hover:bg-[#A21CAF] group-hover:border-[#E8C586]/40 transition-all duration-300 shadow-sm">
                       {item.icon}
                     </div>
                     <div>
-                      <p className="text-white/50 text-xs uppercase tracking-wider font-semibold">{item.label}</p>
-                      <p className="text-white text-sm font-medium group-hover:text-pink-300 transition-colors">{item.value}</p>
+                      <p className="text-white/60 text-xs uppercase tracking-wider font-semibold">{item.label}</p>
+                      <p className="text-white text-sm font-medium group-hover:text-pink-200 transition-colors">{item.value}</p>
                     </div>
                   </a>
                 ))}

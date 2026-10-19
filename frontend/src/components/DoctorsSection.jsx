@@ -1,6 +1,36 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 
 export default function DoctorsSection() {
+  const scrollRef = useRef(null)
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  const handleScroll = (direction) => {
+    if (!scrollRef.current) return
+    const container = scrollRef.current
+    const card = container.firstElementChild
+    const cardWidth = card ? card.offsetWidth : 380
+    const scrollAmount = (cardWidth + 24) * (direction === 'left' ? -1 : 1)
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+  }
+
+  const handleScrollTrack = () => {
+    if (!scrollRef.current) return
+    const el = scrollRef.current
+    const card = el.firstElementChild
+    const cardWidth = card ? card.offsetWidth : 380
+    const current = Math.round(el.scrollLeft / (cardWidth + 24))
+    setActiveSlide(Math.min(Math.max(current, 0), DOCTORS.length - 1))
+  }
+
+  const scrollToDoctor = (index) => {
+    if (!scrollRef.current) return
+    const container = scrollRef.current
+    const card = container.firstElementChild
+    const cardWidth = card ? card.offsetWidth : 380
+    container.scrollTo({ left: index * (cardWidth + 24), behavior: 'smooth' })
+    setActiveSlide(index)
+  }
+
   const DOCTORS = [
     {
       name: 'Dr. Leena Patankar',
@@ -61,15 +91,19 @@ export default function DoctorsSection() {
           </div>
         </div>
 
-        {/* 3 Doctors Grid (Horizontal scroll on mobile, responsive grid on md+) */}
-        <div className="flex overflow-x-auto pb-4 pt-1 gap-4.5 sm:gap-6 snap-x snap-mandatory scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-2 xl:grid-cols-3 md:overflow-visible md:pb-0">
+        {/* 3 Doctors: Horizontal scroll on Mobile & Tablet (Tab view), Compact 3-Column Grid on Desktop */}
+        <div
+          ref={scrollRef}
+          onScroll={handleScrollTrack}
+          className="flex flex-nowrap overflow-x-auto pb-4 pt-1 gap-4.5 sm:gap-6 lg:gap-5 xl:gap-6 snap-x snap-mandatory scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0"
+        >
           {DOCTORS.map((doc) => (
             <div
               key={doc.name}
-              className="w-[84vw] max-w-[330px] shrink-0 snap-center md:w-auto md:max-w-none md:shrink bg-[#FAF2F7] rounded-2xl p-5 sm:p-6 border border-[#F0D5E6] hover:border-[#C49F64]/70 shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-4.5 sm:gap-5 items-start group"
+              className="w-[84vw] max-w-[340px] sm:w-[380px] md:w-[410px] shrink-0 snap-start lg:w-auto lg:max-w-none lg:shrink bg-[#FAF2F7] rounded-2xl p-4.5 sm:p-5 lg:p-4 xl:p-5 border border-[#F0D5E6] hover:border-[#C49F64]/70 shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-4 sm:gap-4.5 items-start group"
             >
               {/* Doctor Avatar / Image on left (Direct cutout, no inner card/box) */}
-              <div className="relative w-full sm:w-36 md:w-40 lg:w-40 h-48 sm:h-56 shrink-0 overflow-hidden">
+              <div className="relative w-full sm:w-32 md:w-36 lg:w-28 xl:w-36 h-48 sm:h-52 lg:h-48 xl:h-52 shrink-0 overflow-hidden">
                 <img
                   src={doc.image}
                   alt={doc.name}
@@ -81,8 +115,8 @@ export default function DoctorsSection() {
               {/* Doctor Details on right */}
               <div className="flex-1 min-w-0 flex flex-col justify-between h-full w-full">
                 <div>
-                  {/* Name */}
-                  <h3 className="font-serif text-[#C49F64] text-lg sm:text-xl font-medium leading-snug mb-1.5 group-hover:text-[#A21CAF] transition-colors">
+                  {/* Name: Purple by default, Gold on hover */}
+                  <h3 className="font-serif text-[#A21CAF] text-lg sm:text-xl font-medium leading-snug mb-1.5 group-hover:text-[#C49F64] transition-colors duration-300">
                     {doc.name}
                   </h3>
 
@@ -96,14 +130,14 @@ export default function DoctorsSection() {
                   {/* Subtle Divider Line */}
                   <div className="border-b border-[#F5E6F0] mb-3" />
 
-                  {/* Contact Info (No Read More button) */}
+                  {/* Contact Info (Icons: Purple by default, Gold on hover) */}
                   <div className="space-y-2 text-xs text-[#4B5563]">
                     {/* Phone */}
                     <a
                       href={doc.phoneHref}
                       className="flex items-center gap-2 hover:text-[#800080] transition-colors truncate"
                     >
-                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#C49F64] shrink-0" fill="currentColor">
+                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#A21CAF] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
                         <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                       </svg>
                       <span className="truncate">{doc.phone}</span>
@@ -114,7 +148,7 @@ export default function DoctorsSection() {
                       href={doc.emailHref}
                       className="flex items-center gap-2 hover:text-[#800080] transition-colors truncate"
                     >
-                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#C49F64] shrink-0" fill="currentColor">
+                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#A21CAF] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
                         <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                       </svg>
                       <span className="truncate">{doc.email}</span>
@@ -122,7 +156,7 @@ export default function DoctorsSection() {
 
                     {/* Experience */}
                     <div className="flex items-center gap-2 text-[#4B5563]">
-                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#C49F64] shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
+                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#A21CAF] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
                         <circle cx="12" cy="12" r="10" />
                         <path d="M12 6v6l4 2" strokeLinecap="round" />
                       </svg>
@@ -135,13 +169,53 @@ export default function DoctorsSection() {
           ))}
         </div>
 
-        {/* Mobile Swipe Hint */}
-        <div className="flex items-center justify-center gap-1.5 mt-3 md:hidden">
-          <span className="text-[11px] font-medium text-[#7C6285] flex items-center gap-1">
-            <span>Swipe horizontally to view all doctors</span>
-            <svg className="w-3.5 h-3.5 animate-pulse text-[#A21CAF]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+        {/* Navigation Controls: Arrows + Dots on Mobile & Tablet (Tab view), Hidden on Desktop */}
+        <div className="flex lg:hidden flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
+          <div className="flex items-center gap-3">
+            {/* Prev Button */}
+            <button
+              type="button"
+              onClick={() => handleScroll('left')}
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-[#FAF0F7] text-[#241132] hover:text-[#A21CAF] border border-[#F0D5E6] hover:border-[#A21CAF] flex items-center justify-center shadow-xs hover:shadow-md transition-all active:scale-95 cursor-pointer"
+              aria-label="Previous doctor"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Pagination Dots for all 3 Doctors */}
+            <div className="flex items-center gap-2 px-3 py-2 bg-[#FAF2F7] rounded-full border border-[#F0D5E6]">
+              {DOCTORS.map((doc, idx) => (
+                <button
+                  key={doc.name}
+                  type="button"
+                  onClick={() => scrollToDoctor(idx)}
+                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                    activeSlide === idx
+                      ? 'w-6 bg-[#A21CAF]'
+                      : 'w-2 bg-[#E2B8D5] hover:bg-[#A21CAF]/60'
+                  }`}
+                  aria-label={`Go to ${doc.name}`}
+                />
+              ))}
+            </div>
+
+            {/* Next Button */}
+            <button
+              type="button"
+              onClick={() => handleScroll('right')}
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-[#FAF0F7] text-[#241132] hover:text-[#A21CAF] border border-[#F0D5E6] hover:border-[#A21CAF] flex items-center justify-center shadow-xs hover:shadow-md transition-all active:scale-95 cursor-pointer"
+              aria-label="Next doctor"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          <span className="text-[11px] sm:text-xs font-semibold text-[#7C6285]">
+            Scroll or use arrows to view all 3 specialists
           </span>
         </div>
 

@@ -6,15 +6,21 @@ export default function WelcomeSection({ onBookClick }) {
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
           
-          {/* Left Column: Family & Doctor Image (No Card Structure) */}
+          {/* Left Column: Family & Doctor Image with Soft Bottom Gradient Fade */}
           <div className="lg:col-span-6 flex justify-center items-center">
             <div className="relative w-full max-w-[480px] sm:max-w-[520px] lg:max-w-[580px] xl:max-w-[620px]">
               <img
                 src="/images/image copy 4.png"
                 alt="Sequel IVF - Where Hope Begins and Families Grow"
                 className="w-full h-auto object-contain transition-transform duration-500 hover:scale-[1.02]"
+                style={{
+                  maskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
+                }}
                 loading="lazy"
               />
+              {/* Subtle bottom gradient overlay for gentle edge softening */}
+              <div className="absolute inset-x-0 bottom-0 h-8 sm:h-12 bg-gradient-to-t from-white via-white/50 to-transparent pointer-events-none" />
             </div>
           </div>
 

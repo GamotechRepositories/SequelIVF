@@ -40,7 +40,7 @@ function App() {
             />
           </Routes>
         </main>
-        <ContactNowNotch />
+        <ContactNowNotch onBookClick={() => handleOpenBooking()} />
         <BookingModal
           isOpen={isBookingOpen}
           onClose={() => setIsBookingOpen(false)}

@@ -8,12 +8,12 @@ export default function Header({ onBookClick }) {
   return (
     <>
       {/* ── Permanently Sticky Header: Exact Same Design Always On Scroll ── */}
-      <header className="sticky top-0 z-50 w-full bg-white">
-        {/* Top Permanent Sticky White Space Strip (Pure solid white matching notch background) */}
-        <div className="relative z-30 w-full bg-white h-3 sm:h-4" />
+      <header className="sticky top-0 z-50 w-full bg-[#FAF2F7] lg:bg-white">
+        {/* Top Permanent Sticky White Space Strip (Desktop only for white notch blend) */}
+        <div className="hidden lg:block relative z-30 w-full bg-white lg:h-4" />
 
         {/* The Exact Same Header Bar: Logo, Notch with S-curves & Button (Never Changes Design on Scroll) */}
-        <div className="relative w-full bg-[#FAF2F7] rounded-t-[20px] sm:rounded-t-[32px] border-t border-[#F0D5E6]/80 border-b border-[#F0D5E6]/60 shadow-[0_8px_20px_-6px_rgba(36,17,50,0.06)]">
+        <div className="relative w-full bg-[#FAF2F7] rounded-none lg:rounded-t-[32px] border-b border-[#F0D5E6]/60 lg:border-t lg:border-[#F0D5E6]/80 shadow-[0_8px_20px_-6px_rgba(36,17,50,0.06)]">
           <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
             <div className="relative w-full flex items-center justify-between py-2 sm:py-2.5">
 
@@ -90,7 +90,7 @@ export default function Header({ onBookClick }) {
                       onMouseEnter={() => setActiveDropdown('infertility')}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
-                      <a href="#why-choose" className="hover:text-[#A21CAF] transition-colors flex items-center gap-1 whitespace-nowrap">
+                      <a href="#faq" className="hover:text-[#A21CAF] transition-colors flex items-center gap-1 whitespace-nowrap">
                         <span>ABOUT INFERTILITY</span>
                         <svg className="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -99,9 +99,9 @@ export default function Header({ onBookClick }) {
                       {activeDropdown === 'infertility' && (
                         <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-50">
                           <div className="bg-white rounded-2xl p-3 shadow-xl border border-[#F2D7E8] space-y-1">
-                            <a href="#why-choose" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Understanding Infertility</a>
+                            <a href="#faq" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Understanding Infertility (FAQs)</a>
                             <a href="#specialist" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Male & Female Fertility Causes</a>
-                            <a href="#why-choose" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Overcoming Failed Cycles</a>
+                            <a href="#faq" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Common Questions Answered</a>
                             <a href="#contact" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Second Opinion Consultation</a>
                           </div>
                         </div>
@@ -188,7 +188,7 @@ export default function Header({ onBookClick }) {
             <a href="#about" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">ABOUT US</a>
             <a href="#treatments" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">SERVICES</a>
             <a href="#specialist" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">OUR DOCTORS</a>
-            <a href="#why-choose" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">ABOUT INFERTILITY</a>
+            <a href="#faq" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">ABOUT INFERTILITY</a>
             <a href="#contact" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">CONTACT US</a>
             <button
               onClick={() => { setMenuOpen(false); onBookClick(); }}
