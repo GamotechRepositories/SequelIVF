@@ -11,7 +11,7 @@ function App() {
   const [selectedScan, setSelectedScan] = useState('')
 
   const handleOpenBooking = (serviceName = '') => {
-    setSelectedScan(serviceName || 'Early pregnancy (6 - 8 weeks)')
+    setSelectedScan(serviceName || 'Doctor Consultation & Guidance')
     setIsBookingOpen(true)
   }
 
@@ -27,7 +27,6 @@ function App() {
               element={
                 <HomePage
                   onBookClick={() => handleOpenBooking()}
-                  onBookScan={(scan) => handleOpenBooking(scan)}
                 />
               }
             />
@@ -36,7 +35,6 @@ function App() {
               element={
                 <HomePage
                   onBookClick={() => handleOpenBooking()}
-                  onBookScan={(scan) => handleOpenBooking(scan)}
                 />
               }
             />

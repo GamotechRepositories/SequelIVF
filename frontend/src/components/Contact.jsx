@@ -1,35 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 
-const DOCTORS = [
-  {
-    name: 'Dr. Leena Patankar',
-    title: 'Clinical & Managing Director',
-    qualification: 'Endoscopic Surgeon & Clinical Embryologist',
-    speciality: 'Advanced IVF, ICSI, Complex Infertility & Endoscopy',
-    exp: '24 years',
-    initials: 'LP',
-    color: { from: '#A21CAF', to: '#B81D76' },
-  },
-  {
-    name: 'Dr. Monika Thavare',
-    title: 'Fertility Consultant / Specialist',
-    qualification: 'MD (OBGY), Fellowship in Reproductive Medicine',
-    speciality: 'Ovarian Stimulation, Follicular Tracking & IUI',
-    exp: '10+ years',
-    initials: 'MT',
-    color: { from: '#C026D3', to: '#E879F9' },
-  },
-  {
-    name: 'Dr. Chirag Sharma',
-    title: 'Reproductive Medicine Specialist',
-    qualification: 'M.B.B.S, M.S. OBGY, Fellowship Reproductive Medicine',
-    speciality: 'Male Factor Infertility & Clinical Embryology',
-    exp: '3 years',
-    initials: 'CS',
-    color: { from: '#B81D76', to: '#A21CAF' },
-  },
-]
-
 export default function Contact() {
   const ref = useRef(null)
   const [form, setForm] = useState({ name: '', phone: '', email: '', treatment: '', message: '' })
@@ -55,82 +25,8 @@ export default function Contact() {
 
   return (
     <>
-      {/* ── Doctors Section ── */}
-      <section id="doctors" ref={ref} className="relative py-24 overflow-hidden"
-        style={{ background: 'linear-gradient(175deg, #faf7ff 0%, #f3e8ff 100%)' }}>
-
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-0 right-0 h-1 grad-purple-magenta" />
-          <div className="absolute top-12 right-0 w-72 h-72 rounded-full opacity-8 float-slow"
-            style={{ background: 'radial-gradient(circle, #7C3AED, transparent)', transform: 'translate(40%, -30%)' }} />
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="reveal section-badge mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-600" />
-              Our Specialists
-            </span>
-            <h2 className="reveal reveal-delay-1 font-heading font-800 text-3xl sm:text-4xl lg:text-5xl text-gray-900 mt-4 mb-5">
-              Meet Our{' '}
-              <span className="grad-text">Expert Team</span>
-            </h2>
-            <p className="reveal reveal-delay-2 text-gray-600 text-lg max-w-2xl mx-auto">
-              Our doctors are internationally trained, published researchers and — above all — compassionate healers dedicated to your family dream.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {DOCTORS.map((doc, i) => (
-              <div
-                key={doc.name}
-                className={`reveal reveal-delay-${i + 1} group glass-card rounded-3xl overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition-all duration-400`}
-              >
-                {/* Gradient banner */}
-                <div className="h-2 w-full" style={{ background: `linear-gradient(90deg, ${doc.color.from}, ${doc.color.to})` }} />
-                <div className="h-28 relative flex items-center justify-center"
-                  style={{ background: `linear-gradient(135deg, ${doc.color.from}15, ${doc.color.to}10)` }}>
-                  {/* Avatar */}
-                  <div className="w-20 h-20 rounded-full flex items-center justify-center text-white font-heading font-800 text-2xl shadow-xl border-4 border-white"
-                    style={{ background: `linear-gradient(135deg, ${doc.color.from}, ${doc.color.to})` }}>
-                    {doc.initials}
-                  </div>
-                  {/* Exp badge */}
-                  <div className="absolute top-3 right-4 px-2.5 py-1 rounded-full text-xs font-bold"
-                    style={{ background: `${doc.color.from}20`, color: doc.color.from }}>
-                    {doc.exp} exp.
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="font-heading font-700 text-xl text-gray-900 mb-0.5">{doc.name}</h3>
-                  <p className="text-sm font-semibold mb-2" style={{ color: doc.color.from }}>{doc.title}</p>
-                  <p className="text-xs text-gray-400 mb-4">{doc.qualification}</p>
-
-                  <div className="flex items-start gap-2 p-3 rounded-xl" style={{ background: `${doc.color.from}08` }}>
-                    <svg viewBox="0 0 24 24" className="w-4 h-4 shrink-0 mt-0.5" fill="none" stroke={doc.color.from} strokeWidth="2">
-                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    <p className="text-xs text-gray-600">{doc.speciality}</p>
-                  </div>
-
-                  <a href="#contact"
-                    className="mt-5 flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:gap-3"
-                    style={{ background: `linear-gradient(135deg, ${doc.color.from}, ${doc.color.to})`, color: '#fff' }}>
-                    Book Appointment
-                    <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Contact / Booking Form ── */}
-      <section id="contact" className="relative py-24 overflow-hidden"
+      <section id="contact" ref={ref} className="relative py-24 overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #1e003a 0%, #3A006F 35%, #5B0EA6 70%, #8B1A6B 100%)' }}>
 
         <div className="absolute inset-0 pointer-events-none">

@@ -46,9 +46,9 @@ export default function Footer() {
 
             {/* Brand & Authentic Address */}
             <div className="lg:col-span-1">
-              <div className="mb-4 inline-block bg-white rounded-2xl p-2.5 shadow-md">
+              <div className="mb-4 inline-block bg-white rounded-lg p-2.5 shadow-md">
                 <img
-                  src="/images/sequelivf.png"
+                  src="/images/Firefly.png"
                   alt="Sequel IVF Pune"
                   className="h-9 w-auto object-contain"
                 />

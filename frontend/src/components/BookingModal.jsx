@@ -36,7 +36,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 w-9 h-9 rounded-full bg-[#FAF2F7] hover:bg-[#F2D7E8] text-[#241132] flex items-center justify-center transition-colors"
+          className="absolute top-6 right-6 w-9 h-9 rounded-lg bg-[#FAF2F7] hover:bg-[#F2D7E8] text-[#241132] flex items-center justify-center transition-colors"
           aria-label="Close modal"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
             </p>
             <button
               onClick={() => { setSubmitted(false); onClose(); }}
-              className="px-6 py-2.5 rounded-full font-bold text-white bg-[#A21CAF] text-sm"
+              className="px-6 py-2.5 rounded-lg font-bold text-white bg-[#A21CAF] text-sm"
             >
               Done
             </button>
@@ -171,7 +171,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-full font-heading font-extrabold text-base text-white bg-[#A21CAF] hover:bg-[#86198F] shadow-lg shadow-fuchsia-900/20 active:scale-98 transition-all cursor-pointer"
+                className="w-full py-4 rounded-lg font-heading font-extrabold text-base text-white bg-[#A21CAF] hover:bg-[#86198F] shadow-lg shadow-fuchsia-900/20 active:scale-98 transition-all cursor-pointer"
               >
                 Confirm Scan Booking →
               </button>

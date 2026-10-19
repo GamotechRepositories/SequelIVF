@@ -12,6 +12,7 @@
   --color-ivf-soft:         #FDF7FA;
   --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-serif:   'Playfair Display', Georgia, serif;
 }
 
 *, *::before, *::after {
@@ -213,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.03em;
-  border-radius: 50px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
@@ -238,7 +239,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.03em;
-  border-radius: 50px;
+  border-radius: 8px;
   border: 2px solid #5B0EA6;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -262,7 +263,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.03em;
-  border-radius: 50px;
+  border-radius: 8px;
   border: 2px solid rgba(255,255,255,0.5);
   cursor: pointer;
   transition: all 0.3s ease;

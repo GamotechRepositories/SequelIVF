@@ -19,11 +19,11 @@ export default function Header({ onBookClick }) {
 
               {/* Left: Official Sequel IVF Logo Badge */}
               <Link to="/" className="flex items-center group select-none shrink-0 py-0.5">
-                <div className="bg-white px-3.5 py-1.5 sm:px-4.5 sm:py-2 rounded-2xl sm:rounded-full border border-[#F0D5E6]/80 flex items-center justify-center overflow-hidden shadow-xs transition-all duration-200 group-hover:shadow-md">
+                <div className="bg-white px-3.5 py-1.5 sm:px-4.5 sm:py-2 rounded-lg border border-[#F0D5E6]/80 flex items-center justify-center overflow-hidden shadow-xs transition-all duration-200 group-hover:shadow-md">
                   <img
-                    src="/images/sequelivf.png"
+                    src="/images/Firefly.png"
                     alt="Sequeli IVF – Advanced Fertility Treatment & IVF Centre"
-                    className="h-7 sm:h-8.5 w-auto object-contain transition-transform duration-200 group-hover:scale-102"
+                    className="h-8 sm:h-9.5 w-auto object-contain transition-transform duration-200 group-hover:scale-102"
                   />
                 </div>
               </Link>
@@ -131,10 +131,10 @@ export default function Header({ onBookClick }) {
                 <button
                   type="button"
                   onClick={onBookClick}
-                  className="group inline-flex items-center gap-1.5 px-3.5 sm:px-4.5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#241132] bg-white border border-[#241132]/30 hover:border-[#A21CAF] hover:text-[#A21CAF] active:scale-95 transition-all duration-200 cursor-pointer shadow-xs"
+                  className="group inline-flex items-center gap-1.5 px-3.5 sm:px-4.5 py-2 sm:py-2.5 rounded-lg text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white bg-[#A21CAF] hover:bg-[#86198F] active:scale-95 shadow-md shadow-fuchsia-900/15 transition-all duration-200 cursor-pointer"
                 >
                   <span>MAKE AN APPOINTMENT</span>
-                  <svg className="w-3.5 h-3.5 text-[#241132] group-hover:text-[#A21CAF]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <svg className="w-3.5 h-3.5 text-white transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7m0 0H9m8 0v8" />
                   </svg>
                 </button>
@@ -145,7 +145,7 @@ export default function Header({ onBookClick }) {
                 <button
                   type="button"
                   onClick={onBookClick}
-                  className="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-[#A21CAF] shadow-xs active:scale-95"
+                  className="px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-[#A21CAF] shadow-xs active:scale-95"
                 >
                   Book
                 </button>
@@ -171,7 +171,7 @@ export default function Header({ onBookClick }) {
         <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-white">
           <div className="flex items-center justify-between px-6 py-5 border-b border-[#F0D5E6] bg-[#FAF2F7]">
             <img
-              src="/images/sequelivf.png"
+              src="/images/Firefly.png"
               alt="Sequeli IVF"
               className="h-9 w-auto object-contain"
             />
@@ -192,7 +192,7 @@ export default function Header({ onBookClick }) {
             <a href="#contact" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">CONTACT US</a>
             <button
               onClick={() => { setMenuOpen(false); onBookClick(); }}
-              className="w-full mt-4 py-3.5 rounded-full flex items-center justify-center gap-2 font-bold text-white bg-[#A21CAF] shadow-lg shadow-fuchsia-900/20"
+              className="w-full mt-4 py-3.5 rounded-lg flex items-center justify-center gap-2 font-bold text-white bg-[#A21CAF] shadow-lg shadow-fuchsia-900/20"
             >
               <span>MAKE AN APPOINTMENT</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
