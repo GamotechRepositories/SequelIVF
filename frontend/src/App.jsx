@@ -5,6 +5,9 @@ import ContactNowNotch from './components/ContactNowNotch.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import BookingModal from './components/BookingModal.jsx'
 import HomePage from './pages/HomePage.jsx'
+import AboutUsPage from './pages/AboutUsPage.jsx'
+import OurTeamPage from './pages/OurTeamPage.jsx'
+import GalleryPage from './pages/GalleryPage.jsx'
 
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
@@ -26,6 +29,46 @@ function App() {
               path="/"
               element={
                 <HomePage
+                  onBookClick={() => handleOpenBooking()}
+                />
+              }
+            />
+            <Route
+              path="/about-us"
+              element={
+                <AboutUsPage
+                  onBookClick={() => handleOpenBooking()}
+                />
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <AboutUsPage
+                  onBookClick={() => handleOpenBooking()}
+                />
+              }
+            />
+            <Route
+              path="/our-team"
+              element={
+                <OurTeamPage
+                  onBookClick={() => handleOpenBooking()}
+                />
+              }
+            />
+            <Route
+              path="/team"
+              element={
+                <OurTeamPage
+                  onBookClick={() => handleOpenBooking()}
+                />
+              }
+            />
+            <Route
+              path="/gallery"
+              element={
+                <GalleryPage
                   onBookClick={() => handleOpenBooking()}
                 />
               }

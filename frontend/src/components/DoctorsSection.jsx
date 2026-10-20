@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function DoctorsSection() {
   const scrollRef = useRef(null)
@@ -84,10 +85,16 @@ export default function DoctorsSection() {
           </div>
 
           {/* Right: Description text close to heading */}
-          <div className="max-w-xl lg:pt-4">
+          <div className="max-w-xl lg:pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <p className="text-[#555555] text-sm sm:text-[15px] leading-relaxed">
               We think it’s really important that clinicians have a mixture of clinical skill and human qualities that mean you can place your trust in them.
             </p>
+            <Link
+              to="/our-team"
+              className="inline-flex items-center gap-1.5 shrink-0 px-4 py-2.5 bg-[#FAF2F7] hover:bg-[#A21CAF] text-[#A21CAF] hover:text-white border border-[#F0D5E6] rounded-xl text-xs font-bold transition-all shadow-xs"
+            >
+              View Full Team &rarr;
+            </Link>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer({ onBookClick }) {
   const [email, setEmail] = useState('')
@@ -15,13 +16,13 @@ export default function Footer({ onBookClick }) {
   }
 
   const USEFUL_LINKS = [
-    { label: 'Make Appointment', href: '#contact' },
-    { label: 'Customer Services', href: '#treatments' },
-    { label: 'About Company', href: '#about' },
-    { label: 'Meet Our Experts', href: '#specialist' },
-    { label: 'Our Case Studies', href: '#faq' },
-    { label: 'Contact Us', href: '#contact' },
-    { label: 'Customer Review', href: '#about' },
+    { label: 'Make Appointment', href: '/#contact', isAppointment: true },
+    { label: 'About Us', href: '/about-us' },
+    { label: 'Our Team', href: '/our-team' },
+    { label: 'Gallery', href: '/gallery' },
+    { label: 'Customer Services', href: '/#treatments' },
+    { label: 'Meet Our Experts', href: '/our-team' },
+    { label: 'Contact Us', href: '/#contact' },
   ]
 
   return (
@@ -85,10 +86,10 @@ export default function Footer({ onBookClick }) {
               <ul className="space-y-2.5 text-xs sm:text-[13.5px]">
                 {USEFUL_LINKS.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       onClick={() => {
-                        if (link.label === 'Make Appointment' && onBookClick) {
+                        if (link.isAppointment && onBookClick) {
                           onBookClick()
                         }
                       }}
@@ -100,7 +101,7 @@ export default function Footer({ onBookClick }) {
                       <span className="group-hover:translate-x-0.5 transition-transform duration-150">
                         {link.label}
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

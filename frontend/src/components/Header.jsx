@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Header({ onBookClick }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false)
 
   return (
     <>
@@ -46,9 +47,49 @@ export default function Header({ onBookClick }) {
 
                   {/* Navigation Links inside Notch */}
                   <nav className="flex items-center gap-2.5 xl:gap-4 text-[12px] xl:text-[13px] font-bold uppercase tracking-wider text-[#241132] whitespace-nowrap">
-                    <a href="#about" className="hover:text-[#A21CAF] transition-colors whitespace-nowrap">
-                      ABOUT US
-                    </a>
+                    {/* ABOUT US DROPDOWN */}
+                    <div
+                      className="relative group cursor-pointer"
+                      onMouseEnter={() => setActiveDropdown('about')}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <Link
+                        to="/about-us"
+                        className="hover:text-[#A21CAF] transition-colors flex items-center gap-1 whitespace-nowrap"
+                      >
+                        <span>ABOUT US</span>
+                        <svg className={`w-3.5 h-3.5 opacity-60 transition-transform ${activeDropdown === 'about' ? 'rotate-180' : 'group-hover:rotate-180'}`} fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </Link>
+                      {activeDropdown === 'about' && (
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-56 z-50">
+                          <div className="bg-white rounded-2xl p-2.5 shadow-xl border border-[#F2D7E8] space-y-1">
+                            <Link
+                              to="/about-us"
+                              onClick={() => setActiveDropdown(null)}
+                              className="block px-3.5 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF] transition-colors"
+                            >
+                              About Us
+                            </Link>
+                            <Link
+                              to="/our-team"
+                              onClick={() => setActiveDropdown(null)}
+                              className="block px-3.5 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF] transition-colors"
+                            >
+                              Our Team
+                            </Link>
+                            <Link
+                              to="/gallery"
+                              onClick={() => setActiveDropdown(null)}
+                              className="block px-3.5 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF] transition-colors"
+                            >
+                              Gallery
+                            </Link>
+                          </div>
+                        </div>
+                      )}
+                    </div>
 
                     <span className="w-1.5 h-1.5 rounded-full bg-[#A21CAF] shrink-0" />
 
@@ -58,19 +99,19 @@ export default function Header({ onBookClick }) {
                       onMouseEnter={() => setActiveDropdown('services')}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
-                      <a href="#treatments" className="hover:text-[#A21CAF] transition-colors flex items-center gap-1 whitespace-nowrap">
+                      <Link to="/#treatments" className="hover:text-[#A21CAF] transition-colors flex items-center gap-1 whitespace-nowrap">
                         <span>SERVICES</span>
                         <svg className="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                         </svg>
-                      </a>
+                      </Link>
                       {activeDropdown === 'services' && (
                         <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-50">
                           <div className="bg-white rounded-2xl p-3 shadow-xl border border-[#F2D7E8] space-y-1">
-                            <a href="#treatments" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">IVF & ICSI Treatment</a>
-                            <a href="#scans" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">HD 4D Pregnancy Scans</a>
-                            <a href="#specialist" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Advanced Embryology & Hatching</a>
-                            <a href="#treatments" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Fertility Health Checkups</a>
+                            <Link to="/#treatments" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">IVF & ICSI Treatment</Link>
+                            <Link to="/#scans" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">HD 4D Pregnancy Scans</Link>
+                            <Link to="/#specialist" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Advanced Embryology & Hatching</Link>
+                            <Link to="/#treatments" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Fertility Health Checkups</Link>
                           </div>
                         </div>
                       )}
@@ -78,9 +119,9 @@ export default function Header({ onBookClick }) {
 
                     <span className="w-1.5 h-1.5 rounded-full bg-[#A21CAF] shrink-0" />
 
-                    <a href="#specialist" className="hover:text-[#A21CAF] transition-colors whitespace-nowrap">
+                    <Link to="/#specialist" className="hover:text-[#A21CAF] transition-colors whitespace-nowrap">
                       OUR DOCTORS
-                    </a>
+                    </Link>
 
                     <span className="w-1.5 h-1.5 rounded-full bg-[#A21CAF] shrink-0" />
 
@@ -90,19 +131,19 @@ export default function Header({ onBookClick }) {
                       onMouseEnter={() => setActiveDropdown('infertility')}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
-                      <a href="#faq" className="hover:text-[#A21CAF] transition-colors flex items-center gap-1 whitespace-nowrap">
+                      <Link to="/#faq" className="hover:text-[#A21CAF] transition-colors flex items-center gap-1 whitespace-nowrap">
                         <span>ABOUT INFERTILITY</span>
                         <svg className="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                         </svg>
-                      </a>
+                      </Link>
                       {activeDropdown === 'infertility' && (
                         <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-50">
                           <div className="bg-white rounded-2xl p-3 shadow-xl border border-[#F2D7E8] space-y-1">
-                            <a href="#faq" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Understanding Infertility (FAQs)</a>
-                            <a href="#specialist" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Male & Female Fertility Causes</a>
-                            <a href="#faq" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Common Questions Answered</a>
-                            <a href="#contact" className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Second Opinion Consultation</a>
+                            <Link to="/#faq" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Understanding Infertility (FAQs)</Link>
+                            <Link to="/#specialist" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Male & Female Fertility Causes</Link>
+                            <Link to="/#faq" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Common Questions Answered</Link>
+                            <Link to="/#contact" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#FAF2F7] hover:text-[#A21CAF]">Second Opinion Consultation</Link>
                           </div>
                         </div>
                       )}
@@ -110,9 +151,9 @@ export default function Header({ onBookClick }) {
 
                     <span className="w-1.5 h-1.5 rounded-full bg-[#A21CAF] shrink-0" />
 
-                    <a href="#contact" className="hover:text-[#A21CAF] transition-colors whitespace-nowrap">
+                    <Link to="/#contact" className="hover:text-[#A21CAF] transition-colors whitespace-nowrap">
                       CONTACT US
-                    </a>
+                    </Link>
                   </nav>
 
                   {/* Right S-Curve Fillet: Curves White Notch back into Pink Card (Always 100% visible) */}
@@ -184,12 +225,50 @@ export default function Header({ onBookClick }) {
               </svg>
             </button>
           </div>
-          <div className="p-6 space-y-4 font-bold text-xs uppercase tracking-wider text-[#241132]">
-            <a href="#about" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">ABOUT US</a>
-            <a href="#treatments" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">SERVICES</a>
-            <a href="#specialist" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">OUR DOCTORS</a>
-            <a href="#faq" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">ABOUT INFERTILITY</a>
-            <a href="#contact" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">CONTACT US</a>
+          <div className="p-6 space-y-3 font-bold text-xs uppercase tracking-wider text-[#241132] overflow-y-auto">
+            {/* ABOUT US Accordion */}
+            <div className="border-b border-gray-100">
+              <button
+                type="button"
+                onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+                className="w-full flex items-center justify-between py-3 hover:text-[#A21CAF] font-bold text-xs uppercase tracking-wider text-[#241132]"
+              >
+                <span>ABOUT US</span>
+                <svg className={`w-4 h-4 transition-transform duration-200 ${mobileAboutOpen ? 'rotate-180 text-[#A21CAF]' : 'text-gray-400'}`} fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileAboutOpen && (
+                <div className="pl-3 pb-3 space-y-1.5 bg-[#FAF2F7]/70 rounded-xl mb-2 p-2">
+                  <Link
+                    to="/about-us"
+                    onClick={() => { setMenuOpen(false); setMobileAboutOpen(false); }}
+                    className="block py-2 px-3 rounded-lg text-xs font-semibold text-[#3C2048] hover:bg-white hover:text-[#A21CAF]"
+                  >
+                    About Us
+                  </Link>
+                  <Link
+                    to="/our-team"
+                    onClick={() => { setMenuOpen(false); setMobileAboutOpen(false); }}
+                    className="block py-2 px-3 rounded-lg text-xs font-semibold text-[#3C2048] hover:bg-white hover:text-[#A21CAF]"
+                  >
+                    Our Team
+                  </Link>
+                  <Link
+                    to="/gallery"
+                    onClick={() => { setMenuOpen(false); setMobileAboutOpen(false); }}
+                    className="block py-2 px-3 rounded-lg text-xs font-semibold text-[#3C2048] hover:bg-white hover:text-[#A21CAF]"
+                  >
+                    Gallery
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link to="/#treatments" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">SERVICES</Link>
+            <Link to="/#specialist" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">OUR DOCTORS</Link>
+            <Link to="/#faq" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">ABOUT INFERTILITY</Link>
+            <Link to="/#contact" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#A21CAF]">CONTACT US</Link>
             <button
               onClick={() => { setMenuOpen(false); onBookClick(); }}
               className="w-full mt-4 py-3.5 rounded-lg flex items-center justify-center gap-2 font-bold text-white bg-[#A21CAF] shadow-lg shadow-fuchsia-900/20"
