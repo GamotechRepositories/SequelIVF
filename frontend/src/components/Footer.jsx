@@ -20,7 +20,7 @@ export default function Footer({ onBookClick }) {
     { label: 'About Us', href: '/about-us' },
     { label: 'Our Team', href: '/our-team' },
     { label: 'Gallery', href: '/gallery' },
-    { label: 'Customer Services', href: '/#treatments' },
+    { label: 'Customer Services', href: '/services' },
     { label: 'Meet Our Experts', href: '/our-team' },
     { label: 'Contact Us', href: '/#contact' },
   ]
@@ -28,7 +28,7 @@ export default function Footer({ onBookClick }) {
   return (
     <footer className="relative overflow-hidden bg-[#18181B] text-white">
       {/* Top divider accent */}
-      <div className="w-full h-1 bg-gradient-to-r from-[#A21CAF] via-[#C49F64] to-[#A21CAF]" />
+      <div className="w-full h-1 bg-gradient-to-r from-[#603085] via-[#C49F64] to-[#603085]" />
 
       <div className="relative pt-14 pb-8 sm:pt-16 sm:pb-10">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
@@ -95,7 +95,7 @@ export default function Footer({ onBookClick }) {
                       }}
                       className="text-white/70 hover:text-white transition-colors duration-150 flex items-center gap-2 group"
                     >
-                      <span className="text-[#A21CAF] group-hover:text-[#C49F64] font-bold text-sm transition-colors">
+                      <span className="text-[#603085] group-hover:text-[#C49F64] font-bold text-sm transition-colors">
                         ›
                       </span>
                       <span className="group-hover:translate-x-0.5 transition-transform duration-150">
@@ -178,12 +178,12 @@ export default function Footer({ onBookClick }) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email"
-                  className="w-full bg-white text-gray-900 px-4 py-2.5 sm:py-3 italic text-xs sm:text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#800080]"
+                  className="w-full bg-white text-gray-900 px-4 py-2.5 sm:py-3 italic text-xs sm:text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#603085]"
                 />
 
                 <button
                   type="submit"
-                  className="w-full py-2.5 sm:py-3 px-4 bg-[#800080] hover:bg-[#680068] active:scale-98 text-white font-extrabold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm"
+                  className="w-full py-2.5 sm:py-3 px-4 bg-[#603085] hover:bg-[#4E276D] active:scale-98 text-white font-extrabold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm"
                 >
                   <svg viewBox="0 0 24 24" className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <circle cx="12" cy="12" r="9" />

@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-ivf-purple:       #A21CAF;
+  --color-ivf-purple:       #603085;
   --color-ivf-purple-dark:  #261132;
-  --color-ivf-purple-light: #C026D3;
+  --color-ivf-purple-light: #8B5AA8;
   --color-ivf-magenta:      #B81D76;
   --color-ivf-pink:         #E879F9;
   --color-ivf-pink-light:   #FCE7F3;
-  --color-ivf-blush:        #FAF2F7;
+  --color-ivf-blush:        #F5F2F8;
   --color-ivf-lavender:     #F3E8FF;
   --color-ivf-soft:         #FDF7FA;
   --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -36,21 +36,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::selection {
-  background: #A21CAF;
+  background: #603085;
   color: #fff;
 }
 
 /* ─── Scrollbar ─── */
 ::-webkit-scrollbar { width: 6px; height: 5px; }
-::-webkit-scrollbar-track { background: #FAF2F7; }
+::-webkit-scrollbar-track { background: #F5F2F8; }
 ::-webkit-scrollbar-thumb { background: #C49F64; border-radius: 9999px; }
-::-webkit-scrollbar-thumb:hover { background: #A21CAF; }
+::-webkit-scrollbar-thumb:hover { background: #603085; }
 
 /* ─── Sleek Category Scroll Line ─── */
 .category-scroll {
   overflow-x: auto;
   scrollbar-width: thin;
-  scrollbar-color: #A21CAF #F0D5E6;
+  scrollbar-color: #603085 #F0D5E6;
 }
 .category-scroll::-webkit-scrollbar {
   height: 4px;
@@ -61,11 +61,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 6px;
 }
 .category-scroll::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #A21CAF, #C49F64);
+  background: linear-gradient(90deg, #603085, #C49F64);
   border-radius: 9999px;
 }
 .category-scroll::-webkit-scrollbar-thumb:hover {
-  background: #86198F;
+  background: #4E276D;
 }
 
 /* ─── Service Card Icon 3D Flip on Hover ─── */
@@ -342,11 +342,21 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
 }
 
+@keyframes values-marquee {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+.values-marquee-track {
+  animation: values-marquee 32s linear infinite;
+}
+
 /* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
   .float-gentle, .float-slow, .pulse-glow, .wave-drift,
   .spin-slow, .counter-spin, .dot-ping, .hero-wave,
-  .stat-ring-rotate, .reveal, .reveal-left, .reveal-right, .reveal-scale {
+  .stat-ring-rotate, .reveal, .reveal-left, .reveal-right, .reveal-scale,
+  .values-marquee-track {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;

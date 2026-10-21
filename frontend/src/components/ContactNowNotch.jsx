@@ -24,14 +24,14 @@ export default function ContactNowNotch({ onBookClick }) {
         >
           {/* Trapezoid Tab SVG Background with Rounded Top Corners */}
           <svg
-            className="absolute inset-0 w-full h-full drop-shadow-[0_-4px_12px_rgba(162,28,175,0.3)] transition-all duration-200 group-hover:drop-shadow-[0_-6px_16px_rgba(162,28,175,0.45)]"
+            className="absolute inset-0 w-full h-full drop-shadow-[0_-4px_12px_rgba(96,48,133,0.3)] transition-all duration-200 group-hover:drop-shadow-[0_-6px_16px_rgba(96,48,133,0.45)]"
             viewBox="0 0 260 44"
             preserveAspectRatio="none"
             fill="none"
           >
             <path
               d="M 0 44 L 20 8 C 23 3, 27 0, 34 0 L 226 0 C 233 0, 237 3, 240 8 L 260 44 Z"
-              className="fill-[#A21CAF] group-hover:fill-[#86198F] transition-colors duration-200"
+              className="fill-[#603085] group-hover:fill-[#4E276D] transition-colors duration-200"
             />
           </svg>
 
@@ -63,7 +63,7 @@ export default function ContactNowNotch({ onBookClick }) {
           href="tel:+919665279369"
           aria-label="Call Sequeli IVF clinic"
           className="group w-11 h-11 sm:w-13 sm:h-13 rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all duration-300"
-          style={{ background: 'linear-gradient(135deg, #A21CAF, #B81D76)' }}
+          style={{ background: 'linear-gradient(135deg, #603085, #B81D76)' }}
         >
           <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor">
             <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>

@@ -8,6 +8,8 @@ import HomePage from './pages/HomePage.jsx'
 import AboutUsPage from './pages/AboutUsPage.jsx'
 import OurTeamPage from './pages/OurTeamPage.jsx'
 import GalleryPage from './pages/GalleryPage.jsx'
+import ServicesPage from './pages/ServicesPage.jsx'
+import ServiceDetailPage from './pages/ServiceDetailPage.jsx'
 
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
@@ -21,7 +23,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen antialiased bg-white text-[#241132] font-body selection:bg-[#A21CAF] selection:text-white">
+      <div className="min-h-screen antialiased bg-white text-[#241132] font-body selection:bg-[#603085] selection:text-white">
         <Header onBookClick={() => handleOpenBooking()} />
         <main>
           <Routes>
@@ -70,6 +72,22 @@ function App() {
               element={
                 <GalleryPage
                   onBookClick={() => handleOpenBooking()}
+                />
+              }
+            />
+            <Route
+              path="/services"
+              element={
+                <ServicesPage
+                  onBookClick={() => handleOpenBooking()}
+                />
+              }
+            />
+            <Route
+              path="/services/:slug"
+              element={
+                <ServiceDetailPage
+                  onBookClick={(name) => handleOpenBooking(name)}
                 />
               }
             />

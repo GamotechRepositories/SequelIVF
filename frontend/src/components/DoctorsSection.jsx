@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 export default function DoctorsSection() {
   const scrollRef = useRef(null)
@@ -42,6 +41,7 @@ export default function DoctorsSection() {
       emailHref: 'mailto:info@sequelivf.com',
       experience: '24 Years Experience',
       image: '/images/285b926543910d790975aa5d1826a1c0-removebg-preview.png',
+      imageHover: '/images/dr_leena_patankar.jpg',
     },
     {
       name: 'Dr. Monika Thavare',
@@ -52,6 +52,7 @@ export default function DoctorsSection() {
       emailHref: 'mailto:info@sequelivf.com',
       experience: '10+ Years Experience',
       image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
+      imageHover: '/images/dr_monika_thavare.jpg',
     },
     {
       name: 'Dr. Chirag Sharma',
@@ -62,6 +63,7 @@ export default function DoctorsSection() {
       emailHref: 'mailto:info@sequelivf.com',
       experience: '3+ Years Experience',
       image: '/images/ee463ed89c8028009bb195f9798676ec-removebg-preview.png',
+      imageHover: '/images/dr_chirag_sharma.jpg',
     },
   ]
 
@@ -73,28 +75,22 @@ export default function DoctorsSection() {
         <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10 mb-10 sm:mb-14">
           {/* Left: Eyebrow, Heading & Line */}
           <div className="shrink-0">
-            <span className="text-[#800080] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">
+            <span className="text-[#603085] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">
               OUR PROFESSIONAL TEAM
             </span>
             {/* Dual-tone Heading: Web Purple + Gold/Silver Combo */}
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] leading-tight font-medium tracking-tight">
-              <span className="text-[#A21CAF]">Meet Our</span>{' '}
+              <span className="text-[#603085]">Meet Our</span>{' '}
               <span className="text-[#C49F64]">Doctors</span>
             </h2>
-            <div className="w-20 h-0.5 bg-gradient-to-r from-[#A21CAF] to-[#C49F64] mt-3" />
+            <div className="w-20 h-0.5 bg-gradient-to-r from-[#603085] to-[#C49F64] mt-3" />
           </div>
 
           {/* Right: Description text close to heading */}
-          <div className="max-w-xl lg:pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="max-w-xl lg:pt-4">
             <p className="text-[#555555] text-sm sm:text-[15px] leading-relaxed">
               We think it’s really important that clinicians have a mixture of clinical skill and human qualities that mean you can place your trust in them.
             </p>
-            <Link
-              to="/our-team"
-              className="inline-flex items-center gap-1.5 shrink-0 px-4 py-2.5 bg-[#FAF2F7] hover:bg-[#A21CAF] text-[#A21CAF] hover:text-white border border-[#F0D5E6] rounded-xl text-xs font-bold transition-all shadow-xs"
-            >
-              View Full Team &rarr;
-            </Link>
           </div>
         </div>
 
@@ -107,23 +103,31 @@ export default function DoctorsSection() {
           {DOCTORS.map((doc) => (
             <div
               key={doc.name}
-              className="w-[84vw] max-w-[340px] sm:w-[380px] md:w-[410px] shrink-0 snap-start lg:w-auto lg:max-w-none lg:shrink bg-[#FAF2F7] rounded-2xl p-4.5 sm:p-5 lg:p-4 xl:p-5 border border-[#F0D5E6] hover:border-[#C49F64]/70 shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-4 sm:gap-4.5 items-start group"
+              className="w-[84vw] max-w-[340px] sm:w-[380px] md:w-[410px] shrink-0 snap-start lg:w-auto lg:max-w-none lg:shrink bg-[#F5F2F8] rounded-2xl p-4.5 sm:p-5 lg:p-4 xl:p-5 border border-[#F0D5E6] hover:border-[#C49F64]/70 shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-4 sm:gap-4.5 items-start group"
             >
-              {/* Doctor Avatar / Image on left (Direct cutout, no inner card/box) */}
-              <div className="relative w-full sm:w-32 md:w-36 lg:w-28 xl:w-36 h-48 sm:h-52 lg:h-48 xl:h-52 shrink-0 overflow-hidden">
+              {/* Doctor photos: cutout by default, clinic photo on hover */}
+              <div className="relative w-full sm:w-36 md:w-40 lg:w-32 xl:w-36 h-52 sm:h-56 lg:h-52 xl:h-56 shrink-0 overflow-hidden rounded-xl bg-white/70">
                 <img
                   src={doc.image}
                   alt={doc.name}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-contain object-bottom"
                   loading="lazy"
                 />
+                {doc.imageHover && (
+                  <img
+                    src={doc.imageHover}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover object-[center_18%] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    loading="lazy"
+                  />
+                )}
               </div>
 
               {/* Doctor Details on right */}
               <div className="flex-1 min-w-0 flex flex-col justify-between h-full w-full">
                 <div>
                   {/* Name: Purple by default, Gold on hover */}
-                  <h3 className="font-serif text-[#A21CAF] text-lg sm:text-xl font-medium leading-snug mb-1.5 group-hover:text-[#C49F64] transition-colors duration-300">
+                  <h3 className="font-serif text-[#603085] text-lg sm:text-xl font-medium leading-snug mb-1.5 group-hover:text-[#C49F64] transition-colors duration-300">
                     {doc.name}
                   </h3>
 
@@ -142,9 +146,9 @@ export default function DoctorsSection() {
                     {/* Phone */}
                     <a
                       href={doc.phoneHref}
-                      className="flex items-center gap-2 hover:text-[#800080] transition-colors truncate"
+                      className="flex items-center gap-2 hover:text-[#603085] transition-colors truncate"
                     >
-                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#A21CAF] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
+                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
                         <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                       </svg>
                       <span className="truncate">{doc.phone}</span>
@@ -153,9 +157,9 @@ export default function DoctorsSection() {
                     {/* Email */}
                     <a
                       href={doc.emailHref}
-                      className="flex items-center gap-2 hover:text-[#800080] transition-colors truncate"
+                      className="flex items-center gap-2 hover:text-[#603085] transition-colors truncate"
                     >
-                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#A21CAF] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
+                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
                         <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                       </svg>
                       <span className="truncate">{doc.email}</span>
@@ -163,7 +167,7 @@ export default function DoctorsSection() {
 
                     {/* Experience */}
                     <div className="flex items-center gap-2 text-[#4B5563]">
-                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#A21CAF] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
+                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
                         <circle cx="12" cy="12" r="10" />
                         <path d="M12 6v6l4 2" strokeLinecap="round" />
                       </svg>
@@ -183,7 +187,7 @@ export default function DoctorsSection() {
             <button
               type="button"
               onClick={() => handleScroll('left')}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-[#FAF0F7] text-[#241132] hover:text-[#A21CAF] border border-[#F0D5E6] hover:border-[#A21CAF] flex items-center justify-center shadow-xs hover:shadow-md transition-all active:scale-95 cursor-pointer"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-[#FAF0F7] text-[#241132] hover:text-[#603085] border border-[#F0D5E6] hover:border-[#603085] flex items-center justify-center shadow-xs hover:shadow-md transition-all active:scale-95 cursor-pointer"
               aria-label="Previous doctor"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -192,7 +196,7 @@ export default function DoctorsSection() {
             </button>
 
             {/* Pagination Dots for all 3 Doctors */}
-            <div className="flex items-center gap-2 px-3 py-2 bg-[#FAF2F7] rounded-full border border-[#F0D5E6]">
+            <div className="flex items-center gap-2 px-3 py-2 bg-[#F5F2F8] rounded-full border border-[#F0D5E6]">
               {DOCTORS.map((doc, idx) => (
                 <button
                   key={doc.name}
@@ -200,8 +204,8 @@ export default function DoctorsSection() {
                   onClick={() => scrollToDoctor(idx)}
                   className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                     activeSlide === idx
-                      ? 'w-6 bg-[#A21CAF]'
-                      : 'w-2 bg-[#E2B8D5] hover:bg-[#A21CAF]/60'
+                      ? 'w-6 bg-[#603085]'
+                      : 'w-2 bg-[#E2B8D5] hover:bg-[#603085]/60'
                   }`}
                   aria-label={`Go to ${doc.name}`}
                 />
@@ -212,7 +216,7 @@ export default function DoctorsSection() {
             <button
               type="button"
               onClick={() => handleScroll('right')}
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-[#FAF0F7] text-[#241132] hover:text-[#A21CAF] border border-[#F0D5E6] hover:border-[#A21CAF] flex items-center justify-center shadow-xs hover:shadow-md transition-all active:scale-95 cursor-pointer"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-[#FAF0F7] text-[#241132] hover:text-[#603085] border border-[#F0D5E6] hover:border-[#603085] flex items-center justify-center shadow-xs hover:shadow-md transition-all active:scale-95 cursor-pointer"
               aria-label="Next doctor"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">

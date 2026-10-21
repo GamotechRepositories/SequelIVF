@@ -36,7 +36,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 w-9 h-9 rounded-lg bg-[#FAF2F7] hover:bg-[#F2D7E8] text-[#241132] flex items-center justify-center transition-colors"
+          className="absolute top-6 right-6 w-9 h-9 rounded-lg bg-[#F5F2F8] hover:bg-[#F2D7E8] text-[#241132] flex items-center justify-center transition-colors"
           aria-label="Close modal"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
 
         {submitted ? (
           <div className="text-center py-10">
-            <div className="w-16 h-16 rounded-full bg-[#FAF0F7] border-2 border-[#A21CAF] text-[#A21CAF] flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 rounded-full bg-[#FAF0F7] border-2 border-[#603085] text-[#603085] flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
               </svg>
@@ -59,7 +59,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
             </p>
             <button
               onClick={() => { setSubmitted(false); onClose(); }}
-              className="px-6 py-2.5 rounded-lg font-bold text-white bg-[#A21CAF] text-sm"
+              className="px-6 py-2.5 rounded-lg font-bold text-white bg-[#603085] text-sm"
             >
               Done
             </button>
@@ -67,7 +67,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
         ) : (
           <div>
             <div className="mb-6">
-              <span className="text-[11px] font-bold text-[#A21CAF] uppercase tracking-wider block mb-1">
+              <span className="text-[11px] font-bold text-[#603085] uppercase tracking-wider block mb-1">
                 Fast & Confidential
               </span>
               <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-[#241132]">
@@ -89,7 +89,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
                   placeholder="e.g. Priya Sharma"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#A21CAF] focus:ring-2 focus:ring-[#A21CAF]/20 outline-none text-sm bg-gray-50/50"
+                  className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#603085] focus:ring-2 focus:ring-[#603085]/20 outline-none text-sm bg-gray-50/50"
                 />
               </div>
 
@@ -104,7 +104,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
                     placeholder="+91 98765 43210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#A21CAF] focus:ring-2 focus:ring-[#A21CAF]/20 outline-none text-sm bg-gray-50/50"
+                    className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#603085] focus:ring-2 focus:ring-[#603085]/20 outline-none text-sm bg-gray-50/50"
                   />
                 </div>
                 <div>
@@ -114,7 +114,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
                   <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#A21CAF] focus:ring-2 focus:ring-[#A21CAF]/20 outline-none text-sm bg-gray-50/50"
+                    className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#603085] focus:ring-2 focus:ring-[#603085]/20 outline-none text-sm bg-gray-50/50"
                   >
                     <option>Early pregnancy (6 - 8 weeks)</option>
                     <option>Private Harmony (NIPT Test)</option>
@@ -137,7 +137,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
                     type="date"
                     value={formData.date}
                     onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#A21CAF] focus:ring-2 focus:ring-[#A21CAF]/20 outline-none text-sm bg-gray-50/50"
+                    className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#603085] focus:ring-2 focus:ring-[#603085]/20 outline-none text-sm bg-gray-50/50"
                   />
                 </div>
                 <div>
@@ -147,7 +147,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
                   <select
                     value={formData.timeSlot}
                     onChange={(e) => setFormData({ ...formData, timeSlot: e.target.value })}
-                    className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#A21CAF] focus:ring-2 focus:ring-[#A21CAF]/20 outline-none text-sm bg-gray-50/50"
+                    className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#603085] focus:ring-2 focus:ring-[#603085]/20 outline-none text-sm bg-gray-50/50"
                   >
                     <option>Morning (10:00 AM - 01:00 PM)</option>
                     <option>Afternoon (01:00 PM - 04:00 PM)</option>
@@ -165,13 +165,13 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
                   placeholder="Any previous scan records or specific questions..."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#A21CAF] focus:ring-2 focus:ring-[#A21CAF]/20 outline-none text-sm bg-gray-50/50"
+                  className="w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-[#603085] focus:ring-2 focus:ring-[#603085]/20 outline-none text-sm bg-gray-50/50"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-lg font-heading font-extrabold text-base text-white bg-[#A21CAF] hover:bg-[#86198F] shadow-lg shadow-fuchsia-900/20 active:scale-98 transition-all cursor-pointer"
+                className="w-full py-4 rounded-lg font-heading font-extrabold text-base text-white bg-[#603085] hover:bg-[#4E276D] shadow-lg shadow-fuchsia-900/20 active:scale-98 transition-all cursor-pointer"
               >
                 Confirm Scan Booking →
               </button>

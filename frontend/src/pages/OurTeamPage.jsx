@@ -37,6 +37,7 @@ export default function OurTeamPage({ onBookClick }) {
       experience: '24 Years Experience',
       location: '103, 104, First Floor, Yash Complex, Survey No. 161/7, Bhosale Garden, Hadapsar, Pune, Maharashtra – 411028',
       image: '/images/285b926543910d790975aa5d1826a1c0-removebg-preview.png',
+      imageHover: '/images/dr_leena_patankar.jpg',
       category: 'doctor',
       tag: 'Clinical Director',
       bioIntro:
@@ -79,6 +80,7 @@ export default function OurTeamPage({ onBookClick }) {
       experience: '10+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
+      imageHover: '/images/dr_monika_thavare.jpg',
       category: 'doctor',
       tag: 'Fertility Specialist',
       bioIntro:
@@ -116,6 +118,7 @@ export default function OurTeamPage({ onBookClick }) {
       experience: '7+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: '/images/ee463ed89c8028009bb195f9798676ec-removebg-preview.png',
+      imageHover: '/images/dr_chirag_sharma.jpg',
       category: 'doctor',
       tag: 'Reproductive Medicine',
       bioIntro:
@@ -452,7 +455,7 @@ export default function OurTeamPage({ onBookClick }) {
   return (
     <div className="bg-white min-h-screen flex flex-col">
       {/* Hero / Breadcrumb Header */}
-      <section className="relative overflow-hidden py-14 sm:py-20 lg:py-24 border-b border-[#F0D5E6]/80 bg-[#FAF2F7]">
+      <section className="relative overflow-hidden py-14 sm:py-20 lg:py-24 border-b border-[#F0D5E6]/80 bg-[#F5F2F8]">
         {/* Background Image with Multi-layer Soft Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <img
@@ -461,7 +464,7 @@ export default function OurTeamPage({ onBookClick }) {
             className="w-full h-full object-cover object-[center_35%]"
           />
           {/* Left-to-right fade so text remains 100% crisp while reception logo is clearly visible */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent sm:from-[#FAF2F7]/95 sm:via-[#FAF2F7]/70 sm:to-transparent lg:w-1/2" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent sm:from-[#F5F2F8]/95 sm:via-[#F5F2F8]/70 sm:to-transparent lg:w-1/2" />
           <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/30" />
         </div>
 
@@ -470,19 +473,19 @@ export default function OurTeamPage({ onBookClick }) {
           <div className="max-w-xl">
             {/* Breadcrumbs */}
             <nav className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-[#F0D5E6] text-[#7C6285] mb-4 uppercase tracking-wider shadow-xs">
-              <Link to="/" className="hover:text-[#A21CAF] transition-colors">Home</Link>
+              <Link to="/" className="hover:text-[#603085] transition-colors">Home</Link>
               <span>/</span>
-              <span className="text-[#A21CAF] font-bold">Our Team</span>
+              <span className="text-[#603085] font-bold">Our Team</span>
             </nav>
 
-            <span className="text-[#800080] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">
+            <span className="text-[#603085] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">
               OUR PROFESSIONAL TEAM
             </span>
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-[46px] font-medium tracking-tight">
-              <span className="text-[#A21CAF]">Meet Our</span>{' '}
+              <span className="text-[#603085]">Meet Our</span>{' '}
               <span className="text-[#C49F64]">Specialists</span>
             </h1>
-            <div className="w-20 h-0.5 bg-gradient-to-r from-[#A21CAF] to-[#C49F64] mt-3.5" />
+            <div className="w-20 h-0.5 bg-gradient-to-r from-[#603085] to-[#C49F64] mt-3.5" />
           </div>
         </div>
       </section>
@@ -494,11 +497,11 @@ export default function OurTeamPage({ onBookClick }) {
           {/* Section Header: Heading & Intro Text */}
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-12">
             <div>
-              <span className="text-[#800080] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">
+              <span className="text-[#603085] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">
                 DEDICATED REPRODUCTIVE MEDICINE EXPERTS
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] leading-tight font-medium tracking-tight">
-                <span className="text-[#A21CAF]">Doctors &</span>{' '}
+                <span className="text-[#603085]">Doctors &</span>{' '}
                 <span className="text-[#C49F64]">Embryology Team</span>
               </h2>
               <p className="text-[#555555] text-sm sm:text-[15px] leading-relaxed max-w-2xl mt-3">
@@ -507,14 +510,14 @@ export default function OurTeamPage({ onBookClick }) {
             </div>
 
             {/* Filter Pill Buttons */}
-            <div className="inline-flex items-center gap-1.5 p-1 bg-[#FAF2F7] rounded-xl border border-[#F0D5E6] self-start lg:self-end">
+            <div className="inline-flex items-center gap-1.5 p-1 bg-[#F5F2F8] rounded-xl border border-[#F0D5E6] self-start lg:self-end">
               <button
                 type="button"
                 onClick={() => setActiveFilter('all')}
                 className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   activeFilter === 'all'
-                    ? 'bg-[#A21CAF] text-white shadow-xs'
-                    : 'text-[#4B5563] hover:text-[#A21CAF]'
+                    ? 'bg-[#603085] text-white shadow-xs'
+                    : 'text-[#4B5563] hover:text-[#603085]'
                 }`}
               >
                 All Team ({TEAM_MEMBERS.length})
@@ -524,8 +527,8 @@ export default function OurTeamPage({ onBookClick }) {
                 onClick={() => setActiveFilter('doctors')}
                 className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   activeFilter === 'doctors'
-                    ? 'bg-[#A21CAF] text-white shadow-xs'
-                    : 'text-[#4B5563] hover:text-[#A21CAF]'
+                    ? 'bg-[#603085] text-white shadow-xs'
+                    : 'text-[#4B5563] hover:text-[#603085]'
                 }`}
               >
                 Doctors ({TEAM_MEMBERS.filter((m) => m.category === 'doctor').length})
@@ -535,8 +538,8 @@ export default function OurTeamPage({ onBookClick }) {
                 onClick={() => setActiveFilter('embryology')}
                 className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                   activeFilter === 'embryology'
-                    ? 'bg-[#A21CAF] text-white shadow-xs'
-                    : 'text-[#4B5563] hover:text-[#A21CAF]'
+                    ? 'bg-[#603085] text-white shadow-xs'
+                    : 'text-[#4B5563] hover:text-[#603085]'
                 }`}
               >
                 Embryologists ({TEAM_MEMBERS.filter((m) => m.category !== 'doctor').length})
@@ -550,20 +553,28 @@ export default function OurTeamPage({ onBookClick }) {
               <div
                 key={doc.name}
                 onClick={() => setSelectedMember(doc)}
-                className="w-full bg-[#FAF2F7] rounded-2xl p-4.5 sm:p-5 lg:p-4.5 xl:p-5 border border-[#F0D5E6] hover:border-[#C49F64] shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-4 sm:gap-4.5 items-start group cursor-pointer hover:-translate-y-1"
+                className="w-full bg-[#F5F2F8] rounded-2xl p-4.5 sm:p-5 lg:p-4.5 xl:p-5 border border-[#F0D5E6] hover:border-[#C49F64] shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-4 sm:gap-4.5 items-start group cursor-pointer hover:-translate-y-1"
                 title={`Click to view full biography of ${doc.name}`}
               >
-                {/* Doctor Avatar / Image on left */}
-                <div className="relative w-full sm:w-32 md:w-36 lg:w-32 xl:w-36 h-48 sm:h-52 lg:h-48 xl:h-52 shrink-0 overflow-hidden rounded-xl bg-white/60">
+                {/* Doctor photos: cutout by default, clinic photo on hover */}
+                <div className="relative w-full sm:w-36 md:w-40 lg:w-36 xl:w-40 h-52 sm:h-56 lg:h-52 xl:h-56 shrink-0 overflow-hidden rounded-xl bg-white/70">
                   <img
                     src={doc.image}
                     alt={doc.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    className="absolute inset-0 w-full h-full object-contain object-bottom"
                     loading="lazy"
                   />
+                  {doc.imageHover && (
+                    <img
+                      src={doc.imageHover}
+                      alt=""
+                      className="absolute inset-0 w-full h-full object-cover object-[center_18%] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      loading="lazy"
+                    />
+                  )}
                   {/* Hover Overlay Hint */}
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="bg-white/95 text-[#A21CAF] text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                  <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-3 pointer-events-none">
+                    <span className="bg-white/95 text-[#603085] text-[11px] font-bold px-2.5 py-1 rounded-full shadow-sm">
                       View Bio
                     </span>
                   </div>
@@ -574,13 +585,13 @@ export default function OurTeamPage({ onBookClick }) {
                   <div>
                     {/* Role Tag */}
                     {doc.tag && (
-                      <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-[#A21CAF] bg-white px-2 py-0.5 rounded-md border border-[#F0D5E6] mb-1.5">
+                      <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-[#603085] bg-white px-2 py-0.5 rounded-md border border-[#F0D5E6] mb-1.5">
                         {doc.tag}
                       </span>
                     )}
 
                     {/* Name: Purple by default, Gold on hover */}
-                    <h3 className="font-serif text-[#A21CAF] text-base sm:text-lg font-medium leading-snug mb-1 group-hover:text-[#C49F64] transition-colors duration-300">
+                    <h3 className="font-serif text-[#603085] text-base sm:text-lg font-medium leading-snug mb-1 group-hover:text-[#C49F64] transition-colors duration-300">
                       {doc.name}
                     </h3>
 
@@ -598,7 +609,7 @@ export default function OurTeamPage({ onBookClick }) {
                     <div className="space-y-1.5 text-xs text-[#4B5563]">
                       {/* Phone */}
                       <div className="flex items-center gap-2 truncate">
-                        <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#A21CAF] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
+                        <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
                           <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                         </svg>
                         <span className="truncate">{doc.phone}</span>
@@ -606,7 +617,7 @@ export default function OurTeamPage({ onBookClick }) {
 
                       {/* Email */}
                       <div className="flex items-center gap-2 truncate">
-                        <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#A21CAF] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
+                        <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
                           <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                         </svg>
                         <span className="truncate">{doc.email}</span>
@@ -615,7 +626,7 @@ export default function OurTeamPage({ onBookClick }) {
                       {/* Experience */}
                       <div className="flex items-center justify-between pt-1">
                         <div className="flex items-center gap-2 text-[#4B5563]">
-                          <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#A21CAF] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
+                          <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
                             <circle cx="12" cy="12" r="10" />
                             <path d="M12 6v6l4 2" strokeLinecap="round" />
                           </svg>
@@ -623,7 +634,7 @@ export default function OurTeamPage({ onBookClick }) {
                         </div>
 
                         {/* Interactive Click Indicator */}
-                        <span className="text-[11px] font-bold text-[#A21CAF] group-hover:text-[#C49F64] flex items-center gap-0.5">
+                        <span className="text-[11px] font-bold text-[#603085] group-hover:text-[#C49F64] flex items-center gap-0.5">
                           View Details &rarr;
                         </span>
                       </div>
@@ -635,9 +646,9 @@ export default function OurTeamPage({ onBookClick }) {
           </div>
 
           {/* Bottom Consultation CTA Banner */}
-          <div className="mt-14 sm:mt-16 bg-gradient-to-r from-[#FAF2F7] via-[#F8E7F3] to-[#FAF2F7] rounded-3xl p-8 sm:p-12 border border-[#F0D5E6] flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="mt-14 sm:mt-16 bg-gradient-to-r from-[#F5F2F8] via-[#F8E7F3] to-[#F5F2F8] rounded-3xl p-8 sm:p-12 border border-[#F0D5E6] flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <span className="text-[#800080] font-bold text-xs uppercase tracking-wider block mb-1">
+              <span className="text-[#603085] font-bold text-xs uppercase tracking-wider block mb-1">
                 NEED PERSONALIZED GUIDANCE?
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl text-[#241132] font-medium">
@@ -650,7 +661,7 @@ export default function OurTeamPage({ onBookClick }) {
             <button
               type="button"
               onClick={onBookClick}
-              className="shrink-0 px-7 py-3.5 bg-[#A21CAF] hover:bg-[#86198F] active:scale-95 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-md transition-all cursor-pointer"
+              className="shrink-0 px-7 py-3.5 bg-[#603085] hover:bg-[#4E276D] active:scale-95 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-md transition-all cursor-pointer"
             >
               MAKE AN APPOINTMENT
             </button>
@@ -670,17 +681,17 @@ export default function OurTeamPage({ onBookClick }) {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header Bar with Close Button */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-[#F5E6F0] bg-[#FAF2F7]/80 shrink-0">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#F5E6F0] bg-[#F5F2F8]/80 shrink-0">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#C49F64]" />
-                <span className="text-xs font-bold uppercase tracking-wider text-[#A21CAF]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#603085]">
                   Sequel IVF Specialist Profile
                 </span>
               </div>
               <button
                 type="button"
                 onClick={() => setSelectedMember(null)}
-                className="w-9 h-9 rounded-full bg-white hover:bg-[#FAF2F7] border border-[#F0D5E6] text-[#6B7280] hover:text-[#A21CAF] flex items-center justify-center transition-colors cursor-pointer text-lg font-bold shadow-xs"
+                className="w-9 h-9 rounded-full bg-white hover:bg-[#F5F2F8] border border-[#F0D5E6] text-[#6B7280] hover:text-[#603085] flex items-center justify-center transition-colors cursor-pointer text-lg font-bold shadow-xs"
                 title="Close"
               >
                 ✕
@@ -694,14 +705,21 @@ export default function OurTeamPage({ onBookClick }) {
                 {/* LEFT COLUMN: Photo, Name in gold, Position, Experience, Location, Contact */}
                 <div className="lg:col-span-5 flex flex-col">
                   {/* Photo Frame */}
-                  <div className="w-full aspect-[4/5] sm:max-h-[380px] rounded-2xl overflow-hidden bg-[#FAF2F7] border border-[#F0D5E6] shadow-md mb-6 relative">
+                  <div className="w-full aspect-[4/5] sm:max-h-[380px] rounded-2xl overflow-hidden bg-[#F5F2F8] border border-[#F0D5E6] shadow-md mb-6 relative group/photo">
                     <img
                       src={selectedMember.image}
                       alt={selectedMember.name}
-                      className="w-full h-full object-cover object-top"
+                      className="absolute inset-0 w-full h-full object-contain object-bottom"
                     />
+                    {selectedMember.imageHover && (
+                      <img
+                        src={selectedMember.imageHover}
+                        alt=""
+                        className="absolute inset-0 w-full h-full object-cover object-[center_18%] opacity-0 group-hover/photo:opacity-100 transition-opacity duration-500"
+                      />
+                    )}
                     {selectedMember.tag && (
-                      <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm border border-[#F0D5E6] text-[#A21CAF] font-bold text-[11px] px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+                      <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm border border-[#F0D5E6] text-[#603085] font-bold text-[11px] px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
                         {selectedMember.tag}
                       </span>
                     )}
@@ -733,7 +751,7 @@ export default function OurTeamPage({ onBookClick }) {
                       <span className="font-semibold text-[#241132]">Email:</span>{' '}
                       <a
                         href={selectedMember.emailHref}
-                        className="text-[#A21CAF] hover:underline"
+                        className="text-[#603085] hover:underline"
                       >
                         {selectedMember.email}
                       </a>
@@ -743,7 +761,7 @@ export default function OurTeamPage({ onBookClick }) {
                       <span className="font-semibold text-[#241132]">Phone:</span>{' '}
                       <a
                         href={selectedMember.phoneHref}
-                        className="text-[#A21CAF] hover:underline font-medium"
+                        className="text-[#603085] hover:underline font-medium"
                       >
                         {selectedMember.phone}
                       </a>
@@ -757,7 +775,7 @@ export default function OurTeamPage({ onBookClick }) {
                       setSelectedMember(null)
                       if (onBookClick) onBookClick()
                     }}
-                    className="w-full py-3.5 px-5 bg-[#A21CAF] hover:bg-[#86198F] active:scale-[0.98] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
+                    className="w-full py-3.5 px-5 bg-[#603085] hover:bg-[#4E276D] active:scale-[0.98] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
                   >
                     <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
                       <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
@@ -782,7 +800,7 @@ export default function OurTeamPage({ onBookClick }) {
                   {selectedMember.highlights && selectedMember.highlights.length > 0 && (
                     <div className="space-y-4 mb-6">
                       {selectedMember.highlights.map((item, idx) => (
-                        <div key={idx} className="bg-[#FAF2F7]/60 p-4 rounded-xl border-l-4 border-[#C49F64]">
+                        <div key={idx} className="bg-[#F5F2F8]/60 p-4 rounded-xl border-l-4 border-[#C49F64]">
                           <h4 className="font-bold text-sm text-[#241132] mb-1">
                             {item.title}
                           </h4>
@@ -803,7 +821,7 @@ export default function OurTeamPage({ onBookClick }) {
                       <ul className="space-y-1.5 pl-2">
                         {selectedMember.institutions.map((inst, i) => (
                           <li key={i} className="flex items-center gap-2 text-xs sm:text-sm text-[#555555]">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#A21CAF] shrink-0" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#603085] shrink-0" />
                             <span>{inst}</span>
                           </li>
                         ))}

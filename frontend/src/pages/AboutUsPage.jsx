@@ -26,7 +26,7 @@ export default function AboutUsPage({ onBookClick }) {
   return (
     <div className="bg-white min-h-screen flex flex-col">
       {/* Hero / Breadcrumb Header with Clinic Background Image */}
-      <section className="relative overflow-hidden py-14 sm:py-20 lg:py-24 border-b border-[#F0D5E6]/80 bg-[#FAF2F7]">
+      <section className="relative overflow-hidden py-14 sm:py-20 lg:py-24 border-b border-[#F0D5E6]/80 bg-[#F5F2F8]">
         {/* Background Image with Multi-layer Soft Gradient Overlay */}
         <div className="absolute inset-0 z-0">
           <img
@@ -35,7 +35,7 @@ export default function AboutUsPage({ onBookClick }) {
             className="w-full h-full object-cover object-[center_35%]"
           />
           {/* Left-to-right fade so text remains 100% crisp while reception logo is clearly visible */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent sm:from-[#FAF2F7]/95 sm:via-[#FAF2F7]/70 sm:to-transparent lg:w-1/2" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent sm:from-[#F5F2F8]/95 sm:via-[#F5F2F8]/70 sm:to-transparent lg:w-1/2" />
           {/* Vertical soft gradient for top-bottom edge blending */}
           <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/30" />
         </div>
@@ -45,19 +45,19 @@ export default function AboutUsPage({ onBookClick }) {
           <div className="max-w-xl">
             {/* Breadcrumbs with subtle frosted pill badge */}
             <nav className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-[#F0D5E6] text-[#7C6285] mb-4 uppercase tracking-wider shadow-xs">
-              <Link to="/" className="hover:text-[#A21CAF] transition-colors">Home</Link>
+              <Link to="/" className="hover:text-[#603085] transition-colors">Home</Link>
               <span>/</span>
-              <span className="text-[#A21CAF] font-bold">About Us</span>
+              <span className="text-[#603085] font-bold">About Us</span>
             </nav>
 
-            <span className="text-[#800080] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">
+            <span className="text-[#603085] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">
               ABOUT SEQUEL IVF
             </span>
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-[46px] font-medium tracking-tight">
-              <span className="text-[#A21CAF]">About</span>{' '}
+              <span className="text-[#603085]">About</span>{' '}
               <span className="text-[#C49F64]">Our Centre</span>
             </h1>
-            <div className="w-20 h-0.5 bg-gradient-to-r from-[#A21CAF] to-[#C49F64] mt-3.5" />
+            <div className="w-20 h-0.5 bg-gradient-to-r from-[#603085] to-[#C49F64] mt-3.5" />
           </div>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default function AboutUsPage({ onBookClick }) {
             {/* Left Column: Content */}
             <div className="lg:col-span-7 flex flex-col justify-center">
               {/* Eyebrow / Kicker */}
-              <span className="text-[#800080] font-bold text-xs sm:text-sm tracking-wider uppercase block mb-2 sm:mb-3">
+              <span className="text-[#603085] font-bold text-xs sm:text-sm tracking-wider uppercase block mb-2 sm:mb-3">
                 WELCOME TO SEQUEL IVF
               </span>
 
@@ -97,11 +97,11 @@ export default function AboutUsPage({ onBookClick }) {
 
                 <ul className="space-y-2 mb-6 text-sm sm:text-[14.5px] text-[#374151] font-medium">
                   <li className="flex items-start gap-2.5">
-                    <span className="text-[#A21CAF] font-bold text-base leading-none mt-1">•</span>
+                    <span className="text-[#603085] font-bold text-base leading-none mt-1">•</span>
                     <span>20,000+ IVF & ICSI Treatment Cycles Performed and Guided</span>
                   </li>
                   <li className="flex items-start gap-2.5">
-                    <span className="text-[#A21CAF] font-bold text-base leading-none mt-1">•</span>
+                    <span className="text-[#603085] font-bold text-base leading-none mt-1">•</span>
                     <span>50+ IVF Success Stories</span>
                   </li>
                 </ul>
@@ -117,13 +117,13 @@ export default function AboutUsPage({ onBookClick }) {
                 <button
                   type="button"
                   onClick={onBookClick}
-                  className="inline-flex items-center justify-center px-7 py-3.5 bg-[#A21CAF] hover:bg-[#86198F] active:scale-95 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-md transition-all cursor-pointer"
+                  className="inline-flex items-center justify-center px-7 py-3.5 bg-[#603085] hover:bg-[#4E276D] active:scale-95 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-md transition-all cursor-pointer"
                 >
                   MAKE AN APPOINTMENT
                 </button>
                 <Link
                   to="/our-team"
-                  className="inline-flex items-center justify-center px-7 py-3.5 bg-white hover:bg-[#FAF2F7] text-[#241132] border border-[#F0D5E6] font-bold text-xs uppercase tracking-wider rounded-lg transition-all"
+                  className="inline-flex items-center justify-center px-7 py-3.5 bg-white hover:bg-[#F5F2F8] text-[#241132] border border-[#F0D5E6] font-bold text-xs uppercase tracking-wider rounded-lg transition-all"
                 >
                   MEET OUR TEAM
                 </Link>
@@ -146,7 +146,7 @@ export default function AboutUsPage({ onBookClick }) {
                   <button
                     type="button"
                     onClick={() => setIsVideoModalOpen(true)}
-                    className="absolute top-4 left-4 sm:top-5 sm:left-5 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/95 backdrop-blur-md shadow-xl border border-white/80 flex items-center justify-center text-[#241132] hover:text-[#A21CAF] hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer group z-10"
+                    className="absolute top-4 left-4 sm:top-5 sm:left-5 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/95 backdrop-blur-md shadow-xl border border-white/80 flex items-center justify-center text-[#241132] hover:text-[#603085] hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer group z-10"
                     aria-label="Play Sequel IVF Video"
                   >
                     {/* Subtle radiating pulse ring */}
@@ -161,7 +161,7 @@ export default function AboutUsPage({ onBookClick }) {
                 {/* Floating "9650+ CUSTOMERS TRUST US" Badge matching user mockup */}
                 <div className="absolute -bottom-5 -left-4 sm:-bottom-6 sm:-left-6 bg-white/95 backdrop-blur-md rounded-2xl px-5 py-4 sm:px-6 sm:py-4.5 shadow-[0_14px_35px_-8px_rgba(36,17,50,0.18)] border border-[#F0D5E6] z-20">
                   <div className="font-bold text-2xl sm:text-3xl text-[#241132] leading-none mb-1">
-                    9650<span className="text-[#A21CAF] ml-0.5 font-extrabold">+</span>
+                    9650<span className="text-[#603085] ml-0.5 font-extrabold">+</span>
                   </div>
                   <div className="text-[10px] sm:text-[11px] font-bold text-[#C49F64] tracking-wider uppercase">
                     CUSTOMERS TRUST US
@@ -191,7 +191,7 @@ export default function AboutUsPage({ onBookClick }) {
             <button
               type="button"
               onClick={() => setIsVideoModalOpen(false)}
-              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-10 h-10 rounded-full bg-black/70 hover:bg-[#A21CAF] text-white flex items-center justify-center border border-white/20 transition-all cursor-pointer hover:scale-105"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-10 h-10 rounded-full bg-black/70 hover:bg-[#603085] text-white flex items-center justify-center border border-white/20 transition-all cursor-pointer hover:scale-105"
               aria-label="Close video"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">

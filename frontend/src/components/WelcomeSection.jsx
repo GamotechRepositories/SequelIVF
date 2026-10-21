@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function WelcomeSection({ onBookClick }) {
   return (
-    <section id="about" className="bg-white py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+    <section id="about" className="bg-gradient-to-b from-[#F5F2F8] via-white via-[38%] to-white py-12 sm:py-16 lg:py-20 relative overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
           
@@ -27,13 +27,13 @@ export default function WelcomeSection({ onBookClick }) {
           {/* Right Column: Exact Content from User Reference */}
           <div className="lg:col-span-6 flex flex-col justify-center">
             {/* Eyebrow / Kicker */}
-            <span className="text-[#800080] font-bold text-xs sm:text-sm tracking-wider uppercase block mb-2 sm:mb-3">
+            <span className="text-[#603085] font-bold text-xs sm:text-sm tracking-wider uppercase block mb-2 sm:mb-3">
               WELCOME TO SEQUEL IVF
             </span>
 
             {/* Dual-tone Headline: Web Purple + Gold/Silver Combo */}
             <h2 className="font-serif text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] leading-[1.2] font-medium tracking-tight mb-5 sm:mb-6">
-              <span className="text-[#A21CAF]">Where Hope Begins</span>{' '}
+              <span className="text-[#603085]">Where Hope Begins</span>{' '}
               <span className="text-[#C49F64]">and Families Grow</span>
             </h2>
 
@@ -52,7 +52,7 @@ export default function WelcomeSection({ onBookClick }) {
               <button
                 type="button"
                 onClick={onBookClick}
-                className="inline-flex items-center justify-center px-7 py-3 sm:px-8 sm:py-3.5 bg-[#800080] hover:bg-[#680068] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-lg transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
+                className="inline-flex items-center justify-center px-7 py-3 sm:px-8 sm:py-3.5 bg-[#603085] hover:bg-[#4E276D] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-lg transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
               >
                 FIND OUT MORE
               </button>

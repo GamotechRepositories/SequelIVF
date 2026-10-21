@@ -104,7 +104,7 @@ export default function Contact() {
                     href={item.href}
                     className="flex items-center gap-4 group"
                   >
-                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/12 border border-white/20 group-hover:bg-[#A21CAF] group-hover:border-[#E8C586]/40 transition-all duration-300 shadow-sm">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/12 border border-white/20 group-hover:bg-[#603085] group-hover:border-[#E8C586]/40 transition-all duration-300 shadow-sm">
                       {item.icon}
                     </div>
                     <div>

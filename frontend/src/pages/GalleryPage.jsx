@@ -6,31 +6,31 @@ export default function GalleryPage({ onBookClick }) {
   return (
     <div className="bg-white min-h-screen flex flex-col">
       {/* Hero / Breadcrumb Header */}
-      <section className="bg-gradient-to-b from-[#FAF2F7] via-[#FAF2F7]/60 to-white py-12 sm:py-16 border-b border-[#F0D5E6]/60">
+      <section className="bg-gradient-to-b from-[#F5F2F8] via-[#F5F2F8]/60 to-white py-12 sm:py-16 border-b border-[#F0D5E6]/60">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-xs font-semibold text-[#7C6285] mb-4 uppercase tracking-wider">
-            <Link to="/" className="hover:text-[#A21CAF] transition-colors">Home</Link>
+            <Link to="/" className="hover:text-[#603085] transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-[#A21CAF]">Gallery</span>
+            <span className="text-[#603085]">Gallery</span>
           </nav>
 
-          <span className="text-[#800080] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">
+          <span className="text-[#603085] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">
             WELCOME TO SEQUEL IVF
           </span>
           <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight">
-            <span className="text-[#A21CAF]">Welcome to</span>{' '}
+            <span className="text-[#603085]">Welcome to</span>{' '}
             <span className="text-[#C49F64]">Our Gallery</span>
           </h1>
-          <div className="w-20 h-0.5 bg-gradient-to-r from-[#A21CAF] to-[#C49F64] mt-4" />
+          <div className="w-20 h-0.5 bg-gradient-to-r from-[#603085] to-[#C49F64] mt-4" />
         </div>
       </section>
 
       {/* Main Welcome Section */}
       <section className="py-14 sm:py-20 flex-1">
         <div className="mx-auto max-w-[1000px] px-4 sm:px-6 lg:px-10 text-center">
-          <div className="bg-[#FAF2F7]/70 rounded-3xl p-8 sm:p-14 border border-[#F0D5E6] shadow-sm">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-xs border border-[#F0D5E6] text-[#A21CAF] mb-6">
+          <div className="bg-[#F5F2F8]/70 rounded-3xl p-8 sm:p-14 border border-[#F0D5E6] shadow-sm">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-xs border border-[#F0D5E6] text-[#603085] mb-6">
               <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
@@ -48,13 +48,13 @@ export default function GalleryPage({ onBookClick }) {
               <button
                 type="button"
                 onClick={onBookClick}
-                className="px-6 py-3 bg-[#A21CAF] hover:bg-[#86198F] active:scale-95 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-md transition-all cursor-pointer"
+                className="px-6 py-3 bg-[#603085] hover:bg-[#4E276D] active:scale-95 text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-md transition-all cursor-pointer"
               >
                 Schedule Clinic Visit
               </button>
               <Link
                 to="/"
-                className="px-6 py-3 bg-white hover:bg-[#FAF2F7] text-[#241132] border border-[#F0D5E6] font-bold text-xs uppercase tracking-wider rounded-lg transition-all"
+                className="px-6 py-3 bg-white hover:bg-[#F5F2F8] text-[#241132] border border-[#F0D5E6] font-bold text-xs uppercase tracking-wider rounded-lg transition-all"
               >
                 Back to Home
               </Link>
