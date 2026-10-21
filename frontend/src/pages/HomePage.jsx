@@ -3,7 +3,7 @@ import Hero from '../components/Hero.jsx'
 import WelcomeSection from '../components/WelcomeSection.jsx'
 import DoctorsSection from '../components/DoctorsSection.jsx'
 import FertilityServices from '../components/FertilityServices.jsx'
-import TrustAccreditation from '../components/TrustAccreditation.jsx'
+import WhyChooseUs from '../components/WhyChooseUs.jsx'
 import FAQSection from '../components/FAQSection.jsx'
 import Contact from '../components/Contact.jsx'
 import Footer from '../components/Footer.jsx'
@@ -15,7 +15,7 @@ export default function HomePage({ onBookClick }) {
       <WelcomeSection onBookClick={onBookClick} />
       <DoctorsSection />
       <FertilityServices onBookClick={onBookClick} />
-      <TrustAccreditation />
+      <WhyChooseUs />
       <FAQSection onBookClick={onBookClick} />
       <Contact />
       <Footer onBookClick={onBookClick} />

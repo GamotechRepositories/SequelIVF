@@ -9,6 +9,7 @@ export default function FertilityServices({ onBookClick }) {
     {
       id: 'ivf',
       slug: 'ivf',
+      image: '/images/services/ivf.jpg',
       title: 'In-Vitro Fertilization (IVF)',
       desc: "At Sequel IVF, we understand that you aren't just looking for a treatment, but a pathway to your family dream. Our advanced IVF programs combine individualized protocols with highest cleanroom embryology standards.",
       icon: (
@@ -26,6 +27,7 @@ export default function FertilityServices({ onBookClick }) {
     {
       id: 'andrology',
       slug: 'andrology',
+      image: '/images/services/andrology.jpg',
       title: 'Semen Analysis & Advanced Andrology',
       desc: 'At Sequel IVF, we ensure this essential test is handled with the highest clinical accuracy, evaluating sperm count, motility, vitality, morphology, and DNA fragmentation.',
       icon: (
@@ -40,6 +42,7 @@ export default function FertilityServices({ onBookClick }) {
     {
       id: 'lah',
       slug: 'laser-assisted-hatching',
+      image: '/images/services/lah.jpg',
       title: 'Laser-Assisted Hatching (LAH)',
       desc: 'Laser-Assisted Hatching (LAH) is an advanced embryology laboratory technique used during IVF to thin the outer shell of the embryo, significantly enhancing implantation rates.',
       icon: (
@@ -57,6 +60,7 @@ export default function FertilityServices({ onBookClick }) {
     {
       id: 'era',
       slug: 'era',
+      image: '/images/services/era.jpg',
       title: 'Endometrial Receptivity Assay (ERA)',
       desc: 'A successful pregnancy requires a beautifully synchronized dialogue between a healthy embryo and a receptive endometrial lining to identify your personalized window of implantation.',
       icon: (
@@ -74,6 +78,7 @@ export default function FertilityServices({ onBookClick }) {
     {
       id: 'counseling',
       slug: 'counseling',
+      image: '/images/services/counseling.jpg',
       title: 'Psychological & Emotional Counseling',
       desc: 'At Sequel IVF, we believe that emotional care is not secondary to medical treatment. Our dedicated counselors support you through every emotional phase of your fertility journey.',
       icon: (
@@ -88,6 +93,7 @@ export default function FertilityServices({ onBookClick }) {
     {
       id: 'evaluation',
       slug: 'fertility-evaluation',
+      image: '/images/services/fertility-evaluation.jpg',
       title: 'Comprehensive Fertility Evaluation',
       desc: 'At Sequel IVF, we look at fertility evaluations not just as a set of diagnostic tests, but as an essential roadmap to understanding your complete reproductive health.',
       icon: (
@@ -162,27 +168,30 @@ export default function FertilityServices({ onBookClick }) {
             <Link
               key={s.id}
               to={`/services/${s.slug}`}
-              className="w-[82vw] max-w-[310px] sm:w-[calc((100%-24px)/2)] sm:max-w-none lg:w-[calc((100%-72px)/4)] shrink-0 snap-start rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between group bg-white text-[#241132] border border-[#F0D5E6] shadow-[0_4px_16px_-4px_rgba(36,17,50,0.06)] hover:bg-[#603085] hover:border-[#603085] hover:shadow-2xl hover:-translate-y-2 cursor-pointer [perspective:1000px]"
+              className="relative w-[82vw] max-w-[310px] sm:w-[calc((100%-24px)/2)] sm:max-w-none lg:w-[calc((100%-72px)/4)] shrink-0 snap-start rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between group bg-[#F5F2F8] text-[#241132] border-2 border-[#603085]/45 hover:border-[#603085] shadow-[0_4px_16px_-4px_rgba(36,17,50,0.06)] hover:shadow-2xl hover:-translate-y-2 cursor-pointer [perspective:1000px]"
             >
-              {/* Card Body */}
-              <div className="p-5 sm:px-6 sm:pt-8 sm:pb-7 flex flex-col items-center text-center flex-1">
-                {/* Top Circle Icon: 3D Flip 360 on card hover + purple/white color swap */}
+              <img
+                src={s.image}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-30 transition-opacity duration-300"
+              />
+              <div className="absolute inset-0 bg-[#EDE4F5]/70 group-hover:bg-[#603085]/82 transition-colors duration-300" />
+
+              <div className="relative z-10 p-5 sm:px-6 sm:pt-8 sm:pb-7 flex flex-col items-center text-center flex-1">
                 <div className="service-icon-flip w-18 h-18 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mb-6 shrink-0 bg-[#603085] text-white shadow-sm group-hover:bg-white group-hover:text-[#603085]">
                   {s.icon}
                 </div>
 
-                {/* Title: Champagne Gold default -> White on card hover */}
-                <h3 className="font-serif text-lg sm:text-[19px] font-medium leading-snug mb-3 min-h-[52px] flex items-center justify-center text-[#C49F64] group-hover:text-white transition-colors duration-300">
+                <h3 className="font-serif text-lg sm:text-[19px] font-medium leading-snug mb-3 min-h-[52px] flex items-center justify-center text-[#603085] group-hover:text-white transition-colors duration-300">
                   {s.title}
                 </h3>
 
-                {/* Description: Gray default -> White on card hover */}
-                <p className="text-xs sm:text-[13px] leading-relaxed text-[#555555] group-hover:text-white/95 transition-colors duration-300">
+                <p className="text-xs sm:text-[13px] leading-relaxed text-[#4E276D] group-hover:text-white/95 transition-colors duration-300">
                   {s.desc}
                 </p>
               </div>
 
-              <span className="w-full py-3.5 bg-[#5D3A20] group-hover:bg-[#482B15] text-white text-xs font-bold uppercase tracking-widest transition-colors duration-200 text-center select-none rounded-b-2xl shrink-0">
+              <span className="relative z-10 w-full py-3.5 bg-[#603085] group-hover:bg-white text-white group-hover:text-[#603085] text-xs font-bold uppercase tracking-widest transition-colors duration-200 text-center select-none rounded-b-2xl shrink-0">
                 READ MORE
               </span>
             </Link>

@@ -26,7 +26,7 @@ export default function Footer({ onBookClick }) {
   ]
 
   return (
-    <footer className="relative overflow-hidden bg-[#18181B] text-white">
+    <footer className="relative overflow-hidden bg-[#261132] text-white">
       {/* Top divider accent */}
       <div className="w-full h-1 bg-gradient-to-r from-[#603085] via-[#C49F64] to-[#603085]" />
 
@@ -53,7 +53,7 @@ export default function Footer({ onBookClick }) {
               </p>
 
               {/* Talk To Our Support Box */}
-              <div className="mt-auto bg-[#232328] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3.5 max-w-[280px]">
+              <div className="mt-auto bg-[#3A1F4E] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3.5 max-w-[280px]">
                 <div className="w-11 h-11 rounded-full bg-[#C49F64] flex items-center justify-center text-white shrink-0 shadow-sm relative">
                   <div className="flex flex-col items-center justify-center leading-none">
                     <svg viewBox="0 0 24 24" className="w-4 h-4 mb-0.5" fill="currentColor">
@@ -95,7 +95,7 @@ export default function Footer({ onBookClick }) {
                       }}
                       className="text-white/70 hover:text-white transition-colors duration-150 flex items-center gap-2 group"
                     >
-                      <span className="text-[#603085] group-hover:text-[#C49F64] font-bold text-sm transition-colors">
+                      <span className="text-[#C49F64] group-hover:text-white font-bold text-sm transition-colors">
                         ›
                       </span>
                       <span className="group-hover:translate-x-0.5 transition-transform duration-150">
@@ -209,7 +209,7 @@ export default function Footer({ onBookClick }) {
           </div>
 
           {/* Bottom Bar: Copyright & Compliance */}
-          <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/50 text-xs">
+          <div className="pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/50 text-xs">
             <p>© {new Date().getFullYear()} Sequel IVF Centre, Hadapsar, Pune. All rights reserved.</p>
             <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
               <a href="#about" className="hover:text-white/80 transition-colors">Privacy Policy</a>
