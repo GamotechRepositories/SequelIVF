@@ -1,4 +1,4 @@
-export const LOGO_URL = '/images/Firefly.png'
+export const LOGO_URL = '/images/SequelIVF Fertility Logo.png'
 export const LOGO_REMOTE_URL = 'https://sequelivf.com/wp-content/uploads/2020/04/sequelivf.png'
 
 export const FAVICON_URL =

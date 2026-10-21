@@ -22,11 +22,11 @@ export default function Header({ onBookClick }) {
 
               {/* Left: Official Sequel IVF Logo Badge */}
               <Link to="/" className="flex items-center group select-none shrink-0 py-0.5">
-                <div className="bg-white px-3.5 py-1.5 sm:px-4.5 sm:py-2 rounded-lg border border-[#F0D5E6]/80 flex items-center justify-center overflow-hidden shadow-xs transition-all duration-200 group-hover:shadow-md">
+                <div className="lg:bg-white lg:px-3.5 lg:py-1.5 xl:px-4 lg:rounded-lg lg:border lg:border-[#F0D5E6]/80 lg:shadow-xs lg:group-hover:shadow-md flex items-center justify-center transition-all duration-200">
                   <img
-                    src="/images/Firefly.png"
+                    src="/images/SequelIVF Fertility Logo.png"
                     alt="Sequeli IVF – Advanced Fertility Treatment & IVF Centre"
-                    className="h-8 sm:h-9.5 w-auto object-contain transition-transform duration-200 group-hover:scale-102"
+                    className="h-10 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.03]"
                   />
                 </div>
               </Link>
@@ -229,9 +229,9 @@ export default function Header({ onBookClick }) {
         <div className="fixed inset-0 z-50 lg:hidden flex flex-col bg-white">
           <div className="flex items-center justify-between px-6 py-5 border-b border-[#F0D5E6] bg-[#F5F2F8]">
             <img
-              src="/images/Firefly.png"
+              src="/images/SequelIVF Fertility Logo.png"
               alt="Sequeli IVF"
-              className="h-9 w-auto object-contain"
+              className="h-11 w-auto object-contain"
             />
             <button
               onClick={() => setMenuOpen(false)}

@@ -38,12 +38,11 @@ export default function Footer({ onBookClick }) {
 
             {/* Column 1: Brand Info & Support Box */}
             <div className="flex flex-col">
-              {/* Logo Card */}
-              <div className="mb-5 inline-block self-start bg-white rounded-lg p-2.5 shadow-md">
+              <div className="mb-5 self-start bg-white px-3.5 py-2 rounded-lg shadow-md border border-white/20">
                 <img
-                  src="/images/Firefly.png"
+                  src="/images/SequelIVF Fertility Logo.png"
                   alt="Sequel IVF – Taking Generations Ahead"
-                  className="h-9.5 w-auto object-contain"
+                  className="h-12 sm:h-14 w-auto object-contain"
                 />
               </div>
 

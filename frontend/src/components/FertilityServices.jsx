@@ -9,7 +9,7 @@ export default function FertilityServices({ onBookClick }) {
     {
       id: 'ivf',
       slug: 'ivf',
-      image: '/images/services/ivf.jpg',
+      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792589457/afdeaafb-deb6-4d4a-9acf-25978364c918.png',
       title: 'In-Vitro Fertilization (IVF)',
       desc: "At Sequel IVF, we understand that you aren't just looking for a treatment, but a pathway to your family dream. Our advanced IVF programs combine individualized protocols with highest cleanroom embryology standards.",
       icon: (
@@ -93,7 +93,7 @@ export default function FertilityServices({ onBookClick }) {
     {
       id: 'evaluation',
       slug: 'fertility-evaluation',
-      image: '/images/services/fertility-evaluation.jpg',
+      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792589225/83bef9f7-efbf-47e1-b2a1-8e581657afdc.png',
       title: 'Comprehensive Fertility Evaluation',
       desc: 'At Sequel IVF, we look at fertility evaluations not just as a set of diagnostic tests, but as an essential roadmap to understanding your complete reproductive health.',
       icon: (

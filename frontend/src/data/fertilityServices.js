@@ -6,7 +6,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'Seeking clarity, illuminating your path forward.',
     excerpt:
       'A compassionate search for clarity—advanced diagnostics that shine a reassuring light on your unique path to parenthood.',
-    image: '/images/services/fertility-evaluation.jpg',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792589225/83bef9f7-efbf-47e1-b2a1-8e581657afdc.png',
     imageAlt: 'Fertility specialists reviewing diagnostic results with a couple',
     intro: [
       'At Sequel IVF, we look at fertility evaluations not just as a series of diagnostic tests, but as a compassionate search for clarity—a way to shine a reassuring light on your unique path to parenthood.',
@@ -21,7 +21,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'Precision at the cellular level, micro-engineered with love.',
     excerpt:
       'A specialized micro-fertilization technique that selects a single healthy sperm and introduces it directly into a mature egg.',
-    image: '/images/services/icsi.jpg',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792589308/8f5c3c36-d8ee-42bc-a41d-061ab2ad4746.png',
     imageAlt: 'Embryology laboratory microscope used for ICSI fertilization',
     intro: [
       'When the path to conception faces complex challenges, modern science offers a direct, beautifully precise bridge. At Sequel IVF, we know how overwhelming a diagnosis of male factor infertility or unexplained fertilization hurdles can feel. ICSI is our most powerful answer to those challenges—a specialized micro-fertilization technique designed to give love a clear way forward.',
@@ -53,7 +53,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'Embrace hope. Embracing your hope, shielding your future.',
     excerpt:
       'Personalized IVF care with advanced embryology—every step handled with scientific devotion and a safe harbor for your next chapter.',
-    image: '/images/services/ivf.jpg',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792589457/afdeaafb-deb6-4d4a-9acf-25978364c918.png',
     imageAlt: 'Advanced IVF embryology laboratory',
     intro: [
       "The decision to pursue IVF is a profound step—one paved with deep resilience, quiet hope, and a beautiful longing to hold your baby in your arms. At Sequel IVF, we understand that you aren't just looking for a medical procedure; you are looking for a safe harbor to begin your family's next chapter.",

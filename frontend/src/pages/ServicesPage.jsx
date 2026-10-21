@@ -38,40 +38,43 @@ export default function ServicesPage({ onBookClick }) {
 
       <section className="py-10 sm:py-14 lg:py-16 flex-1 bg-gradient-to-b from-[#F5F2F8] via-white to-white">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
             {FERTILITY_SERVICES.map((service, index) => (
               <Link
                 key={service.slug}
                 to={`/services/${service.slug}`}
-                className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-[#E4D4EE] shadow-[0_8px_24px_-12px_rgba(96,48,133,0.18)] hover:border-[#603085] hover:shadow-[0_18px_36px_-16px_rgba(96,48,133,0.35)] hover:-translate-y-1 transition-all duration-300"
+                className="service-card-frame group rounded-[22px] p-[3px] flex hover:-translate-y-1.5 transition-transform duration-300 shadow-[0_10px_28px_-14px_rgba(96,48,133,0.28)] hover:shadow-[0_22px_40px_-16px_rgba(96,48,133,0.42)]"
               >
-                <div className="relative h-44 sm:h-48 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.imageAlt}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading={index < 6 ? 'eager' : 'lazy'}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#241132]/70 via-[#241132]/15 to-transparent" />
-                  <span className="absolute bottom-3 left-3 right-3 text-white font-serif text-lg sm:text-[19px] leading-snug">
-                    {service.shortTitle}
-                  </span>
-                </div>
+                <article className="relative z-10 flex flex-col w-full rounded-[19px] overflow-hidden bg-white">
+                  <div className="relative h-48 sm:h-52 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.imageAlt}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading={index < 6 ? 'eager' : 'lazy'}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#261132] via-[#261132]/25 to-transparent" />
+                    <span className="service-card-shine-el pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+                    <h2 className="absolute bottom-3 left-3 right-3 text-white font-serif text-xl sm:text-[22px] leading-snug drop-shadow-md">
+                      {service.shortTitle}
+                    </h2>
+                  </div>
 
-                <div className="flex flex-col flex-1 p-4.5 sm:p-5">
-                  <p className="text-[#C49F64] text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2">
-                    {service.tagline}
-                  </p>
-                  <p className="text-[#555555] text-[13px] sm:text-sm leading-relaxed flex-1">
-                    {service.excerpt}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-[#603085] text-xs font-bold uppercase tracking-widest group-hover:gap-2.5 transition-all">
-                    Learn more
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </span>
-                </div>
+                  <div className="flex flex-col flex-1 p-5">
+                    <p className="text-[#C49F64] text-[11px] sm:text-xs font-bold uppercase tracking-[0.12em] mb-2">
+                      {service.tagline}
+                    </p>
+                    <p className="text-[#555555] text-[13px] sm:text-sm leading-relaxed flex-1">
+                      {service.excerpt}
+                    </p>
+                    <span className="mt-5 inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-[#F5F2F8] text-[#603085] text-xs font-bold uppercase tracking-widest group-hover:bg-[#603085] group-hover:text-white transition-colors duration-300">
+                      Learn more
+                      <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </span>
+                  </div>
+                </article>
               </Link>
             ))}
           </div>

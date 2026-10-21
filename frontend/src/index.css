@@ -351,12 +351,59 @@ h1, h2, h3, h4, h5, h6 {
   animation: values-marquee 32s linear infinite;
 }
 
+@keyframes service-border-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes service-shine {
+  from { transform: translateX(-120%) skewX(-18deg); }
+  to { transform: translateX(220%) skewX(-18deg); }
+}
+
+.service-card-frame {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.service-card-frame::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 240%;
+  height: 240%;
+  transform: translate(-50%, -50%);
+  background: conic-gradient(
+    from 0deg,
+    #603085 0deg,
+    #C49F64 90deg,
+    #8B5AA8 180deg,
+    #E8D5A3 270deg,
+    #603085 360deg
+  );
+  animation: service-border-spin 3.5s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.service-card-frame:hover::before {
+  animation-duration: 2.2s;
+}
+
+.service-card-frame:hover .service-card-shine-el {
+  animation: service-shine 0.85s ease-out forwards;
+}
+
 /* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
   .float-gentle, .float-slow, .pulse-glow, .wave-drift,
   .spin-slow, .counter-spin, .dot-ping, .hero-wave,
   .stat-ring-rotate, .reveal, .reveal-left, .reveal-right, .reveal-scale,
-  .values-marquee-track {
+  .values-marquee-track,
+  .service-card-frame::before,
+  .service-card-shine {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
