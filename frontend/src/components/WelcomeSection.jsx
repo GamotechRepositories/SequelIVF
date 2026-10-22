@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function WelcomeSection({ onBookClick }) {
   return (
@@ -39,22 +40,28 @@ export default function WelcomeSection({ onBookClick }) {
 
             {/* Paragraph 1 */}
             <p className="text-[#4B5563] text-sm sm:text-[15px] leading-[1.7] mb-4 text-justify sm:text-left">
-              At <strong>Sequel IVF</strong>, we are dedicated to helping individuals and couples achieve their dream of parenthood through advanced fertility treatments and compassionate care. Our experienced team of fertility specialists, embryologists, and healthcare professionals combines medical expertise with the latest reproductive technologies to provide personalized treatment plans tailored to each patient's unique needs. From fertility evaluations to advanced procedures such as IVF, IUI, ICSI, and fertility preservation, we are committed to delivering exceptional care with transparency, empathy, and excellence.
+              Welcome to <strong>Sequel IVF</strong>, a world-class fertility service where we believe that every fertility journey is unique and deserves a dedicated “next chapter”—a sequel filled with hope, precision care, and success.
             </p>
 
             {/* Paragraph 2 */}
             <p className="text-[#4B5563] text-sm sm:text-[15px] leading-[1.7] mb-6 sm:mb-8 text-justify sm:text-left">
-              We believe that every fertility journey is unique, and our patient-centered approach ensures that you receive continuous support at every stage of your treatment. Equipped with state-of-the-art facilities and a commitment to maintaining the highest standards of clinical excellence, Sequel IVF has earned the trust of countless families. Our mission is to provide hope, confidence, and the best possible chance of a successful pregnancy while creating a comfortable and caring environment for every patient who walks through our doors.
+              At Sequel IVF in Pune, we believe that a challenging diagnosis is never the end of your story. It is simply a page turning to a new chapter—and we are here to help you write it. Combining advanced reproductive science with compassionate, tender care, our expert team walks beside you every step of the way to bring the joy of a new beginning into your family.
             </p>
 
-            {/* CTA Button */}
-            <div>
-              <button
-                type="button"
-                onClick={onBookClick}
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap items-center gap-3.5">
+              <Link
+                to="/about-us"
                 className="inline-flex items-center justify-center px-7 py-3 sm:px-8 sm:py-3.5 bg-[#603085] hover:bg-[#4E276D] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-lg transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
               >
                 FIND OUT MORE
+              </Link>
+              <button
+                type="button"
+                onClick={onBookClick}
+                className="inline-flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3.5 bg-white hover:bg-[#F5F2F8] active:scale-95 text-[#241132] border border-[#F0D5E6] font-bold text-xs sm:text-sm tracking-wider uppercase rounded-lg transition-all duration-200 cursor-pointer"
+              >
+                BOOK APPOINTMENT
               </button>
             </div>
           </div>

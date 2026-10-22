@@ -30,174 +30,358 @@ export default function OurTeamPage({ onBookClick }) {
       name: 'Dr. Leena Patankar',
       role: 'Clinical & Managing Director | Fertility Specialist | Endoscopic Surgeon | Clinical Embryologist',
       displayPosition: 'Clinical & Managing Director at Sequel IVF',
+      qualifications: 'M.D. (Obstetrics & Gynaecology), M.Sc. Clinical Embryology, University of Leeds, United Kingdom',
       phone: '+91-9665 279 369',
       phoneHref: 'tel:+919665279369',
       email: 'info@sequelivf.com',
       emailHref: 'mailto:info@sequelivf.com',
-      experience: '24 Years Experience',
+      experience: '25+ Years Experience',
       location: '103, 104, First Floor, Yash Complex, Survey No. 161/7, Bhosale Garden, Hadapsar, Pune, Maharashtra – 411028',
       image: '/images/285b926543910d790975aa5d1826a1c0-removebg-preview.png',
       imageHover: '/images/dr_leena_patankar.jpg',
       category: 'doctor',
       tag: 'Clinical Director',
       bioIntro:
-        'Dr. Leena Patankar is the visionary Clinical & Managing Director of Sequel IVF, a pioneer in clinical embryology, endoscopic surgery, and advanced reproductive medicine. With over two decades of transformative contributions to assisted reproductive technology (ART), she has brought hope, joy, and healthy parenthood to thousands of families across India and internationally.',
+        "With over 25 years of dedicated experience in reproductive medicine, Dr. Leena Patankar is one of India's most respected fertility specialists, combining expertise in clinical infertility, advanced gynaecological endoscopy, and clinical embryology. Since beginning her medical practice in 1998, she has devoted her career to helping couples achieve parenthood through ethical, evidence-based, and personalized fertility treatment. As the Clinical & Managing Director of Sequel IVF, Dr. Patankar leads a multidisciplinary team committed to delivering world-class fertility care with compassion, transparency, and scientific excellence.",
       highlights: [
         {
-          title: 'A Legacy of Excellence in Fertility Care',
-          text: 'Over 24 years of pioneering reproductive leadership, successfully treating complex infertility cases, recurrent implantation failures, and diminished ovarian reserves.'
+          title: 'International Education & Advanced Training',
+          text: 'Dr. Patankar has pursued advanced education and international training to remain at the forefront of reproductive medicine. Her professional milestones include: M.D. in Obstetrics & Gynaecology; Advanced Training in Assisted Reproductive Technology (ART) at the National University Hospital, Singapore (2001); M.Sc. in Clinical Embryology from the University of Leeds, United Kingdom (2006). Her rare combination of expertise as both a fertility specialist and a trained clinical embryologist enables her to bridge the gap between clinical management and laboratory excellence, ensuring the highest standards of patient care.'
         },
         {
           title: 'Expertise in Fertility & Advanced Reproductive Medicine',
-          text: 'Pioneered individualized ovarian stimulation protocols, advanced reproductive endocrinology, and fertility preservation techniques.'
+          text: 'Dr. Patankar has extensive experience in the diagnosis and management of female infertility, male factor infertility, recurrent IVF failure, recurrent pregnancy loss, PCOS and ovulation disorders, endometriosis, low ovarian reserve, advanced maternal age infertility, fertility preservation, and high-risk complex fertility cases. She also specializes in advanced fertility-enhancing laparoscopic and hysteroscopic surgeries, helping many couples conceive naturally or improve their chances of successful IVF treatment.'
         },
         {
           title: 'Pioneer in Clinical Embryology & IVF Laboratory Excellence',
-          text: 'Renowned for establishing state-of-the-art cleanroom IVF laboratories adhering to the highest global standards, ensuring world-class micromanipulation and culture environments.'
+          text: 'Dr. Patankar has made remarkable contributions to the field of clinical embryology. As the Laboratory Director of Patankar Fertility Solutions since 2001 and Co-founder of Genesis ART Services, she has been instrumental in establishing, developing, standardizing, and quality-assuring IVF laboratories across India. Her work extends beyond patient care into laboratory design, workflow optimization, quality management systems, embryology training, and implementation of international laboratory standards. Today, her expertise continues through Sequel IVF, where every laboratory protocol reflects decades of scientific precision and commitment to excellence.'
         },
         {
           title: 'Mentor, Teacher & Helping Hand to the IVF Community',
-          text: 'Actively trains clinical embryologists and reproductive medicine fellows, leading scientific research and publishing widely in leading reproductive journals.'
+          text: "One of Dr. Patankar's greatest contributions has been her commitment to sharing knowledge, firmly believing that advancing reproductive medicine requires empowering future professionals. Over the years she has trained more than 50 Clinical Embryologists; conducted numerous hands-on workshops in IUI, IVF, ICSI, embryo culture, cryopreservation, and laboratory quality systems; mentored fertility specialists and embryologists from across India; and assisted in the planning, establishment, and laboratory setup of over 100 IVF centres nationwide. Many successful embryologists and fertility laboratories across India continue to benefit from her guidance, making her an educator as well as a clinician."
+        },
+        {
+          title: 'Publications, Research & Scientific Contributions',
+          text: "Dr. Leena Patankar is an active contributor to reproductive medicine and women's health research, with several publications in national and international peer-reviewed journals. Her work spans clinical embryology, IVF laboratory quality, assisted reproductive technology (ART), maternal health, and pregnancy outcomes, reflecting her commitment to evidence-based medicine and continuous innovation. Through her ongoing research and academic collaborations, Dr. Patankar ensures that the care delivered at Sequel IVF remains aligned with the latest scientific evidence and global best practices."
+        },
+        {
+          title: 'Research, Academics & Professional Leadership',
+          text: 'Dr. Patankar actively contributes to the advancement of reproductive medicine through research, teaching, and academic collaboration. She is a highly respected faculty member and invited speaker at numerous national and international conferences, where she regularly delivers lectures on Clinical Embryology, IVF Laboratory Quality, Assisted Reproductive Technology, Fertility Preservation, Cryopreservation, Advanced Embryology Techniques, and Endoscopic Fertility Surgery. Her dedication to continuous learning ensures that patients at Sequel IVF benefit from the latest advances in fertility science.'
+        },
+        {
+          title: 'Leadership in Assisted Reproductive Technology',
+          text: 'Recognizing her decades of expertise and contributions to reproductive medicine, Dr. Patankar has been appointed as a Member of the State Board Authority for Assisted Reproductive Technology. This prestigious responsibility reflects the trust placed in her professional judgment and her commitment to promoting ethical, safe, and high-quality ART practices. Her role supports the advancement of standards, governance, and quality within the field of assisted reproduction.'
+        },
+        {
+          title: 'A Team-First Philosophy',
+          text: 'Dr. Patankar strongly believes that successful fertility treatment is never the achievement of one individual—it is the result of a dedicated, collaborative team. At Sequel IVF, she has built a highly experienced clinical, embryology, nursing, counselling, and support team that shares the same commitment to excellence, empathy, and patient-centred care. Every treatment plan is discussed collectively, ensuring that each couple benefits from multidisciplinary expertise and individualized attention throughout their fertility journey. This philosophy of teamwork is one of the defining strengths of Sequel IVF.'
+        },
+        {
+          title: 'Beyond Medicine',
+          text: 'Outside her professional life, Dr. Patankar believes in maintaining a balanced and enriching lifestyle. She is a trained Indian Classical Vocalist, having earned the prestigious Sangeet Visharad qualification, reflecting her lifelong passion for music and the arts. An enthusiastic cyclist, she has a keen interest in endurance cycling and is an active participant in various cycling events, embracing fitness, discipline, and perseverance beyond the field of reproductive medicine. She is also a PADI-certified Advanced Open Water Diver, embracing adventure, exploration, and continuous learning beyond the medical profession.'
         }
       ],
       institutionsTitle: 'To bring this level of care directly to those who need it most, Dr. Patankar serves in trusted leadership roles:',
       institutions: [
         'Sequel IVF – Clinical & Managing Director',
-        'Patankar Fertility Solutions – Chief Fertility Specialist & Director',
-        'National Reproductive Medicine & Embryology Societies – Senior Advisory Faculty'
+        'Patankar Fertility Solutions – Laboratory Director (since 2001)',
+        'Genesis ART Services – Co-founder',
+        'State Board Authority for Assisted Reproductive Technology – Appointed Member'
       ],
       closingQuote:
-        'For Dr. Leena Patankar, leading Sequel IVF is guided by a team-first philosophy, combining compassionate human empathy with rigorous clinical precision to make parenthood accessible and transparent.'
-    },
-    {
-      name: 'Dr. Monika Thavare',
-      role: 'Fertility Consultant & Specialist | MD (OBGY), Fellowship in Reproductive Medicine',
-      displayPosition: 'Fertility Consultant & Specialist at Sequel IVF',
-      phone: '+91 9763 845 143',
-      phoneHref: 'tel:+919763845143',
-      email: 'info@sequelivf.com',
-      emailHref: 'mailto:info@sequelivf.com',
-      experience: '10+ Years Experience',
-      location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
-      imageHover: '/images/dr_monika_thavare.jpg',
-      category: 'doctor',
-      tag: 'Fertility Specialist',
-      bioIntro:
-        'Dr. Monika Thavare is an accomplished Fertility Consultant and Gynecological specialist who has dedicated her career to reproductive medicine and patient-centric fertility solutions. Holding an MD in Obstetrics and Gynecology along with an advanced Fellowship in Reproductive Medicine, she combines scientific rigor with deep personal compassion.',
-      highlights: [
-        {
-          title: 'Specialized Reproductive Medicine Expertise',
-          text: 'Specializes in the evaluation and treatment of both female and male infertility, complex PCOS, endometriosis, and recurrent pregnancy loss.'
-        },
-        {
-          title: 'Tailored Clinical Pathways',
-          text: 'Designs individualized ovarian stimulation protocols and advanced follicle tracking to maximize oocyte quality and treatment success rates.'
-        },
-        {
-          title: 'Patient-First Compassionate Care',
-          text: 'Provides clear, empathetic counseling that guides couples through every medical and emotional dimension of their fertility journey with total transparency.'
-        }
-      ],
-      institutionsTitle: 'To bring this level of care directly to patients, Dr. Monika serves in key roles:',
-      institutions: [
-        'Sequel IVF – Fertility Consultant & Specialist',
-        'Patankar Fertility Solutions – Consultant Gynecologist & Reproductive Specialist'
-      ],
-      closingQuote:
-        'For Dr. Monika Thavare, fertility care is a mission to empower couples with evidence-based medical innovation, sincere warmth, and the highest standard of clinical excellence.'
+        'Today, Dr. Leena Patankar continues her mission through Sequel IVF, Hadapsar, Pune, bringing together more than two decades of experience, internationally trained expertise, state-of-the-art embryology, and compassionate patient care. Her vision is to provide every couple with ethical, transparent, scientifically advanced fertility treatment while offering unwavering emotional support throughout their journey to parenthood.'
     },
     {
       name: 'Dr. Chirag Sharma',
-      role: 'Reproductive Medicine Specialist | M.B.B.S, M.S. OBGY, Fellowship Reproductive Medicine',
-      displayPosition: 'Reproductive Medicine Specialist at Sequel IVF',
+      role: 'IVF Specialist | Fertility Expert',
+      displayPosition: 'IVF Specialist & Fertility Expert at Sequel IVF',
+      qualifications: 'M.B.B.S, M.S. OBGY, Fellowship in Reproductive Medicine',
       phone: '+91 9763 845 143',
       phoneHref: 'tel:+919763845143',
       email: 'info@sequelivf.com',
       emailHref: 'mailto:info@sequelivf.com',
-      experience: '7+ Years Experience',
+      experience: '3 Years of Dedicated Expertise',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: '/images/ee463ed89c8028009bb195f9798676ec-removebg-preview.png',
       imageHover: '/images/dr_chirag_sharma.jpg',
       category: 'doctor',
-      tag: 'Reproductive Medicine',
+      tag: 'IVF Specialist',
       bioIntro:
-        'Dr. Chirag Sharma is a dedicated Reproductive Medicine Specialist with extensive clinical and surgical expertise in assisted conception and minimally invasive gynecological procedures. With credentials spanning MBBS, MS in OBGY, and fellowship training in reproductive endocrinology, he provides modern, evidence-based fertility solutions.',
+        "Dr. Chirag Sharma (M.B.B.S, M.S. OBGY, Fellowship in Reproductive Medicine) is a dedicated specialist in women's health and fertility who has spent the last 3 years bringing advanced medical expertise and compassionate care to families across India. Guided by a profound commitment to clinical excellence and patient well-being, Chirag combines rigorous scientific training with deep empathy, ensuring that every patient feels supported, safe, and valued throughout their reproductive journey. Behind every successful pregnancy is a foundation of advanced clinical precision, and Chirag has built a promising career dedicated to navigating everything from routine wellness to complex fertility solutions.",
       highlights: [
         {
-          title: 'Male and Female Infertility Evaluations',
-          text: 'Specialized training in comprehensive diagnostic workups, semen quality optimization, surgical sperm retrieval (PESA/TESA), and fertility preservation.'
+          title: '3 Years of Dedicated Expertise',
+          text: 'He brings focused, specialized experience in obstetrics, gynecology, and reproductive endocrinology, delivering high standards of care to every single cycle.'
         },
         {
-          title: 'Minimally Invasive Fertility Surgery',
-          text: 'Skilled in diagnostic and therapeutic laparoscopy and hysteroscopy for uterine septum, intrauterine adhesions, tubal blocks, and ovarian pathologies.'
+          title: 'Clinical Excellence in Reproductive Medicine',
+          text: 'With advanced fellowship training, he offers expert diagnostic and therapeutic strategies tailored to complex fertility needs.'
         },
         {
-          title: 'Precision Assisted Conception Protocols',
-          text: 'Expertise in customized stimulation protocols, endometrial receptivity timing, and gentle, ultrasound-guided embryo transfers.'
+          title: 'A Trusted Pillar of Support',
+          text: 'He provides dedicated clinical guidance and patient-centered solutions, helping individuals and couples navigate their path to parenthood with confidence.'
         }
       ],
-      institutionsTitle: 'Dr. Chirag Sharma actively serves in respected reproductive institutions:',
+      institutionsTitle: 'To bring this level of care directly to those who need it most, Chirag serves in trusted clinical roles at several leading fertility institutions:',
       institutions: [
-        'Sequel IVF – Reproductive Medicine Specialist',
-        'Patankar Fertility Solutions – Fertility & Laparoscopy Consultant'
+        'Sequel IVF – IVF Specialist',
+        'Genesis ART Services – Freelance IVF Specialist',
+        'Patankar Fertility Solutions – Consultant Fertility Expert'
       ],
       closingQuote:
-        'Dr. Chirag Sharma believes in treating every patient as family, ensuring compassionate communication, rigorous safety protocols, and optimal outcomes.'
+        'For Dr. Chirag Sharma, reproductive medicine is more than a medical science—it is a deeply meaningful mission to bring joy, hope, and new life to families.'
+    },
+    {
+      name: 'Emb. Sushil Waghmare',
+      role: 'Founder & Lab Director | ESHRE-Certified Senior Clinical Embryologist',
+      displayPosition: 'Founder & Lab Director at Sequel IVF',
+      phone: '+91 9763 845 143',
+      phoneHref: 'tel:+919763845143',
+      email: 'sushil1june@gmail.com',
+      emailHref: 'mailto:sushil1june@gmail.com',
+      experience: '16 Years Experience',
+      location: 'Hadapsar, Pune, Maharashtra – 411028',
+      image: '/images/dr_chirag_sharma.jpg',
+      category: 'embryologist',
+      tag: 'Founder & Lab Director',
+      bioIntro:
+        'Emb. Sushil Waghmare is an ESHRE-certified senior clinical embryologist who has spent the last 16 years turning the dream of parenthood into reality for families across India. Guided by the deeply personal philosophy of "Building Labs, Nurturing Hope, Creating Miracles," Emb. Sushil combines world-class science with profound empathy, ensuring that every family feels supported, safe, and valued throughout their fertility journey. Behind every successful pregnancy is a dedicated laboratory standard, and Sushil has spent his career building safer, highly advanced environments for the earliest stages of life. His clinical dedication is reflected in an extraordinary life’s work.',
+      highlights: [
+        {
+          title: '20,000+ Dreams Nurtured',
+          text: 'He has personally performed and guided over 20,000 IVF cases throughout India, bringing comfort, precision, and dedication to every single cycle.'
+        },
+        {
+          title: '30+ Safe Havens Built',
+          text: 'As an expert in laboratory design, he has set up over 30 state-of-the-art IVF labs from the ground up, ensuring embryos develop in optimal, international-standard environments.'
+        },
+        {
+          title: 'A Trusted Pillar of Support',
+          text: 'He provides vital embryology backup and guidance to 20 IVF centers across India, helping local clinics elevate their care and success rates for patients nationwide.'
+        },
+        {
+          title: 'Global Scientific Benchmark',
+          text: 'With international ESHRE certification, Sushil ensures that patients receive the highest benchmark of global scientific care.'
+        }
+      ],
+      institutionsTitle: 'To bring this level of care directly to those who need it most, Sushil serves in trusted leadership roles at several leading fertility institutions:',
+      institutions: [
+        'Sequel IVF – Founder & Lab Director',
+        'Genesis ART Services – Managing Partner & Embryology Head',
+        'Patankar Fertility Solutions – Chief Embryologist'
+      ],
+      closingQuote:
+        'For Sushil, embryology is more than a medical science—it is a deeply meaningful mission to bring joy, hope, and new life to families.'
     },
     {
       name: 'Emb. Bharat Harpude',
-      role: 'ESHRE Certified Senior Clinical Embryologist | IVF Lab Quality & Culture Specialist',
-      displayPosition: 'ESHRE-Certified Senior Clinical Embryologist',
-      phone: '+91 9763 845 143',
-      phoneHref: 'tel:+919763845143',
-      email: 'info@sequelivf.com',
-      emailHref: 'mailto:info@sequelivf.com',
+      role: 'Founder & Lab Director | ESHRE-Certified Senior Clinical Embryologist',
+      displayPosition: 'Founder & Lab Director at Sequel IVF',
+      phone: '+91 9011 920 589',
+      phoneHref: 'tel:+919011920589',
+      email: 'bharat.harpudeg@gmail.com',
+      emailHref: 'mailto:bharat.harpudeg@gmail.com',
       experience: '16+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: '/images/dr_chirag_sharma.jpg',
       category: 'embryologist',
-      tag: 'Senior Embryologist',
+      tag: 'Founder & Lab Director',
       bioIntro:
-        'Emb. Bharat Harpude is an internationally certified ESHRE (European Society of Human Reproduction and Embryology) Senior Clinical Embryologist. With over 16 years of hands-on mastery in human embryology laboratories, he is recognized for extraordinary precision in micromanipulation, gamete cryopreservation, and cleanroom quality management.',
+        'Emb. Bharat Harpude is an ESHRE-certified senior clinical embryologist with more than 16 years of experience helping families across India pursue their dream of parenthood. Guided by the philosophy "Building Labs. Nurturing Hope. Creating Miracles," he combines advanced reproductive science with empathy, precision, and a strong commitment to patient safety. Emb. Bharat believes that every successful fertility journey begins with a high-quality embryology laboratory. Throughout his career, he has focused on creating advanced, carefully controlled environments in which embryos can develop under optimal conditions. ESHRE certification is an internationally recognized credential demonstrating clinical embryology knowledge and professional standards.',
       highlights: [
         {
-          title: 'Mastery in Micromanipulation & ICSI',
-          text: 'Has performed thousands of delicate Intracytoplasmic Sperm Injections (ICSI), laser-assisted hatching, and blastocyst biopsies with industry-leading fertilization and survival rates.'
+          title: '20,000+ IVF/ICSI Cycles Performed or Guided',
+          text: 'Extensive hands-on experience in micromanipulation, gamete handling, and clinical embryology across thousands of successful cycles.'
         },
         {
-          title: 'IVF Cleanroom & Quality Assurance',
-          text: 'Maintains stringent Quality Control (QC) and continuous environmental monitoring, ensuring pristine incubator gas equilibrium and sterile culture conditions.'
+          title: '50+ IVF Laboratories Established',
+          text: 'Pioneered planning, cleanroom setup, and equipment validation for over 50 state-of-the-art IVF laboratories across India.'
         },
         {
-          title: 'Advanced Cryopreservation Protocols',
-          text: 'Expert in ultra-rapid vitrification and warming of oocytes and blastocysts, maximizing post-thaw survival and implantation success in frozen cycles.'
+          title: '20+ IVF Centers Supported',
+          text: 'Provides ongoing consulting, embryology backup, and technical quality management to over 20 fertility centers nationwide.'
+        },
+        {
+          title: '16+ Years of Expertise in Reproductive Medicine & Embryology',
+          text: 'His work includes hands-on embryology, IVF laboratory planning and setup, quality management, clinical guidance, and ongoing support for fertility centers. He helps clinics strengthen laboratory systems and maintain consistent standards across critical stages of IVF and ICSI treatment.'
         }
       ],
-      institutionsTitle: 'Emb. Bharat Harpude brings his clinical laboratory leadership to premier fertility centers:',
+      institutionsTitle: 'Leadership Roles:',
       institutions: [
-        'Sequel IVF – Senior Clinical Embryologist & IVF Lab Lead',
-        'Patankar Fertility Solutions – Senior Embryology Consultant',
-        'National IVF Laboratory Quality & ART Advisory Panels'
+        'Sequel IVF – Founder and Lab Director',
+        'Genesis ART Services – Managing Partner and Head of Embryology',
+        'Patankar Fertility Solutions – Chief Embryologist'
       ],
       closingQuote:
-        'Emb. Bharat Harpude handles every gamete and embryo with reverence and scientific excellence, knowing that every delicate cell represents a family’s greatest dream.'
+        'For Bharat, embryology is more than a medical discipline. It is a meaningful mission centered on scientific excellence, safe laboratory practice, compassionate care, and the creation of new possibilities for families.'
     },
     {
-      name: 'Emb. Shruti Mohite',
-      role: 'Programs Coordinator & Senior Clinical Embryologist | Assisted Reproductive Technology',
-      displayPosition: 'Programs Coordinator at Sequel IVF',
+      name: 'Emb. Rajwardhan Jagtap',
+      role: 'Coordinator & Senior Embryologist | Postgraduate Senior Embryologist & ART Specialist',
+      displayPosition: 'Coordinator and Senior Embryologist at Sequel IVF',
+      phone: '+91 9011 920 589',
+      phoneHref: 'tel:+919011920589',
+      email: 'info@sequelivf.com',
+      emailHref: 'mailto:info@sequelivf.com',
+      experience: 'Over 6 Years Experience',
+      location: 'Hadapsar, Pune, Maharashtra – 411028',
+      image: '/images/ee463ed89c8028009bb195f9798676ec-removebg-preview.png',
+      category: 'embryologist',
+      tag: 'Coordinator & Senior Embryologist',
+      bioIntro:
+        'Emb. Rajwardhan Jagtap is a Postgraduate Senior Embryologist and Assisted Reproductive Technology (ART) Specialist with over six years of clinical experience in reproductive medicine. He currently serves as the Coordinator and Senior Embryologist at Sequel IVF, where he oversees embryology laboratory operations, ensuring the highest standards of clinical excellence, laboratory precision, quality assurance, and patient care.',
+      highlights: [
+        {
+          title: 'Advanced Training & Key Embryological Procedures',
+          text: 'Having completed advanced training at Patankar Fertility Solutions Pvt. Ltd., Rajwardhan has developed extensive expertise in key embryological procedures, including Intracytoplasmic Sperm Injection (ICSI), embryo and gamete vitrification, thawing techniques, semen processing, and laboratory quality assurance and quality control (QA/QC).'
+        },
+        {
+          title: 'Consistently High Standards & Reproductive Outcomes',
+          text: 'His strong technical proficiency and commitment to best practices contribute to consistently high standards of laboratory performance and reproductive outcomes.'
+        },
+        {
+          title: 'Consultation & Laboratory Optimization',
+          text: 'In addition to his leadership role at Sequel IVF, Rajwardhan serves as a Freelance Embryologist with Genesis ART Services, providing specialized embryology consultation, laboratory setup and optimization, quality management, and operational support to fertility centers.'
+        }
+      ],
+      institutionsTitle: 'Key Leadership & Institutional Roles:',
+      institutions: [
+        'Sequel IVF – Coordinator and Senior Embryologist',
+        'Genesis ART Services – Freelance Embryologist',
+        'Patankar Fertility Solutions Pvt. Ltd. – Advanced Embryology Practice'
+      ],
+      closingQuote:
+        'Passionate about scientific innovation and clinical excellence, he remains dedicated to optimizing fertilization and embryo development outcomes while helping individuals and couples achieve their dream of parenthood through evidence-based assisted reproductive technologies.'
+    },
+    {
+      name: 'Emb. Bhagyashree Uttekar',
+      role: 'Programs Coordinator & Clinical Embryologist',
+      displayPosition: 'Programs Coordinator & Clinical Embryologist at Sequel IVF',
       phone: '+91 9763 845 143',
       phoneHref: 'tel:+919763845143',
       email: 'info@sequelivf.com',
       emailHref: 'mailto:info@sequelivf.com',
-      experience: '3 Years',
+      experience: 'Over 12 Years of Expertise',
+      location: 'Hadapsar, Pune, Maharashtra – 411028',
+      image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
+      category: 'embryologist',
+      tag: 'Programs Coordinator',
+      bioIntro:
+        'Emb. Bhagyashree Uttekar is a highly experienced Clinical Embryologist and reproductive healthcare professional with over 12 years of expertise in assisted reproductive technology (ART) and fertility care. Throughout her career, she has remained committed to clinical excellence, scientific precision, and compassionate patient support, playing an integral role in helping individuals and couples navigate their fertility journey with confidence.',
+      highlights: [
+        {
+          title: 'Over 12 Years of Clinical Expertise',
+          text: 'With extensive experience spanning embryology, laboratory management, and patient program coordination, Bhagyashree combines advanced technical expertise with a patient-centered approach.'
+        },
+        {
+          title: 'Advanced Embryological Procedures & Quality Standards',
+          text: 'Her proficiency includes key embryological procedures, laboratory quality standards, and the coordination of multidisciplinary fertility programs, ensuring seamless clinical workflows and exceptional standards of care.'
+        },
+        {
+          title: 'Patient Pathways & Supportive Experience',
+          text: 'As the Programs Coordinator at Sequel IVF, she oversees patient pathways, facilitating effective communication between clinical teams and patients while ensuring a smooth and supportive treatment experience.'
+        }
+      ],
+      institutionsTitle: 'Key Roles & Institutional Affiliations:',
+      institutions: [
+        'Sequel IVF – Programs Coordinator',
+        'Genesis ART Services – Freelance Embryologist',
+        'Patankar Fertility Solutions – Senior Embryologist'
+      ],
+      closingQuote:
+        'Driven by a passion for reproductive medicine and continuous professional growth, Bhagyashree is dedicated to maintaining the highest standards of embryology practice and contributing to successful fertility outcomes. She believes that every patient deserves compassionate care, scientific excellence, and personalized support throughout their journey toward parenthood.'
+    },
+    {
+      name: 'Emb. Madhu Kale',
+      role: 'Programs Coordinator & Clinical Embryologist',
+      displayPosition: 'Programs Coordinator & Clinical Embryologist at Sequel IVF',
+      phone: '+91 9763 845 143',
+      phoneHref: 'tel:+919763845143',
+      email: 'info@sequelivf.com',
+      emailHref: 'mailto:info@sequelivf.com',
+      experience: 'Over 5 Years of Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: '/images/285b926543910d790975aa5d1826a1c0-removebg-preview.png',
       category: 'embryologist',
       tag: 'Programs Coordinator',
       bioIntro:
-        'Emb. Shruti Mohite is a skilled clinical professional who has spent the last 3 years dedicating her career to reproductive medicine and patient care across India. Guided by a deep commitment to excellence, compassion, and precision, she plays a vital role in ensuring that every patient’s fertility journey is handled with the highest standard of support and scientific expertise. Behind every successful clinical outcome is meticulous coordination and expert laboratory execution, and Shruti has built a promising career spanning multiple facets of assisted reproductive technology.',
+        'Emb. Madhu Kale is a dedicated Clinical Embryologist and reproductive healthcare professional with over 5 years of experience in assisted reproductive technology (ART) and fertility care. Throughout her career, she has remained committed to delivering clinical excellence, scientific precision, and compassionate patient support, helping individuals and couples navigate their fertility journey with confidence and care.',
+      highlights: [
+        {
+          title: 'Over 5 Years of Hands-on Experience',
+          text: 'With hands-on experience in embryology, laboratory operations, and patient program coordination, Madhu combines strong technical expertise with a patient-centered approach.'
+        },
+        {
+          title: 'Essential Embryological Procedures & Quality Management',
+          text: 'She is skilled in essential embryological procedures, laboratory quality management, and the coordination of fertility programs, ensuring efficient clinical workflows and maintaining the highest standards of embryological care.'
+        },
+        {
+          title: 'Patient Care Pathways & Multidisciplinary Communication',
+          text: 'As the Programs Coordinator at Sequel IVF, Madhu oversees patient care pathways, facilitating seamless communication between patients and clinical teams while ensuring a supportive and well-coordinated treatment experience.'
+        }
+      ],
+      institutionsTitle: 'Key Roles & Institutional Affiliations:',
+      institutions: [
+        'Sequel IVF – Programs Coordinator',
+        'Genesis ART Services – Freelance Embryologist',
+        'Patankar Fertility Solutions – Senior Embryologist'
+      ],
+      closingQuote:
+        'Passionate about reproductive medicine and continuous professional development, Madhu is dedicated to advancing embryology standards and contributing to successful fertility outcomes. She believes that every patient deserves compassionate care, scientific excellence, and personalized support throughout their journey toward parenthood.'
+    },
+    {
+      name: 'Emb. Sanjana Chorage',
+      role: 'Programs Coordinator & Clinical Embryologist',
+      displayPosition: 'Programs Coordinator & Clinical Embryologist at Sequel IVF',
+      phone: '+91 9763 845 143',
+      phoneHref: 'tel:+919763845143',
+      email: 'info@sequelivf.com',
+      emailHref: 'mailto:info@sequelivf.com',
+      experience: 'Over 3 Years of Experience',
+      location: 'Hadapsar, Pune, Maharashtra – 411028',
+      image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
+      category: 'embryologist',
+      tag: 'Programs Coordinator',
+      bioIntro:
+        'Emb. Sanjana Chorage is a dedicated Clinical Embryologist and reproductive healthcare professional with over 3 years of experience in assisted reproductive technology (ART) and fertility care. She is committed to delivering clinical excellence, scientific precision, and compassionate patient support, helping individuals and couples navigate their fertility journey with confidence and care.',
+      highlights: [
+        {
+          title: 'Over 3 Years of Hands-on Experience',
+          text: 'With hands-on experience in embryology, laboratory operations, and patient program coordination, Sanjana combines technical expertise with a patient-focused approach.'
+        },
+        {
+          title: 'Embryological Procedures & Quality-Driven Practice',
+          text: 'She is skilled in essential embryological procedures, laboratory quality management, and the coordination of fertility programs, contributing to efficient clinical workflows and maintaining high standards of embryological care.'
+        },
+        {
+          title: 'Seamless Patient Care Pathways',
+          text: 'As the Programs Coordinator at Sequel IVF, Sanjana supports seamless patient care pathways by facilitating effective communication between patients and multidisciplinary clinical teams, ensuring a smooth and supportive treatment experience.'
+        }
+      ],
+      institutionsTitle: 'Key Roles & Institutional Affiliations:',
+      institutions: [
+        'Sequel IVF – Programs Coordinator',
+        'Genesis ART Services – Freelance Embryologist',
+        'Patankar Fertility Solutions – Embryologist'
+      ],
+      closingQuote:
+        'Passionate about reproductive medicine and committed to continuous professional development, Sanjana strives to uphold the highest standards of embryology while contributing to successful fertility outcomes. She believes that every patient deserves compassionate care, scientific excellence, and personalized support throughout their journey toward parenthood.'
+    },
+    {
+      name: 'Emb. Shruti Mohite',
+      role: 'Programs Coordinator & Clinical Embryologist',
+      displayPosition: 'Programs Coordinator at Sequel IVF',
+      phone: '+91 9763 845 143',
+      phoneHref: 'tel:+919763845143',
+      email: 'info@sequelivf.com',
+      emailHref: 'mailto:info@sequelivf.com',
+      experience: '3 Years of Dedicated Expertise',
+      location: 'Hadapsar, Pune, Maharashtra – 411028',
+      image: '/images/285b926543910d790975aa5d1826a1c0-removebg-preview.png',
+      category: 'embryologist',
+      tag: 'Programs Coordinator',
+      bioIntro:
+        "Emb. Shruti Mohite is a skilled clinical professional who has spent the last 3 years dedicating her career to reproductive medicine and patient care across India. Guided by a deep commitment to excellence, compassion, and precision, she plays a vital role in ensuring that every patient's fertility journey is handled with the highest standard of support and scientific expertise. Behind every successful clinical outcome is meticulous coordination and expert laboratory execution, and Shruti has built a promising career spanning multiple facets of assisted reproductive technology.",
       highlights: [
         {
           title: '3 Years of Dedicated Expertise',
@@ -222,226 +406,41 @@ export default function OurTeamPage({ onBookClick }) {
         'For Emb. Shruti Mohite, reproductive medicine is more than a profession—it is a meaningful dedication to supporting families, empowering clinical success, and bringing new life into the world.'
     },
     {
-      name: 'Mr. Rajwardhan Jagtap',
-      role: 'Clinical Coordinator & Senior Embryologist | Patient Guidance & Lab Management',
-      displayPosition: 'Coordinator and Senior Embryologist at Sequel IVF',
-      phone: '+91 9763 845 143',
-      phoneHref: 'tel:+919763845143',
-      email: 'info@sequelivf.com',
-      emailHref: 'mailto:info@sequelivf.com',
-      experience: '7+ Years Experience',
-      location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/ee463ed89c8028009bb195f9798676ec-removebg-preview.png',
-      category: 'coordinator',
-      tag: 'Clinical Coordinator',
-      bioIntro:
-        'Mr. Rajwardhan Jagtap serves as a Coordinator and Senior Embryologist at Sequel IVF, bringing specialized proficiency in both embryology laboratory operations and streamlined patient care management. His dual expertise ensures flawless synchronization between clinical consultations, diagnostic schedules, and embryology interventions.',
-      highlights: [
-        {
-          title: 'Embryology Laboratory Management',
-          text: 'Skilled in gamete handling, in vitro fertilization (IVF), ICSI, embryo assessment, and maintaining stringent laboratory sterility and incubator environments.'
-        },
-        {
-          title: 'Patient Pathways & Operational Coordination',
-          text: 'Works closely with clinical consultants and couples to coordinate treatment timelines, ensuring patients understand each phase of their ART cycle with clarity and peace of mind.'
-        },
-        {
-          title: 'Andrology Diagnostics & Advanced Workups',
-          text: 'Experienced in complex semen analyses, sperm processing, cryopreservation, and specialized preparation for assisted conception.'
-        }
-      ],
-      institutionsTitle: 'Mr. Rajwardhan Jagtap contributes to leading fertility organizations:',
-      institutions: [
-        'Sequel IVF – Coordinator and Senior Embryologist',
-        'Patankar Fertility Solutions – Senior Embryologist & Coordinator'
-      ],
-      closingQuote:
-        'Dedicated to maintaining smooth, dependable laboratory operations and providing comforting coordination for every couple seeking fertility care.'
-    },
-    {
-      name: 'Emb. Bhagyashree Uttekar',
-      role: 'Clinical Embryologist | Advanced ICSI, Vitrification & Embryo Micromanipulation',
-      displayPosition: 'Programs Coordinator & Clinical Embryologist',
-      phone: '+91 9763 845 143',
-      phoneHref: 'tel:+919763845143',
-      email: 'info@sequelivf.com',
-      emailHref: 'mailto:info@sequelivf.com',
-      experience: '6+ Years Experience',
-      location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
-      category: 'embryologist',
-      tag: 'Clinical Embryologist',
-      bioIntro:
-        'Emb. Bhagyashree Uttekar is a devoted Clinical Embryologist and Programs Coordinator at Sequel IVF, specializing in micromanipulation, gamete vitrification, and reproductive laboratory quality maintenance. Her meticulous attention to detail has contributed to consistently high fertilization and blastocyst formation rates.',
-      highlights: [
-        {
-          title: 'Advanced ICSI & Vitrification',
-          text: 'Specializes in Intracytoplasmic Sperm Injection (ICSI), delicate oocyte denudation, and rapid vitrification and warming of high-grade embryos.'
-        },
-        {
-          title: 'Embryo Morphological Grading',
-          text: 'Adept at rigorous time-lapse and morphological grading systems, selecting the most viable embryos to enhance successful implantation.'
-        },
-        {
-          title: 'Program Coordination & Quality Assurance',
-          text: 'Active in patient cycle coordination, ensuring smooth transitions between clinical steps and adherence to standard operating procedures (SOPs).'
-        }
-      ],
-      institutionsTitle: 'Emb. Bhagyashree Uttekar serves with distinction at:',
-      institutions: [
-        'Sequel IVF – Programs Coordinator & Clinical Embryologist',
-        'Patankar Fertility Solutions – Clinical Embryologist'
-      ],
-      closingQuote:
-        'Emb. Bhagyashree brings passion, meticulous scientific skill, and compassionate care to help aspiring parents build healthy families.'
-    },
-    {
       name: 'Emb. Maithili Kadam',
-      role: 'Clinical Embryologist | Gamete Culture, Blastocyst Culture & Embryo Assessment',
-      displayPosition: 'Programs Coordinator & Clinical Embryologist',
-      phone: '+91 9763 845 143',
-      phoneHref: 'tel:+919763845143',
-      email: 'info@sequelivf.com',
-      emailHref: 'mailto:info@sequelivf.com',
-      experience: '5+ Years Experience',
-      location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/dr_monika_thavare.jpg',
-      category: 'embryologist',
-      tag: 'Clinical Embryologist',
-      bioIntro:
-        'Emb. Maithili Kadam is an enthusiastic Clinical Embryologist and Programs Coordinator at Sequel IVF, bringing comprehensive skills in gamete processing, in vitro culture protocols, and reproductive lab maintenance.',
-      highlights: [
-        {
-          title: 'Oocyte Retrieval & Gamete Care',
-          text: 'Skilled in prompt oocyte identification, follicular fluid scanning, and delicate gamete preparation during ovum pick-up procedures.'
-        },
-        {
-          title: 'Blastocyst Culture Excellence',
-          text: 'Dedicated to creating microenvironments that mimic natural physiology, ensuring optimal blastocyst development and high embryo vitality.'
-        },
-        {
-          title: 'Cryobanking & Sample Integrity',
-          text: 'Manages liquid nitrogen storage tanks, embryo and sperm inventory tracking, and stringent cryopreservation security protocols.'
-        }
-      ],
-      institutionsTitle: 'Emb. Maithili Kadam serves in trusted roles at:',
-      institutions: [
-        'Sequel IVF – Programs Coordinator & Clinical Embryologist',
-        'Patankar Fertility Solutions – Clinical Embryologist'
-      ],
-      closingQuote:
-        'Maithili is committed to scientific accuracy and the gentlest handling of gametes, supporting patient dreams with devotion and precision.'
-    },
-    {
-      name: 'Emb. Madhu Kale',
-      role: 'Clinical Embryologist & IVF Programs Team | Embryo Culture & Cryopreservation',
+      role: 'Programs Coordinator & Clinical Embryologist',
       displayPosition: 'Programs Coordinator at Sequel IVF',
       phone: '+91 9763 845 143',
       phoneHref: 'tel:+919763845143',
       email: 'info@sequelivf.com',
       emailHref: 'mailto:info@sequelivf.com',
-      experience: '5+ Years Experience',
-      location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/285b926543910d790975aa5d1826a1c0-removebg-preview.png',
-      category: 'embryologist',
-      tag: 'Clinical Embryologist',
-      bioIntro:
-        'Emb. Madhu Kale is a valued Clinical Embryologist and Programs Coordinator at Sequel IVF, specializing in andrology diagnostics, sperm preparation techniques, and IVF laboratory coordination.',
-      highlights: [
-        {
-          title: 'Andrology Diagnostics & Sperm Preparation',
-          text: 'Proficient in advanced semen analysis, sperm DNA fragmentation testing, and customized density gradient and swim-up preparation methods.'
-        },
-        {
-          title: 'Embryo Culture Support',
-          text: 'Experienced in preparing culture dishes, incubator calibration, monitoring pH/temperature equilibrium, and supporting complex ART procedures.'
-        },
-        {
-          title: 'Patient Orientation & Care Coordination',
-          text: 'Guides patients through laboratory procedures and timeline expectations, helping alleviate anxiety with warmth and clarity.'
-        }
-      ],
-      institutionsTitle: 'Emb. Madhu Kale contributes her clinical skills at:',
-      institutions: [
-        'Sequel IVF – Programs Coordinator & Clinical Embryologist',
-        'Patankar Fertility Solutions – Embryology Team Member'
-      ],
-      closingQuote:
-        'Passionate about providing every patient with compassionate care, technical excellence, and the highest standard of reproductive laboratory practice.'
-    },
-    {
-      name: 'Emb. Sanjana Chorage',
-      role: 'Programs Coordinator & Clinical Embryologist | Patient Fertility Support & Protocols',
-      displayPosition: 'Programs Coordinator at Sequel IVF',
-      phone: '+91 9763 845 143',
-      phoneHref: 'tel:+919763845143',
-      email: 'info@sequelivf.com',
-      emailHref: 'mailto:info@sequelivf.com',
-      experience: '4+ Years Experience',
+      experience: '1 Year of Dedicated Expertise',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
-      category: 'coordinator',
+      category: 'embryologist',
       tag: 'Programs Coordinator',
       bioIntro:
-        'Emb. Sanjana Chorage serves as a Programs Coordinator and Clinical Embryologist at Sequel IVF, bridging clinical coordination, laboratory workflows, and patient support.',
+        'Emb. Maithili Kadam is a dedicated clinical embryologist who has spent the last year contributing her expertise to reproductive medicine and patient care. Guided by a strong commitment to excellence, compassion, and precision, she plays an important role in ensuring that patients receive high standards of support throughout their fertility journey. Behind successful clinical outcomes is careful coordination and dedicated laboratory execution, and Maithili has started a promising career in assisted reproductive technology.',
       highlights: [
         {
-          title: 'Patient Pathway Coordination',
-          text: 'Coordinates IVF treatment cycles, monitoring test schedules, scheduling laboratory procedures, and ensuring timely communication across medical teams.'
+          title: '1 Year of Dedicated Expertise',
+          text: 'She brings focused, hands-on experience in the specialized field of fertility care, combining administrative coordination with clinical embryology.'
         },
         {
-          title: 'Embryology Laboratory Assistance',
-          text: 'Experienced in sterile laboratory maintenance, gamete handling, culture media preparation, and routine embryology protocols.'
+          title: 'Coordinating Care and Hope',
+          text: 'As a programs coordinator, she ensures smooth patient pathways, bridging clinical requirements with compassionate guidance for families navigating their treatment.'
         },
         {
-          title: 'Records & Compliance',
-          text: 'Maintains comprehensive clinical ART documentation in compliance with national assisted reproductive regulations and quality benchmarks.'
+          title: 'Embryology Expertise',
+          text: 'Bringing technical precision to the laboratory, she contributes specialized embryological skills to support optimal environments for embryo development.'
         }
       ],
-      institutionsTitle: 'Emb. Sanjana Chorage serves in dedicated roles at:',
+      institutionsTitle: 'To bring this level of care directly to those who need it most, Maithili serves in trusted roles at leading fertility institutions:',
       institutions: [
-        'Sequel IVF – Programs Coordinator & Clinical Embryologist',
-        'Patankar Fertility Solutions – Clinical Embryology Coordinator'
+        'Sequel IVF – Programs Coordinator',
+        'Genesis ART Services – Freelance Embryologist'
       ],
       closingQuote:
-        'Emb. Sanjana is devoted to creating a warm, dependable environment where patients feel fully supported and confident throughout their treatment journey.'
-    },
-    {
-      name: 'Emb. Sushil Waghmare',
-      role: 'Clinical Embryologist | Andrology & Reproductive Laboratory Specialist',
-      displayPosition: 'Founder & Lab Director | Andrology & Reproductive Specialist',
-      phone: '+91 9763 845 143',
-      phoneHref: 'tel:+919763845143',
-      email: 'info@sequelivf.com',
-      emailHref: 'mailto:info@sequelivf.com',
-      experience: '9+ Years Experience',
-      location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/ee463ed89c8028009bb195f9798676ec-removebg-preview.png',
-      category: 'embryologist',
-      tag: 'Clinical Embryologist',
-      bioIntro:
-        'Emb. Sushil Waghmare is an accomplished Clinical Embryologist and Andrology Laboratory Specialist with nearly a decade of experience spearheading reproductive laboratory setups, advanced andrology diagnostics, and quality systems.',
-      highlights: [
-        {
-          title: 'Advanced Andrology & Sperm Functional Testing',
-          text: 'A recognized expert in comprehensive semen diagnostics, sperm morphology assessments, cryobanking, and specialized preparation for complex male factor infertility.'
-        },
-        {
-          title: 'Laboratory Operations & Cleanroom Protocols',
-          text: 'Extensive experience in designing and auditing ISO cleanroom standards, air handling units (AHU), and VOC-free embryology laboratory environments.'
-        },
-        {
-          title: 'Comprehensive ART Skills',
-          text: 'Skilled in gamete culture, micromanipulation, vitrification protocols, and laboratory risk mitigation.'
-        }
-      ],
-      institutionsTitle: 'Emb. Sushil Waghmare contributes his expertise across premier centers:',
-      institutions: [
-        'Sequel IVF – Andrology & Reproductive Laboratory Specialist',
-        'Genesis ART Services / Patankar Fertility Solutions – Embryologist & Lab Consultant'
-      ],
-      closingQuote:
-        'Dedicated to setting the highest benchmarks in laboratory quality and reproductive science, ensuring every embryo has the best possible potential.'
+        'For Emb. Maithili Kadam, reproductive medicine is an inspiring beginning to a meaningful mission of supporting families and bringing new life into the world.'
     }
   ]
 
@@ -736,6 +735,13 @@ export default function OurTeamPage({ onBookClick }) {
                       <span className="font-semibold text-[#241132]">Position:</span>{' '}
                       <span className="text-[#555555]">{selectedMember.displayPosition || selectedMember.role}</span>
                     </div>
+
+                    {selectedMember.qualifications && (
+                      <div>
+                        <span className="font-semibold text-[#241132]">Qualifications:</span>{' '}
+                        <span className="text-[#555555]">{selectedMember.qualifications}</span>
+                      </div>
+                    )}
 
                     <div>
                       <span className="font-semibold text-[#241132]">Experience:</span>{' '}

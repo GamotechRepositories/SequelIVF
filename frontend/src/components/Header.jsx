@@ -75,13 +75,6 @@ export default function Header({ onBookClick }) {
                               About Us
                             </Link>
                             <Link
-                              to="/our-team"
-                              onClick={() => setActiveDropdown(null)}
-                              className="block px-3.5 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#F5F2F8] hover:text-[#603085] transition-colors"
-                            >
-                              Our Team
-                            </Link>
-                            <Link
                               to="/gallery"
                               onClick={() => setActiveDropdown(null)}
                               className="block px-3.5 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#F5F2F8] hover:text-[#603085] transition-colors"
@@ -137,7 +130,7 @@ export default function Header({ onBookClick }) {
                     <span className="w-1.5 h-1.5 rounded-full bg-[#603085] shrink-0" />
 
                     <Link to="/our-team" className="hover:text-[#603085] transition-colors whitespace-nowrap">
-                      OUR DOCTORS
+                      OUR TEAM
                     </Link>
 
                     <span className="w-1.5 h-1.5 rounded-full bg-[#603085] shrink-0" />
@@ -265,13 +258,6 @@ export default function Header({ onBookClick }) {
                     About Us
                   </Link>
                   <Link
-                    to="/our-team"
-                    onClick={() => { setMenuOpen(false); setMobileAboutOpen(false); }}
-                    className="block py-2 px-3 rounded-lg text-xs font-semibold text-[#3C2048] hover:bg-white hover:text-[#603085]"
-                  >
-                    Our Team
-                  </Link>
-                  <Link
                     to="/gallery"
                     onClick={() => { setMenuOpen(false); setMobileAboutOpen(false); }}
                     className="block py-2 px-3 rounded-lg text-xs font-semibold text-[#3C2048] hover:bg-white hover:text-[#603085]"
@@ -315,7 +301,7 @@ export default function Header({ onBookClick }) {
                 </div>
               )}
             </div>
-            <Link to="/our-team" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#603085]">OUR DOCTORS</Link>
+            <Link to="/our-team" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#603085]">OUR TEAM</Link>
             <Link to="/#faq" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#603085]">ABOUT INFERTILITY</Link>
             <Link to="/#contact" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#603085]">CONTACT US</Link>
             <button

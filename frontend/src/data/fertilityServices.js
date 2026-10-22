@@ -53,7 +53,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'Embrace hope. Embracing your hope, shielding your future.',
     excerpt:
       'Personalized IVF care with advanced embryology—every step handled with scientific devotion and a safe harbor for your next chapter.',
-    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792589457/afdeaafb-deb6-4d4a-9acf-25978364c918.png',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655017/024cc721-d945-4dd0-bd03-0df90c20a63e.png',
     imageAlt: 'Advanced IVF embryology laboratory',
     intro: [
       "The decision to pursue IVF is a profound step—one paved with deep resilience, quiet hope, and a beautiful longing to hold your baby in your arms. At Sequel IVF, we understand that you aren't just looking for a medical procedure; you are looking for a safe harbor to begin your family's next chapter.",
@@ -88,7 +88,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'Restoring harmony, clearing the way for life to bloom.',
     excerpt:
       'Minimally invasive laparoscopy and hysteroscopy to treat fibroids, polyps, cysts, and blocked tubes—gently preparing the body for conception.',
-    image: '/images/services/fertility-surgery.jpg',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792654234/e876ba22-7f6a-41e5-834d-d84f97c4d7ed.png',
     imageAlt: 'Minimally invasive fertility surgery in a modern operating theatre',
     intro: [
       'Sometimes, the body simply needs a gentle structural correction to open the doors to conception. When physical barriers or anatomical challenges stand in the way of your dream, fertility enhancing surgeries offer a transformative path forward. At Sequel IVF, we look at these specialized procedures not merely as medical interventions, but as a restorative process—carefully preparing your body to become a warm, welcoming home for your future child.',
@@ -144,7 +144,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'Protecting your lineage, anchoring your hope in certainty.',
     excerpt:
       'Gentle embryo screening at the cellular level to select the strongest embryo and reduce the risk of genetic conditions.',
-    image: '/images/services/pgt.jpg',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655478/7cad0e96-55ef-4208-a692-3fcf2d36b0cd.png',
     imageAlt: 'Genetic testing and DNA analysis in a fertility laboratory',
     intro: [
       'When you have experienced the quiet heartbreak of recurring miscarriages or unexplained IVF hurdles, taking the next step requires an immense amount of courage. We understand that you are not just looking for a pregnancy; you are looking for the reassurance that your future baby will be healthy, strong, and safe. PGT is our way of giving you that profound peace of mind, adding an extra layer of scientific protection before your embryo ever returns home to you.',
@@ -176,7 +176,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'Time stands still, safeguarding your dreams for tomorrow.',
     excerpt:
       'Egg, sperm, and embryo freezing with rapid vitrification—pressing pause on time until you are ready for the next step.',
-    image: '/images/services/cryopreservation.jpg',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655778/45cdf191-e190-413a-98e4-654c44ad5136.png',
     imageAlt: 'Cryopreservation vials stored in a fertility laboratory',
     intro: [
       'Life doesn’t always move in a straight line, and neither does the journey to parenthood. Whether you are pausing to protect your fertility before undergoing medical treatments, balancing a demanding timeline, or preserving beautifully healthy embryos from a current IVF cycle for the future, cryopreservation is our way of pressing a gentle "pause" button on time.',
@@ -242,7 +242,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'A gentle, natural step closer to your miracle.',
     excerpt:
       'A simple, minimally invasive treatment that places prepared sperm directly into the uterus at the moment of ovulation.',
-    image: '/images/services/iui.jpg',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655834/59f41f88-18e4-4f88-98e0-7742870cc730.png',
     imageAlt: 'Couple receiving fertility care during an IUI treatment journey',
     intro: [
       "Sometimes, all nature needs is a little assistance and a beautifully clear path. If you are at the beginning stages of your fertility journey, IUI offers a gentle, less invasive treatment pathway that stays close to the body's natural processes. At Sequel IVF, we approach this step with the same profound care and technical excellence that defines our entire clinic, keeping your comfort and hope at the center of everything we do.",
@@ -274,7 +274,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'Understanding the foundation, empowering the journey together.',
     excerpt:
       'Expert semen analysis, DNA fragmentation testing, and advanced surgical sperm retrieval with dignity, privacy, and scientific excellence.',
-    image: '/images/services/andrology.jpg',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792656176/2fb64835-3b24-460f-9bdb-0541ca7dfced.png',
     imageAlt: 'Andrology laboratory evaluation of male fertility',
     intro: [
       'Fertility is a beautiful partnership, and building a family relies equally on both partners. When seeking answers, a semen analysis is one of the most vital, foundational steps a couple can take. At Sequel IVF, we ensure this essential test is handled with the utmost dignity, privacy, and scientific excellence, removing any anxiety and replacing it with clear, actionable insights.',
@@ -333,7 +333,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'A safe space for your heart, walking beside you at every step.',
     excerpt:
       'Gentle, non-judgmental counseling that treats emotional care as an essential part of fertility treatment—not a secondary extra.',
-    image: '/images/services/counseling.jpg',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792656342/93c654cd-8f74-4000-954d-5557ad3b11b9.png',
     imageAlt: 'Compassionate fertility counseling session',
     intro: [
       'We know that the journey to parenthood is measured in much more than medical milestones and laboratory results; it is measured in the quiet moments of hope, the weight of waiting, and the profound resilience of your heart. At Sequel IVF, we believe that emotional care is not secondary to scientific treatment—it is an essential part of it. Our counseling services are designed to be a gentle, non-judgmental sanctuary where you and your partner can pause, breathe, and find your footing.',
@@ -348,7 +348,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'A precise opening, so your embryo can find its way home.',
     excerpt:
       'A precision laser creates a tiny opening in the embryo’s outer shell to help it hatch more easily before implantation.',
-    image: '/images/services/lah.jpg',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792656415/69385e12-7dd1-4052-badd-90f280e7924f.png',
     imageAlt: 'Precision laser technology in an embryology laboratory',
     intro: [
       'Some embryos need a little extra help to break through their outer shell before they can implant. Laser-Assisted Hatching is a refined laboratory technique that supports that moment with microscopic precision, used only when your fertility specialist believes it can meaningfully support implantation.',
@@ -376,7 +376,7 @@ export const FERTILITY_SERVICES = [
     tagline: 'Finding the perfect window, preparing a welcoming home.',
     excerpt:
       'A specialized genetic test that pinpoints your unique window of implantation so embryo transfer is timed with scientific precision.',
-    image: '/images/services/era.jpg',
+    image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792656508/cc08fc70-37db-4c8f-b33d-5e86d2abcfd8.png',
     imageAlt: 'Specialist performing an endometrial evaluation',
     intro: [
       'A successful pregnancy requires a beautifully synchronized dialogue between a healthy embryo and a receptive uterine lining. For most women, the optimal time for an embryo to attach occurs during a specific timeframe known as the "window of implantation." However, for some women—especially those who have experienced unexplained IVF hurdles—this window may be uniquely shifted, arriving slightly earlier or later than expected.',

@@ -116,92 +116,94 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Right form */}
-            <div className="reveal-right glass-card rounded-3xl p-8 shadow-2xl">
+            {/* Right form - Seamless on Mobile & Desktop, matching white text styling */}
+            <div className="reveal-right bg-transparent rounded-none lg:rounded-3xl p-0 sm:p-2 lg:p-4 border-none shadow-none">
               {submitted ? (
-                <div className="text-center py-10">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 pulse-glow"
-                    style={{ background: 'linear-gradient(135deg, #5B0EA6, #C2185B)' }}>
+                <div className="text-center py-10 rounded-2xl bg-white/10 backdrop-blur-sm p-6 lg:p-8">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-gradient-to-r from-[#C49F64] to-[#603085] text-white shadow-lg">
                     <svg viewBox="0 0 24 24" className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <path d="M5 12l5 5L19 7" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <h3 className="font-heading font-700 text-2xl text-gray-900 mb-2">Thank You!</h3>
-                  <p className="text-gray-600">We'll contact you within 24 hours to confirm your consultation.</p>
+                  <h3 className="font-heading font-extrabold text-2xl text-white mb-2">Thank You!</h3>
+                  <p className="text-white/80 text-sm">We'll contact you within 24 hours to confirm your consultation.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div>
-                    <h3 className="font-heading font-800 text-2xl text-gray-900 mb-1">Book Your Consultation</h3>
-                    <p className="text-gray-500 text-sm">Free · No obligation · Confidential</p>
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                  <div className="pt-6 lg:pt-0 border-t border-white/15 lg:border-t-0">
+                    <h3 className="font-heading font-extrabold text-2xl text-white mb-1">Book Your Consultation</h3>
+                    <p className="text-white/75 text-sm">Free · No obligation · Confidential</p>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-gray-700 mb-1.5 uppercase tracking-wider" htmlFor="name">Full Name *</label>
+                      <label className="block text-xs font-semibold text-white/90 mb-1.5 uppercase tracking-wider" htmlFor="name">Full Name *</label>
                       <input
                         id="name" name="name" type="text" required
                         value={form.name} onChange={handleChange}
                         placeholder="Your full name"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all placeholder-gray-400"
+                        className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C49F64] focus:border-transparent transition-all placeholder-gray-400 shadow-xs"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-gray-700 mb-1.5 uppercase tracking-wider" htmlFor="phone">Phone *</label>
+                      <label className="block text-xs font-semibold text-white/90 mb-1.5 uppercase tracking-wider" htmlFor="phone">Phone *</label>
                       <input
                         id="phone" name="phone" type="tel" required
                         value={form.phone} onChange={handleChange}
                         placeholder="+91 XXXXX XXXXX"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all placeholder-gray-400"
+                        className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C49F64] focus:border-transparent transition-all placeholder-gray-400 shadow-xs"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-gray-700 mb-1.5 uppercase tracking-wider" htmlFor="email">Email</label>
+                    <label className="block text-xs font-semibold text-white/90 mb-1.5 uppercase tracking-wider" htmlFor="email">Email</label>
                     <input
                       id="email" name="email" type="email"
                       value={form.email} onChange={handleChange}
                       placeholder="you@email.com"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all placeholder-gray-400"
+                      className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C49F64] focus:border-transparent transition-all placeholder-gray-400 shadow-xs"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-gray-700 mb-1.5 uppercase tracking-wider" htmlFor="treatment">Treatment of Interest</label>
+                    <label className="block text-xs font-semibold text-white/90 mb-1.5 uppercase tracking-wider" htmlFor="treatment">Treatment of Interest</label>
                     <select
                       id="treatment" name="treatment"
                       value={form.treatment} onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C49F64] focus:border-transparent transition-all shadow-xs cursor-pointer"
                     >
                       <option value="">Select treatment…</option>
-                      <option>IVF</option>
-                      <option>IUI</option>
+                      <option>In-Vitro Fertilization (IVF)</option>
+                      <option>Intrauterine Insemination (IUI)</option>
                       <option>ICSI</option>
-                      <option>Egg Freezing</option>
-                      <option>Donor Egg / Sperm</option>
-                      <option>Not sure — need advice</option>
+                      <option>Egg / Sperm Freezing</option>
+                      <option>Comprehensive Fertility Evaluation</option>
+                      <option>Not sure — need expert advice</option>
                     </select>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-gray-700 mb-1.5 uppercase tracking-wider" htmlFor="message">Brief Message</label>
+                    <label className="block text-xs font-semibold text-white/90 mb-1.5 uppercase tracking-wider" htmlFor="message">Brief Message</label>
                     <textarea
                       id="message" name="message" rows={3}
                       value={form.message} onChange={handleChange}
                       placeholder="Tell us a little about your situation (optional)"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none placeholder-gray-400"
+                      className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C49F64] focus:border-transparent transition-all resize-none placeholder-gray-400 shadow-xs"
                     />
                   </div>
 
-                  <button type="submit" className="btn-primary w-full justify-center text-base py-4">
-                    Request Free Consultation
+                  <button
+                    type="submit"
+                    className="w-full py-4 px-6 rounded-xl font-bold text-white bg-gradient-to-r from-[#C49F64] via-[#603085] to-[#B38E55] hover:brightness-110 active:scale-95 shadow-lg text-sm sm:text-base flex items-center justify-center gap-2 transition-all cursor-pointer"
+                  >
+                    <span>Request Free Consultation</span>
                     <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </button>
 
-                  <p className="text-center text-xs text-gray-400">
+                  <p className="text-center text-xs text-white/60">
                     Your information is 100% confidential and never shared.
                   </p>
                 </form>
