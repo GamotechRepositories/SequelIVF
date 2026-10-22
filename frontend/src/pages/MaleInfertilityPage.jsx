@@ -71,9 +71,9 @@ export default function MaleInfertilityPage({ onBookClick }) {
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
 
           {/* ── Factor 1: Image Left, Text Right ── */}
-          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60">
+          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792665327/4d47fa89-d77f-4e4e-9b06-0a0a6c55107a.png"
                   alt="Problems with Sperm Production"
@@ -123,9 +123,9 @@ export default function MaleInfertilityPage({ onBookClick }) {
           </div>
 
           {/* ── Factor 2: Text Left, Image Right (Reverse) ── */}
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792665594/5fd9b84e-62e7-4616-ad10-e27f4ff8d2e9.png"
                   alt="Varicocele"
@@ -156,9 +156,9 @@ export default function MaleInfertilityPage({ onBookClick }) {
           </div>
 
           {/* ── Factor 3: Image Left, Text Right ── */}
-          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60">
+          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792666549/c66cb509-0bf5-4a63-8b72-46eca8f3a813.png"
                   alt="Hormonal Causes"
@@ -209,9 +209,9 @@ export default function MaleInfertilityPage({ onBookClick }) {
           </div>
 
           {/* ── Factor 4: Text Left, Image Right (Reverse) ── */}
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792666584/60300ce1-7f6c-4da3-9af2-48efddfd951c.png"
                   alt="Genetic Causes"
@@ -254,9 +254,9 @@ export default function MaleInfertilityPage({ onBookClick }) {
           </div>
 
           {/* ── Factor 5: Image Left, Text Right ── */}
-          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60">
+          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792666642/0f28171b-5bbd-49ea-98bf-5b4f66d27ecf.png"
                   alt="Blockage of the Sperm Transport Pathway"
@@ -290,9 +290,9 @@ export default function MaleInfertilityPage({ onBookClick }) {
           </div>
 
           {/* ── Factor 6: Text Left, Image Right (Reverse) ── */}
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792666692/b06117d0-42ae-4579-8695-a2d10a25bbb1.png"
                   alt="Infections and Inflammation"
@@ -323,9 +323,9 @@ export default function MaleInfertilityPage({ onBookClick }) {
           </div>
 
           {/* ── Factor 7: Image Left, Text Right ── */}
-          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60">
+          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792666722/ebb6e326-7ef2-45e8-9396-60feb0bd66c5.png"
                   alt="Problems with Ejaculation or Sexual Function"
@@ -367,9 +367,9 @@ export default function MaleInfertilityPage({ onBookClick }) {
           </div>
 
           {/* ── Factor 8: Text Left, Image Right (Reverse) ── */}
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792666752/ef3a387b-2dac-4a5c-894a-ea2bbd893d46.png"
                   alt="Testicular and Developmental Conditions"
@@ -418,9 +418,9 @@ export default function MaleInfertilityPage({ onBookClick }) {
           </div>
 
           {/* ── Factor 9: Image Left, Text Right ── */}
-          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12">
+          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792666786/0a0019bd-96d2-4f54-ade8-440abe353334.png"
                   alt="Lifestyle and Environmental Factors"

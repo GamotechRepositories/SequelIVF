@@ -8,12 +8,12 @@ export default function WelcomeSection({ onBookClick }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
           
           {/* Left Column: Family & Doctor Image with Soft Bottom Gradient Fade */}
-          <div className="lg:col-span-6 flex justify-center items-center">
-            <div className="relative w-full max-w-[480px] sm:max-w-[520px] lg:max-w-[580px] xl:max-w-[620px]">
+          <div className="lg:col-span-6 flex justify-center items-center group">
+            <div className="relative w-full max-w-[480px] sm:max-w-[520px] lg:max-w-[580px] xl:max-w-[620px] overflow-hidden rounded-2xl sm:rounded-3xl img-shine-effect">
               <img
                 src="/images/image copy 4.png"
                 alt="Sequel IVF - Where Hope Begins and Families Grow"
-                className="w-full h-auto object-contain transition-transform duration-500 hover:scale-[1.02]"
+                className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                 style={{
                   maskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
                   WebkitMaskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
@@ -49,17 +49,17 @@ export default function WelcomeSection({ onBookClick }) {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-3.5">
+            <div className="flex flex-row items-center gap-2 sm:gap-3.5 w-full sm:w-auto">
               <Link
                 to="/about-us"
-                className="inline-flex items-center justify-center px-7 py-3 sm:px-8 sm:py-3.5 bg-[#603085] hover:bg-[#4E276D] active:scale-95 text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-lg transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md"
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center px-2.5 sm:px-8 py-2.5 sm:py-3.5 bg-[#603085] hover:bg-[#4E276D] active:scale-95 text-white font-bold text-[10px] min-[360px]:text-[11px] sm:text-xs md:text-sm tracking-normal sm:tracking-wider uppercase rounded-lg transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md whitespace-nowrap text-center"
               >
                 FIND OUT MORE
               </Link>
               <button
                 type="button"
                 onClick={onBookClick}
-                className="inline-flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3.5 bg-white hover:bg-[#F5F2F8] active:scale-95 text-[#241132] border border-[#F0D5E6] font-bold text-xs sm:text-sm tracking-wider uppercase rounded-lg transition-all duration-200 cursor-pointer"
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center px-2.5 sm:px-7 py-2.5 sm:py-3.5 bg-white hover:bg-[#F5F2F8] active:scale-95 text-[#241132] border border-[#F0D5E6] font-bold text-[10px] min-[360px]:text-[11px] sm:text-xs md:text-sm tracking-normal sm:tracking-wider uppercase rounded-lg transition-all duration-200 cursor-pointer whitespace-nowrap text-center"
               >
                 BOOK APPOINTMENT
               </button>

@@ -60,13 +60,13 @@ export default function AboutInfertilityPage({ onBookClick }) {
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
 
           {/* ── Section 1: Female Infertility (Image Left, Text Right) ── */}
-          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60">
+          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792662978/ad61a54b-de20-4623-beb1-815a791b6b5d.png"
                   alt="Female Infertility Factors"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#241132]/60 via-[#241132]/10 to-transparent pointer-events-none" />
                 <div className="absolute bottom-2.5 sm:bottom-4 left-3 sm:left-5 right-3 sm:right-5 text-white">
@@ -110,13 +110,13 @@ export default function AboutInfertilityPage({ onBookClick }) {
           </div>
 
           {/* ── Section 2: Male Infertility (Text Left, Image Right) ── */}
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792663018/3917659f-ad13-4315-911d-34a20432b776.png"
                   alt="Male Infertility Factors"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#241132]/60 via-[#241132]/10 to-transparent pointer-events-none" />
                 <div className="absolute bottom-2.5 sm:bottom-4 left-3 sm:left-5 right-3 sm:right-5 text-white">
@@ -160,13 +160,13 @@ export default function AboutInfertilityPage({ onBookClick }) {
           </div>
 
           {/* ── Section 3: When Both Partners Contribute & Unexplained (Image Left, Text Right) ── */}
-          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60">
+          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-14 py-8 sm:py-12 border-b border-[#F0D5E6]/60 group">
             <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border border-[#F0D5E6]/80 aspect-[4/3] sm:aspect-[16/11] img-shine-effect group-hover:shadow-lg transition-all duration-300">
                 <img
                   src="https://res.cloudinary.com/exmvyjeq/image/upload/v1792663570/6896d604-7e1d-46ab-83c5-0fefe30fb0b0.png"
                   alt="When Both Partners May Contribute & Whole Couple Fertility"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#241132]/60 via-[#241132]/10 to-transparent pointer-events-none" />
                 <div className="absolute bottom-2.5 sm:bottom-4 left-3 sm:left-5 right-3 sm:right-5 text-white">

@@ -241,7 +241,7 @@ export default function FertilityServices({ onBookClick }) {
             <Link
               key={s.id}
               to={`/services/${s.slug}`}
-              className="relative w-[82vw] max-w-[310px] sm:w-[calc((100%-24px)/2)] sm:max-w-none lg:w-[calc((100%-72px)/4)] shrink-0 snap-start rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between group bg-[#F5F2F8] text-[#241132] border-2 border-[#603085]/45 hover:border-[#603085] shadow-[0_4px_16px_-4px_rgba(36,17,50,0.06)] hover:shadow-2xl hover:-translate-y-2 cursor-pointer [perspective:1000px]"
+              className="relative w-[82vw] max-w-[310px] sm:w-[calc((100%-24px)/2)] sm:max-w-none lg:w-[calc((100%-72px)/4)] shrink-0 snap-start rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between group bg-[#F5F2F8] text-[#241132] border-2 border-[#603085]/45 hover:border-[#603085] shadow-[0_4px_16px_-4px_rgba(36,17,50,0.06)] hover:shadow-2xl hover:-translate-y-2 cursor-pointer [perspective:1000px] img-shine-effect"
             >
               <img
                 src={s.image}

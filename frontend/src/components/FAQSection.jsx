@@ -156,7 +156,6 @@ export const FAQ_ITEMS = [
 export default function FAQSection({ onBookClick }) {
   const [activeCategory, setActiveCategory] = useState('General & Conception')
   const [openId, setOpenId] = useState(null)
-  const [searchQuery, setSearchQuery] = useState('')
 
   const CATEGORIES = [
     'General & Conception',
@@ -171,18 +170,10 @@ export default function FAQSection({ onBookClick }) {
     setOpenId(null)
   }
 
-  // Filter FAQs based on active category and optional search query
+  // Filter FAQs based on active category
   const filteredFaqs = useMemo(() => {
-    return FAQ_ITEMS.filter((item) => {
-      const matchesCategory = item.category === activeCategory
-      const query = searchQuery.trim().toLowerCase()
-      const matchesQuery =
-        !query ||
-        item.q.toLowerCase().includes(query) ||
-        item.a.toLowerCase().includes(query)
-      return matchesCategory && matchesQuery
-    })
-  }, [activeCategory, searchQuery])
+    return FAQ_ITEMS.filter((item) => item.category === activeCategory)
+  }, [activeCategory])
 
   const half = Math.ceil(filteredFaqs.length / 2)
   const col1 = filteredFaqs.slice(0, half)
@@ -193,53 +184,22 @@ export default function FAQSection({ onBookClick }) {
   }
 
   return (
-    <section id="faq" className="bg-[#F5F2F8] py-14 sm:py-20 relative overflow-hidden">
-      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
+    <section id="faq" className="bg-[#F5F2F8] py-10 sm:py-20 relative overflow-hidden">
+      <div className="mx-auto max-w-[1400px] px-2 sm:px-6 lg:px-10">
 
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="w-2 h-2 rounded-full bg-[#603085] animate-pulse" />
-              <span className="text-[#603085] font-bold text-xs sm:text-sm tracking-widest uppercase">
-                FAQS & PATIENT GUIDANCE
-              </span>
-            </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] leading-tight font-medium tracking-tight">
-              <span className="text-[#603085]">Frequently Asked</span>{' '}
-              <span className="text-[#C49F64]">Questions</span>
-            </h2>
-            <div className="w-20 h-0.5 bg-gradient-to-r from-[#603085] to-[#C49F64] mt-3" />
+        <div className="mb-8 sm:mb-10">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="w-2 h-2 rounded-full bg-[#603085] animate-pulse" />
+            <span className="text-[#603085] font-bold text-xs sm:text-sm tracking-widest uppercase">
+              FAQS & PATIENT GUIDANCE
+            </span>
           </div>
-
-          {/* Quick Search Input */}
-          <div className="w-full md:w-80 relative">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search questions (e.g. AMH, cost, IVF)..."
-              className="w-full px-4 py-2.5 pl-10 rounded-xl bg-white border border-[#F0D5E6] text-xs sm:text-sm text-[#241132] placeholder-gray-400 focus:outline-none focus:border-[#603085] focus:ring-1 focus:ring-[#603085] shadow-xs"
-            />
-            <svg
-              className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            {searchQuery && (
-              <button
-                type="button"
-                onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 text-xs"
-              >
-                Clear
-              </button>
-            )}
-          </div>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] leading-tight font-medium tracking-tight">
+            <span className="text-[#603085]">Frequently Asked</span>{' '}
+            <span className="text-[#C49F64]">Questions</span>
+          </h2>
+          <div className="w-20 h-0.5 bg-gradient-to-r from-[#603085] to-[#C49F64] mt-3" />
         </div>
 
         {/* Category Tabs */}
@@ -270,21 +230,6 @@ export default function FAQSection({ onBookClick }) {
           })}
         </div>
 
-        {/* Empty state if search finds nothing */}
-        {filteredFaqs.length === 0 && (
-          <div className="text-center py-12 bg-white rounded-2xl border border-[#F0D5E6] p-8">
-            <p className="text-sm font-semibold text-[#241132] mb-1">No questions found matching "{searchQuery}"</p>
-            <p className="text-xs text-gray-500 mb-4">Try a different keyword or browse through our categories above.</p>
-            <button
-              type="button"
-              onClick={() => { setSearchQuery(''); setActiveCategory('General & Conception'); }}
-              className="text-xs font-bold text-[#603085] hover:underline"
-            >
-              Reset Search & Filter
-            </button>
-          </div>
-        )}
-
         {/* 2-Column Responsive FAQ Accordion Grid */}
         {filteredFaqs.length > 0 && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-3.5 sm:gap-4.5 items-start">
@@ -306,14 +251,14 @@ export default function FAQSection({ onBookClick }) {
                     <button
                       type="button"
                       onClick={() => toggleFAQ(item.id)}
-                      className="w-full text-left p-4.5 sm:p-5 flex items-start justify-between gap-3.5 cursor-pointer select-none group"
+                      className="w-full text-left p-3 min-[380px]:p-4 sm:p-5 flex items-start justify-between gap-2.5 sm:gap-3.5 cursor-pointer select-none group"
                       aria-expanded={isOpen}
                     >
-                      <div className="flex items-start gap-2.5">
+                      <div className="flex items-start gap-2 sm:gap-2.5">
                         <span className="text-[11px] font-bold text-[#C49F64] mt-0.5 shrink-0">
                           Q{item.id}.
                         </span>
-                        <span className={`font-serif text-[14.5px] sm:text-[15.5px] font-medium leading-snug transition-colors duration-200 ${
+                        <span className={`font-serif text-[14px] min-[380px]:text-[14.5px] sm:text-[15.5px] font-medium leading-snug transition-colors duration-200 ${
                           isOpen ? 'text-[#603085]' : 'text-[#241132] group-hover:text-[#603085]'
                         }`}>
                           {item.q}
@@ -332,9 +277,9 @@ export default function FAQSection({ onBookClick }) {
                     </button>
 
                     {isOpen && (
-                      <div className="px-4.5 pb-4.5 sm:px-5 sm:pb-5 pt-0">
-                        <div className="h-px bg-gradient-to-r from-[#F0D5E6] via-[#F5F2F8] to-transparent mb-3.5" />
-                        <p className="text-[#555555] text-xs sm:text-[13.5px] leading-relaxed pl-5 sm:pl-6 border-l-2 border-[#603085]/30">
+                      <div className="px-3 pb-3 min-[380px]:px-4 min-[380px]:pb-4 sm:px-5 sm:pb-5 pt-0">
+                        <div className="h-px bg-gradient-to-r from-[#F0D5E6] via-[#F5F2F8] to-transparent mb-3" />
+                        <p className="text-[#555555] text-xs sm:text-[13.5px] leading-relaxed pl-3.5 sm:pl-6 border-l-2 border-[#603085]/30">
                           {item.a}
                         </p>
                       </div>
@@ -361,14 +306,14 @@ export default function FAQSection({ onBookClick }) {
                     <button
                       type="button"
                       onClick={() => toggleFAQ(item.id)}
-                      className="w-full text-left p-4.5 sm:p-5 flex items-start justify-between gap-3.5 cursor-pointer select-none group"
+                      className="w-full text-left p-3 min-[380px]:p-4 sm:p-5 flex items-start justify-between gap-2.5 sm:gap-3.5 cursor-pointer select-none group"
                       aria-expanded={isOpen}
                     >
-                      <div className="flex items-start gap-2.5">
+                      <div className="flex items-start gap-2 sm:gap-2.5">
                         <span className="text-[11px] font-bold text-[#C49F64] mt-0.5 shrink-0">
                           Q{item.id}.
                         </span>
-                        <span className={`font-serif text-[14.5px] sm:text-[15.5px] font-medium leading-snug transition-colors duration-200 ${
+                        <span className={`font-serif text-[14px] min-[380px]:text-[14.5px] sm:text-[15.5px] font-medium leading-snug transition-colors duration-200 ${
                           isOpen ? 'text-[#603085]' : 'text-[#241132] group-hover:text-[#603085]'
                         }`}>
                           {item.q}
@@ -387,9 +332,9 @@ export default function FAQSection({ onBookClick }) {
                     </button>
 
                     {isOpen && (
-                      <div className="px-4.5 pb-4.5 sm:px-5 sm:pb-5 pt-0">
-                        <div className="h-px bg-gradient-to-r from-[#F0D5E6] via-[#F5F2F8] to-transparent mb-3.5" />
-                        <p className="text-[#555555] text-xs sm:text-[13.5px] leading-relaxed pl-5 sm:pl-6 border-l-2 border-[#603085]/30">
+                      <div className="px-3 pb-3 min-[380px]:px-4 min-[380px]:pb-4 sm:px-5 sm:pb-5 pt-0">
+                        <div className="h-px bg-gradient-to-r from-[#F0D5E6] via-[#F5F2F8] to-transparent mb-3" />
+                        <p className="text-[#555555] text-xs sm:text-[13.5px] leading-relaxed pl-3.5 sm:pl-6 border-l-2 border-[#603085]/30">
                           {item.a}
                         </p>
                       </div>

@@ -106,8 +106,10 @@ export default function ServiceDetailPage({ onBookClick }) {
             </div>
 
             <aside className="lg:col-span-4">
-              <div className="lg:sticky lg:top-28 rounded-2xl overflow-hidden border border-[#E4D4EE] bg-white shadow-[0_12px_28px_-16px_rgba(96,48,133,0.28)]">
-                <img src={service.image} alt="" className="w-full h-44 sm:h-52 object-cover" />
+              <div className="lg:sticky lg:top-28 rounded-2xl overflow-hidden border border-[#E4D4EE] bg-white shadow-[0_12px_28px_-16px_rgba(96,48,133,0.28)] group">
+                <div className="relative overflow-hidden img-shine-effect">
+                  <img src={service.image} alt="" className="w-full h-44 sm:h-52 object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
                 <div className="p-5">
                   <p className="text-[#603085] font-bold text-sm mb-2">Talk to a specialist</p>
                   <p className="text-[#555555] text-[13px] leading-relaxed mb-4">
@@ -158,7 +160,7 @@ export default function ServiceDetailPage({ onBookClick }) {
                   to={`/services/${item.slug}`}
                   className="group rounded-2xl overflow-hidden border border-[#E4D4EE] bg-white hover:border-[#603085] transition-colors"
                 >
-                  <div className="h-32 overflow-hidden">
+                  <div className="h-32 overflow-hidden img-shine-effect">
                     <img src={item.image} alt={item.imageAlt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-4">

@@ -357,8 +357,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes service-shine {
-  from { transform: translateX(-120%) skewX(-18deg); }
-  to { transform: translateX(220%) skewX(-18deg); }
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(380%) skewX(-18deg);
+    opacity: 0;
+  }
 }
 
 .service-card-frame {
@@ -392,8 +398,76 @@ h1, h2, h3, h4, h5, h6 {
   animation-duration: 2.2s;
 }
 
-.service-card-frame:hover .service-card-shine-el {
-  animation: service-shine 0.85s ease-out forwards;
+/* Desktop: trigger exclusively on hover */
+@media (hover: hover) and (pointer: fine) {
+  .service-card-frame:hover .service-card-shine-el,
+  .group:hover .service-card-shine-el {
+    animation: service-shine 1.4s ease-out forwards;
+  }
+
+  .img-shine-effect:hover::after,
+  .group:hover .img-shine-effect::after,
+  .service-card-frame:hover .img-shine-effect::after {
+    animation: img-shine-sweep 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+}
+
+/* ─── Universal Left-to-Right Image Shine / Sheen Sweep Animation ─── */
+@keyframes img-shine-sweep {
+  0% {
+    transform: translateX(-160%) skewX(-20deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(380%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.img-shine-effect {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.img-shine-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 15%,
+    rgba(255, 255, 255, 0.52) 50%,
+    rgba(255, 255, 255, 0.08) 85%,
+    transparent 100%
+  );
+  transform: translateX(-160%) skewX(-20deg);
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Mobile / Android / Touch devices without mouse cursor: trigger when scrolled into view or tapped */
+@media (hover: none), (pointer: coarse), (max-width: 1023px) {
+  .img-shine-effect.shine-active::after,
+  .service-card-frame.shine-active .img-shine-effect::after,
+  .img-shine-effect:active::after {
+    animation: img-shine-sweep 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  .service-card-frame.shine-active .service-card-shine-el,
+  .service-card-frame:active .service-card-shine-el {
+    animation: service-shine 1.4s ease-out forwards;
+  }
 }
 
 /* ─── Premium Page Loader Animations ─── */

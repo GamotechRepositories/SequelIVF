@@ -187,7 +187,7 @@ function CarouselSlide({ image, category, index, total, onImageOpen }) {
           onPointerDown={handlePointerDown}
           onPointerUp={handlePointerUp}
           aria-label={`View ${image.title ?? 'project'} screenshot full screen`}
-          className="block w-full cursor-zoom-in touch-manipulation"
+          className="block w-full cursor-zoom-in touch-manipulation img-shine-effect rounded-xl overflow-hidden"
         >
           <img
             src={image.src}

@@ -73,7 +73,7 @@ export default function Hero({ onBookClick }) {
             <div className="grid lg:grid-cols-12 lg:gap-x-8 items-center">
               
               {/* 1. Headline */}
-              <div className="order-1 lg:col-span-6 lg:col-start-1 lg:row-start-1 lg:self-end pt-0.5 sm:pt-2 text-center lg:text-left">
+              <div className="order-1 lg:col-span-6 xl:col-span-5 lg:col-start-1 lg:row-start-1 lg:self-end pt-0.5 sm:pt-2 text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-1.5 sm:gap-2 text-[8.5px] min-[340px]:text-[10px] min-[390px]:text-[11px] sm:text-xs font-bold uppercase tracking-tight min-[340px]:tracking-normal sm:tracking-wider text-[#4E276D] whitespace-nowrap mb-1.5 sm:mb-2.5">
                   <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#603085] animate-pulse shrink-0" />
                   <span>YOUR JOURNEY, OUR CARE</span>
@@ -88,28 +88,28 @@ export default function Hero({ onBookClick }) {
               </div>
 
               {/* 2. Fertility Puzzle Family Portrait */}
-              <div className="order-2 lg:col-span-6 lg:col-start-7 lg:row-start-1 lg:row-span-2 lg:self-center relative flex justify-center lg:justify-end my-1 sm:my-3 lg:my-0">
-                <div className="relative w-full max-w-[240px] min-[360px]:max-w-[280px] sm:max-w-[540px] lg:max-w-[680px] xl:max-w-[760px]">
+              <div className="order-2 lg:col-span-6 lg:col-start-7 xl:col-span-7 xl:col-start-6 lg:row-start-1 lg:row-span-2 lg:self-center relative flex justify-center lg:justify-end xl:justify-center my-2 sm:my-3.5 lg:my-0 lg:pr-3 xl:pr-0">
+                <div className="relative w-full max-w-[360px] min-[360px]:max-w-[440px] min-[400px]:max-w-[490px] min-[480px]:max-w-[560px] sm:max-w-[680px] md:max-w-[800px] lg:max-w-[620px] xl:max-w-[710px]">
                   <div className="absolute inset-0 m-auto w-[92%] h-[92%] rounded-full bg-gradient-to-tr from-[#FCE4F2]/80 to-[#F5F2F8]/50 -z-10 scale-105 blur-md" />
-                  <div className="relative flex justify-center lg:justify-end items-end overflow-hidden">
+                  <div className="relative flex justify-center lg:justify-end items-end p-0.5 sm:p-2 img-shine-effect group cursor-pointer">
                     <img
                       src="/images/Purple and Gold Fertility Family Puzzle.png"
                       alt="Sequeli IVF fertility puzzle family portrait - joyful couple with IVF journey pieces and baby"
-                      className="w-full h-auto object-contain drop-shadow-[0_20px_30px_rgba(80,20,65,0.14)] transition-transform duration-500 hover:scale-[1.02]"
+                      className="w-full h-auto object-contain drop-shadow-[0_20px_30px_rgba(80,20,65,0.14)] transition-transform duration-500 group-hover:scale-[1.02]"
                       style={{
-                        maskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
-                        WebkitMaskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
+                        maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
+                        WebkitMaskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
                       }}
                       loading="eager"
                     />
                     {/* Subtle bottom gradient overlay for gentle edge softening */}
-                    <div className="absolute inset-x-0 bottom-0 h-8 sm:h-12 bg-gradient-to-t from-[#F5F2F8] via-[#F5F2F8]/50 to-transparent pointer-events-none" />
+                    <div className="absolute inset-x-0 bottom-0 h-6 sm:h-8 bg-gradient-to-t from-[#F5F2F8] via-[#F5F2F8]/50 to-transparent pointer-events-none" />
                   </div>
                 </div>
               </div>
 
               {/* 3. Subtext & CTAs */}
-              <div className="order-3 lg:col-span-6 lg:col-start-1 lg:row-start-2 lg:self-start text-center lg:text-left">
+              <div className="order-3 lg:col-span-6 xl:col-span-5 lg:col-start-1 lg:row-start-2 lg:self-start text-center lg:text-left">
                 <div className="space-y-1.5 sm:space-y-2.5 max-w-xl mx-auto lg:mx-0 text-[#53385E] text-[12.5px] sm:text-[15.5px] leading-snug sm:leading-relaxed mb-3 sm:mb-4">
                   <p>
                     Every parenthood journey is unique. We bring together advanced fertility technology, personalized treatment plans, and compassionate care to help you take the next step with confidence.
@@ -191,11 +191,11 @@ export default function Hero({ onBookClick }) {
               <div className="order-2 lg:col-span-6 lg:col-start-7 lg:row-start-1 lg:row-span-2 lg:self-center relative flex justify-center lg:justify-end my-1 sm:my-2 lg:my-0">
                 <div className="relative w-full max-w-[240px] min-[360px]:max-w-[290px] sm:max-w-[440px] lg:max-w-[520px] xl:max-w-[580px]">
                   <div className="absolute inset-0 m-auto w-[90%] h-[90%] rounded-full bg-gradient-to-tr from-[#FCE4F2]/80 to-[#F5F2F8]/50 -z-10 scale-105 blur-md" />
-                  <div className="relative flex justify-center lg:justify-end items-end overflow-hidden">
+                  <div className="relative flex justify-center lg:justify-end items-end overflow-hidden rounded-2xl sm:rounded-3xl img-shine-effect group cursor-pointer">
                     <img
                       src="/images/image copy 3.png"
                       alt="Experienced fertility specialist doctors and care team at Sequel IVF"
-                      className="w-full h-auto max-h-[340px] sm:max-h-[420px] lg:max-h-[460px] object-contain drop-shadow-[0_16px_30px_rgba(80,20,65,0.14)] transition-transform duration-500 hover:scale-[1.02]"
+                      className="w-full h-auto max-h-[340px] sm:max-h-[420px] lg:max-h-[460px] object-contain drop-shadow-[0_16px_30px_rgba(80,20,65,0.14)] transition-transform duration-500 group-hover:scale-[1.02]"
                       style={{
                         maskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',
                         WebkitMaskImage: 'linear-gradient(to bottom, black 86%, transparent 100%)',

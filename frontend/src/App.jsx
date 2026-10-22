@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import ContactNowNotch from './components/ContactNowNotch.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import ScrollShineObserver from './components/ScrollShineObserver.jsx'
 import PageLoader from './components/PageLoader.jsx'
 import BookingModal from './components/BookingModal.jsx'
 import HomePage from './pages/HomePage.jsx'
@@ -27,6 +28,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ScrollShineObserver />
       <PageLoader />
       <div className="min-h-screen antialiased bg-white text-[#241132] font-body selection:bg-[#603085] selection:text-white">
         <Header onBookClick={() => handleOpenBooking()} />

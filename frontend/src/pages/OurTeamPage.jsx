@@ -556,7 +556,7 @@ export default function OurTeamPage({ onBookClick }) {
                 title={`Click to view full biography of ${doc.name}`}
               >
                 {/* Doctor photos: cutout by default, clinic photo on hover */}
-                <div className="relative w-full sm:w-36 md:w-40 lg:w-36 xl:w-40 h-52 sm:h-56 lg:h-52 xl:h-56 shrink-0 overflow-hidden rounded-xl bg-white/70">
+                <div className="relative w-full sm:w-36 md:w-40 lg:w-36 xl:w-40 h-52 sm:h-56 lg:h-52 xl:h-56 shrink-0 overflow-hidden rounded-xl bg-white/70 img-shine-effect">
                   <img
                     src={doc.image}
                     alt={doc.name}
@@ -704,7 +704,7 @@ export default function OurTeamPage({ onBookClick }) {
                 {/* LEFT COLUMN: Photo, Name in gold, Position, Experience, Location, Contact */}
                 <div className="lg:col-span-5 flex flex-col">
                   {/* Photo Frame */}
-                  <div className="w-full aspect-[4/5] sm:max-h-[380px] rounded-2xl overflow-hidden bg-[#F5F2F8] border border-[#F0D5E6] shadow-md mb-6 relative group/photo">
+                  <div className="w-full aspect-[4/5] sm:max-h-[380px] rounded-2xl overflow-hidden bg-[#F5F2F8] border border-[#F0D5E6] shadow-md mb-6 relative group/photo img-shine-effect">
                     <img
                       src={selectedMember.image}
                       alt={selectedMember.name}

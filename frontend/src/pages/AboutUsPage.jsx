@@ -194,11 +194,11 @@ export default function AboutUsPage({ onBookClick }) {
             <div className="lg:col-span-5 flex justify-center items-center lg:sticky lg:top-28 pt-2 lg:pt-0">
               <div className="relative w-full max-w-[360px] sm:max-w-[400px]">
                 {/* Doctor Showcase Image Card */}
-                <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-[0_16px_40px_-10px_rgba(36,17,50,0.14)] border border-[#F0D5E6]/80 bg-white">
+                <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-[0_16px_40px_-10px_rgba(36,17,50,0.14)] border border-[#F0D5E6]/80 bg-white img-shine-effect group cursor-pointer">
                   <img
                     src="/images/image copy 6.png"
                     alt="Sequel IVF – Advanced Fertility Specialists"
-                    className="w-full h-auto object-cover transition-transform duration-500 hover:scale-[1.01]"
+                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
                   />
 

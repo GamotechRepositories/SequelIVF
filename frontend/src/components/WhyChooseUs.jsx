@@ -38,11 +38,11 @@ export default function WhyChooseUs() {
             <p className="text-[#644B6F] text-[15px] sm:text-[16px] leading-relaxed max-w-md mb-7">
               Sequel IVF in Hadapsar, Pune brings together advanced reproductive science and human warmth—so your journey is medically precise and emotionally supported.
             </p>
-            <div className="relative max-w-md overflow-hidden">
+            <div className="relative max-w-md overflow-hidden rounded-2xl img-shine-effect group cursor-pointer">
               <img
                 src="/images/Warm Pregnancy Consultation Cutout.png"
                 alt="Warm pregnancy consultation at Sequel IVF"
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                 style={{
                   maskImage: 'linear-gradient(to bottom, black 78%, transparent 100%)',
                   WebkitMaskImage: 'linear-gradient(to bottom, black 78%, transparent 100%)',

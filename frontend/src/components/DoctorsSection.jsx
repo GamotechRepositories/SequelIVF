@@ -106,7 +106,7 @@ export default function DoctorsSection() {
               className="w-[84vw] max-w-[340px] sm:w-[380px] md:w-[410px] shrink-0 snap-start lg:w-auto lg:max-w-none lg:shrink bg-[#F5F2F8] rounded-2xl p-4.5 sm:p-5 lg:p-4 xl:p-5 border border-[#F0D5E6] hover:border-[#C49F64]/70 shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-4 sm:gap-4.5 items-start group"
             >
               {/* Doctor photos: cutout by default, clinic photo on hover */}
-              <div className="relative w-full sm:w-36 md:w-40 lg:w-32 xl:w-36 h-52 sm:h-56 lg:h-52 xl:h-56 shrink-0 overflow-hidden rounded-xl bg-white/70">
+              <div className="relative w-full sm:w-36 md:w-40 lg:w-32 xl:w-36 h-52 sm:h-56 lg:h-52 xl:h-56 shrink-0 overflow-hidden rounded-xl bg-white/70 img-shine-effect">
                 <img
                   src={doc.image}
                   alt={doc.name}
