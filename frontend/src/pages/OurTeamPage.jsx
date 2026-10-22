@@ -471,10 +471,10 @@ export default function OurTeamPage({ onBookClick }) {
         <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
           <div className="max-w-xl">
             {/* Breadcrumbs */}
-            <nav className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-[#F0D5E6] text-[#7C6285] mb-4 uppercase tracking-wider shadow-xs">
-              <Link to="/" className="hover:text-[#603085] transition-colors">Home</Link>
-              <span>/</span>
-              <span className="text-[#603085] font-bold">Our Team</span>
+            <nav className="inline-flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-medium px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/80 backdrop-blur-md border border-[#F0D5E6] text-[#7C6285] mb-2 sm:mb-4 shadow-xs max-w-full overflow-x-auto whitespace-nowrap">
+              <Link to="/" className="hover:text-[#603085] transition-colors shrink-0">Home</Link>
+              <span className="text-[#C49F64] shrink-0">/</span>
+              <span className="text-[#603085] font-semibold shrink-0">Our Team</span>
             </nav>
 
             <span className="text-[#603085] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">

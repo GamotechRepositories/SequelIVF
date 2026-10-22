@@ -9,10 +9,10 @@ export default function GalleryPage({ onBookClick }) {
       <section className="bg-gradient-to-b from-[#F5F2F8] via-[#F5F2F8]/60 to-white py-12 sm:py-16 border-b border-[#F0D5E6]/60">
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs font-semibold text-[#7C6285] mb-4 uppercase tracking-wider">
-            <Link to="/" className="hover:text-[#603085] transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-[#603085]">Gallery</span>
+          <nav className="inline-flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-medium px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/90 backdrop-blur-md border border-[#F0D5E6] text-[#7C6285] mb-2 sm:mb-4 shadow-xs max-w-full overflow-x-auto whitespace-nowrap">
+            <Link to="/" className="hover:text-[#603085] transition-colors shrink-0">Home</Link>
+            <span className="text-[#C49F64] shrink-0">/</span>
+            <span className="text-[#603085] font-semibold shrink-0">Gallery</span>
           </nav>
 
           <span className="text-[#603085] font-bold text-xs sm:text-sm tracking-widest uppercase block mb-2">

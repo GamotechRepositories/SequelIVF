@@ -396,6 +396,50 @@ h1, h2, h3, h4, h5, h6 {
   animation: service-shine 0.85s ease-out forwards;
 }
 
+/* ─── Premium Page Loader Animations ─── */
+@keyframes loader-progress-slide {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(25%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes loader-pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 20px 50px -10px rgba(96, 48, 133, 0.15), 0 0 30px rgba(196, 159, 100, 0.12);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 25px 60px -10px rgba(96, 48, 133, 0.25), 0 0 40px rgba(196, 159, 100, 0.22);
+  }
+}
+
+@keyframes loader-ring-spin-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes loader-ring-spin-ccw {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.loader-progress-animated {
+  animation: loader-progress-slide 1.4s ease-in-out infinite;
+}
+
+.loader-badge-glow {
+  animation: loader-pulse-glow 2.4s ease-in-out infinite;
+}
+
+.loader-spin-cw {
+  animation: loader-ring-spin-cw 1.6s linear infinite;
+}
+
+.loader-spin-ccw {
+  animation: loader-ring-spin-ccw 1.1s linear infinite;
+}
+
 /* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
   .float-gentle, .float-slow, .pulse-glow, .wave-drift,
@@ -403,10 +447,15 @@ h1, h2, h3, h4, h5, h6 {
   .stat-ring-rotate, .reveal, .reveal-left, .reveal-right, .reveal-scale,
   .values-marquee-track,
   .service-card-frame::before,
-  .service-card-shine {
+  .service-card-shine,
+  .loader-progress-animated,
+  .loader-badge-glow,
+  .loader-spin-cw,
+  .loader-spin-ccw {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
 }
+

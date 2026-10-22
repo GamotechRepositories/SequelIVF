@@ -19,9 +19,11 @@ export default function Footer({ onBookClick }) {
     { label: 'Make Appointment', href: '/#contact', isAppointment: true },
     { label: 'About Us', href: '/about-us' },
     { label: 'Our Team', href: '/our-team' },
+    { label: 'About Infertility', href: '/about-infertility' },
+    { label: 'Male Infertility', href: '/male-infertility' },
+    { label: 'Female Infertility', href: '/female-infertility' },
+    { label: 'Fertility Services', href: '/services' },
     { label: 'Gallery', href: '/gallery' },
-    { label: 'Customer Services', href: '/services' },
-    { label: 'Meet Our Experts', href: '/our-team' },
     { label: 'Contact Us', href: '/#contact' },
   ]
 

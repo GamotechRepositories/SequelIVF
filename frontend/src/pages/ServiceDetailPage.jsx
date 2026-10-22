@@ -69,12 +69,12 @@ export default function ServiceDetailPage({ onBookClick }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#241132] via-[#241132]/55 to-[#241132]/20" />
         <div className="relative z-10 w-full mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10 pb-8 sm:pb-10">
-          <nav className="flex flex-wrap items-center gap-2 text-[11px] sm:text-xs font-semibold text-white/75 mb-4 uppercase tracking-wider">
-            <Link to="/" className="hover:text-white">Home</Link>
-            <span>/</span>
-            <Link to="/services" className="hover:text-white">Services</Link>
-            <span>/</span>
-            <span className="text-[#E8D5A3]">{service.shortTitle}</span>
+          <nav className="inline-flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-medium px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white/80 mb-2 sm:mb-4 shadow-xs max-w-full overflow-x-auto whitespace-nowrap">
+            <Link to="/" className="hover:text-white transition-colors shrink-0">Home</Link>
+            <span className="text-[#E8D5A3] shrink-0">/</span>
+            <Link to="/services" className="hover:text-white transition-colors shrink-0">Services</Link>
+            <span className="text-[#E8D5A3] shrink-0">/</span>
+            <span className="text-[#E8D5A3] font-semibold shrink-0">{service.shortTitle}</span>
           </nav>
           <p className="text-[#E8D5A3] font-bold text-xs sm:text-sm tracking-widest uppercase mb-2">
             {service.tagline}

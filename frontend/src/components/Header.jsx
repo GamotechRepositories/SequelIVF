@@ -7,6 +7,7 @@ export default function Header({ onBookClick }) {
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const [mobileInfertilityOpen, setMobileInfertilityOpen] = useState(false)
 
   return (
     <>
@@ -141,19 +142,29 @@ export default function Header({ onBookClick }) {
                       onMouseEnter={() => setActiveDropdown('infertility')}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
-                      <Link to="/#faq" className="hover:text-[#603085] transition-colors flex items-center gap-1 whitespace-nowrap">
+                      <Link to="/about-infertility" className="hover:text-[#603085] transition-colors flex items-center gap-1 whitespace-nowrap">
                         <span>ABOUT INFERTILITY</span>
-                        <svg className="w-3.5 h-3.5 opacity-60 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <svg className={`w-3.5 h-3.5 opacity-60 transition-transform ${activeDropdown === 'infertility' ? 'rotate-180' : 'group-hover:rotate-180'}`} fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                         </svg>
                       </Link>
                       {activeDropdown === 'infertility' && (
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-50">
-                          <div className="bg-white rounded-2xl p-3 shadow-xl border border-[#F2D7E8] space-y-1">
-                            <Link to="/#faq" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#F5F2F8] hover:text-[#603085]">Understanding Infertility (FAQs)</Link>
-                            <Link to="/#specialist" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#F5F2F8] hover:text-[#603085]">Male & Female Fertility Causes</Link>
-                            <Link to="/#faq" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#F5F2F8] hover:text-[#603085]">Common Questions Answered</Link>
-                            <Link to="/#contact" onClick={() => setActiveDropdown(null)} className="block px-3 py-2 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#F5F2F8] hover:text-[#603085]">Second Opinion Consultation</Link>
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-56 z-50">
+                          <div className="bg-white rounded-2xl p-2.5 shadow-xl border border-[#F2D7E8] space-y-1">
+                            <Link
+                              to="/male-infertility"
+                              onClick={() => setActiveDropdown(null)}
+                              className="block px-3.5 py-2.5 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#F5F2F8] hover:text-[#603085] transition-colors"
+                            >
+                              Male Infertility
+                            </Link>
+                            <Link
+                              to="/female-infertility"
+                              onClick={() => setActiveDropdown(null)}
+                              className="block px-3.5 py-2.5 rounded-xl text-xs font-semibold text-[#3C2048] hover:bg-[#F5F2F8] hover:text-[#603085] transition-colors"
+                            >
+                              Female Infertility
+                            </Link>
                           </div>
                         </div>
                       )}
@@ -301,8 +312,43 @@ export default function Header({ onBookClick }) {
                 </div>
               )}
             </div>
-            <Link to="/our-team" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#603085]">OUR TEAM</Link>
-            <Link to="/#faq" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#603085]">ABOUT INFERTILITY</Link>
+            <div className="border-b border-gray-100">
+              <button
+                type="button"
+                onClick={() => setMobileInfertilityOpen(!mobileInfertilityOpen)}
+                className="w-full flex items-center justify-between py-3 hover:text-[#603085] font-bold text-xs uppercase tracking-wider text-[#241132]"
+              >
+                <span>ABOUT INFERTILITY</span>
+                <svg className={`w-4 h-4 transition-transform duration-200 ${mobileInfertilityOpen ? 'rotate-180 text-[#603085]' : 'text-gray-400'}`} fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileInfertilityOpen && (
+                <div className="pl-3 pb-3 space-y-1.5 bg-[#F5F2F8]/70 rounded-xl mb-2 p-2">
+                  <Link
+                    to="/about-infertility"
+                    onClick={() => { setMenuOpen(false); setMobileInfertilityOpen(false); }}
+                    className="block py-2 px-3 rounded-lg text-xs font-semibold text-[#603085] hover:bg-white"
+                  >
+                    Overview: About Infertility
+                  </Link>
+                  <Link
+                    to="/male-infertility"
+                    onClick={() => { setMenuOpen(false); setMobileInfertilityOpen(false); }}
+                    className="block py-2 px-3 rounded-lg text-xs font-semibold text-[#3C2048] hover:bg-white hover:text-[#603085]"
+                  >
+                    Male Infertility
+                  </Link>
+                  <Link
+                    to="/female-infertility"
+                    onClick={() => { setMenuOpen(false); setMobileInfertilityOpen(false); }}
+                    className="block py-2 px-3 rounded-lg text-xs font-semibold text-[#3C2048] hover:bg-white hover:text-[#603085]"
+                  >
+                    Female Infertility
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link to="/#contact" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#603085]">CONTACT US</Link>
             <button
               onClick={() => { setMenuOpen(false); onBookClick(); }}
