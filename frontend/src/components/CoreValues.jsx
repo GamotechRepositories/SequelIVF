@@ -101,7 +101,7 @@ function ValueCard({ icon: Icon, text }) {
         />
       </div>
 
-      <p className="relative font-heading font-semibold text-[11px] sm:text-[13px] leading-snug text-[#4E276D]">
+      <p className="relative font-heading font-semibold sm:font-bold text-[12px] sm:text-[15px] lg:text-[15.5px] leading-snug sm:leading-tight text-[#4E276D]">
         {text}
       </p>
     </div>

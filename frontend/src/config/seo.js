@@ -1,13 +1,13 @@
 import { LOGO_URL } from './brand.js'
 
-const SITE_URL = 'https://growwcode.com'
+const SITE_URL = 'https://sequelivf.com'
 
 const DEFAULT_OG_IMAGE = LOGO_URL
 
 export const DEFAULT_SEO = {
-  title: 'GrowwCode - Custom Software, Web & Mobile App Development',
+  title: 'Sequel IVF - Advanced Fertility Treatment & IVF Centre in Pune',
   description:
-    'GrowwCode builds custom software, web applications, and mobile apps. Full-stack development, AI/ML solutions, and cloud services for startups and enterprises.',
+    'Sequel IVF in Hadapsar, Pune offers personalized fertility care, IVF, ICSI, IUI, and reproductive medicine led by Dr. Leena Patankar.',
 }
 
 export const PAGE_SEO = {
@@ -18,27 +18,27 @@ export const PAGE_SEO = {
   },
   services: {
     path: '/services',
-    title: 'Software Development Services | GrowwCode',
+    title: 'Fertility Services & IVF Treatments | Sequel IVF Pune',
     description:
-      'Explore GrowwCode software development services: web apps, mobile apps, AI/ML, cloud infrastructure, and dedicated engineering teams tailored to your business.',
+      'Explore advanced fertility treatments at Sequel IVF Pune: IVF, ICSI, IUI, Blastocyst Culture, PGT, and fertility preservation.',
   },
   portfolio: {
     path: '/project-work',
-    title: 'Our Portfolio | GrowwCode',
+    title: 'Patient Stories & Success | Sequel IVF Pune',
     description:
-      'View GrowwCode portfolio of web, mobile, and AI projects delivered for clients across e-commerce, healthcare, fintech, and more.',
+      'Discover patient experiences and fertility success stories at Sequel IVF Fertility Centre.',
   },
   industries: {
     path: '/industries',
-    title: 'Industries We Serve | GrowwCode',
+    title: 'Specialized Fertility Care | Sequel IVF Pune',
     description:
-      'GrowwCode serves e-commerce, healthcare, fintech, education, logistics, and more with custom software tailored to each industry.',
+      'Personalized reproductive care and fertility solutions for couples and individuals.',
   },
   contact: {
     path: '/contact',
-    title: 'Contact GrowwCode | Software Development Company',
+    title: 'Contact Us | Sequel IVF Fertility Centre Pune',
     description:
-      'Contact GrowwCode to discuss your software project. We build custom web apps, mobile apps, and AI solutions for businesses worldwide.',
+      'Contact Sequel IVF Fertility Centre in Hadapsar, Pune. Book an appointment with Dr. Leena Patankar and our fertility specialists for confidential consultation and personalized IVF care.',
   },
   customSoftwareDevelopment: {
     path: '/custom-software-development',

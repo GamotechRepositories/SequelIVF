@@ -1,14 +1,16 @@
 import React from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-export default function ContactNowNotch({ onBookClick }) {
+export default function ContactNowNotch() {
+  const location = useLocation()
+  const navigate = useNavigate()
+
   const handleContactClick = (e) => {
-    const contactEl = document.getElementById('contact')
-    if (contactEl) {
-      e.preventDefault()
-      contactEl.scrollIntoView({ behavior: 'smooth' })
-    } else if (onBookClick) {
-      e.preventDefault()
-      onBookClick()
+    e.preventDefault()
+    if (location.pathname === '/contact' || location.pathname === '/contact-us') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      navigate('/contact')
     }
   }
 
@@ -16,8 +18,9 @@ export default function ContactNowNotch({ onBookClick }) {
     <>
       {/* Sticky Bottom Notch "Contact Now" Tab - Flush to Bottom of Screen */}
       <div className="fixed bottom-0 left-1/2 -translate-x-1/2 z-50 pointer-events-auto">
-        <a
-          href="#contact"
+        <Link
+          id="bottom-contact-now-tab"
+          to="/contact"
           onClick={handleContactClick}
           aria-label="Contact Sequel IVF Clinic Now"
           className="relative group inline-flex items-center justify-center w-[210px] sm:w-[260px] h-11 sm:h-12 select-none cursor-pointer"
@@ -39,7 +42,7 @@ export default function ContactNowNotch({ onBookClick }) {
           <span className="relative z-10 font-bold text-white text-[14px] sm:text-[15px] tracking-wide whitespace-nowrap mb-0.5 group-hover:scale-102 transition-transform duration-200">
             Contact Now
           </span>
-        </a>
+        </Link>
       </div>
 
       {/* Right Corner: Floating WhatsApp & Call Buttons */}

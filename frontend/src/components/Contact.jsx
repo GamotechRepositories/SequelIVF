@@ -1,17 +1,7 @@
-import { useState } from 'react'
+import React from 'react'
+import ConsultationForm from './ConsultationForm.jsx'
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', phone: '', email: '', treatment: '', message: '' })
-  const [submitted, setSubmitted] = useState(false)
-
-  function handleChange(e) {
-    setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault()
-    setSubmitted(true)
-  }
 
   const CONTACT_INFO = [
     {
@@ -113,140 +103,10 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Column: Consultation Form (Wider & Compact Card) */}
+          {/* Right Column: Consultation Form (Matching Contact Us page) */}
           <div className="lg:col-span-7 flex flex-col lg:items-end">
-            <div className="w-full max-w-2xl lg:max-w-[650px] xl:max-w-[680px] sm:bg-[#FAF8FC] sm:rounded-2xl sm:border sm:border-[#F0D5E6] sm:shadow-md sm:shadow-[#603085]/5 p-0 sm:p-6 lg:p-7 transition-all duration-200">
-              {submitted ? (
-                <div className="text-center py-8 sm:py-10">
-                  <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3 bg-[#603085] text-white shadow-md">
-                    <svg viewBox="0 0 24 24" className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path d="M5 12l5 5L19 7" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#241132] mb-1.5">Thank You!</h3>
-                  <p className="text-[#555555] text-xs sm:text-sm max-w-md mx-auto">
-                    We have received your details. Our patient coordinator will contact you within 24 hours to confirm your consultation schedule.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-3.5">
-                  <div className="mb-2 sm:mb-3">
-                    <span className="text-[#603085] font-bold text-[11px] tracking-wider uppercase block mb-0.5">
-                      CONFIDENTIAL INQUIRY
-                    </span>
-                    <h3 className="font-serif text-xl sm:text-2xl font-medium text-[#241132] mb-0.5">
-                      Book Your Consultation
-                    </h3>
-                    <p className="text-xs text-[#666666]">
-                      Free · No obligation · 100% Confidential
-                    </p>
-                  </div>
-
-                  {/* Row 1: Name and Phone */}
-                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-3.5">
-                    <div>
-                      <label className="block text-[11px] font-bold text-[#603085] mb-1 uppercase tracking-wider" htmlFor="name">
-                        Full Name *
-                      </label>
-                      <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        value={form.name}
-                        onChange={handleChange}
-                        placeholder="Your full name"
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-[#D8C7E2] bg-white text-[#241132] text-xs sm:text-sm focus:outline-none focus:border-[#603085] focus:ring-1 focus:ring-[#603085] transition-all placeholder-gray-400"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[11px] font-bold text-[#603085] mb-1 uppercase tracking-wider" htmlFor="phone">
-                        Phone *
-                      </label>
-                      <input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        required
-                        value={form.phone}
-                        onChange={handleChange}
-                        placeholder="+91 XXXXX XXXXX"
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-[#D8C7E2] bg-white text-[#241132] text-xs sm:text-sm focus:outline-none focus:border-[#603085] focus:ring-1 focus:ring-[#603085] transition-all placeholder-gray-400"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Row 2: Email and Treatment of Interest (Side-by-side for compact layout) */}
-                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-3.5">
-                    <div>
-                      <label className="block text-[11px] font-bold text-[#603085] mb-1 uppercase tracking-wider" htmlFor="email">
-                        Email
-                      </label>
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={form.email}
-                        onChange={handleChange}
-                        placeholder="you@email.com"
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-[#D8C7E2] bg-white text-[#241132] text-xs sm:text-sm focus:outline-none focus:border-[#603085] focus:ring-1 focus:ring-[#603085] transition-all placeholder-gray-400"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[11px] font-bold text-[#603085] mb-1 uppercase tracking-wider" htmlFor="treatment">
-                        Treatment of Interest
-                      </label>
-                      <select
-                        id="treatment"
-                        name="treatment"
-                        value={form.treatment}
-                        onChange={handleChange}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-[#D8C7E2] bg-white text-[#241132] text-xs sm:text-sm focus:outline-none focus:border-[#603085] focus:ring-1 focus:ring-[#603085] transition-all cursor-pointer"
-                      >
-                        <option value="">Select treatment…</option>
-                        <option>In-Vitro Fertilization (IVF)</option>
-                        <option>Intrauterine Insemination (IUI)</option>
-                        <option>ICSI (Intracytoplasmic Sperm Injection)</option>
-                        <option>Egg / Sperm Freezing</option>
-                        <option>Comprehensive Fertility Evaluation</option>
-                        <option>Not sure — need expert advice</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  {/* Row 3: Brief Message (2 rows for compactness) */}
-                  <div>
-                    <label className="block text-[11px] font-bold text-[#603085] mb-1 uppercase tracking-wider" htmlFor="message">
-                      Brief Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={2}
-                      value={form.message}
-                      onChange={handleChange}
-                      placeholder="Tell us a little about your situation (optional)"
-                      className="w-full px-3.5 py-2 rounded-lg border border-[#D8C7E2] bg-white text-[#241132] text-xs sm:text-sm focus:outline-none focus:border-[#603085] focus:ring-1 focus:ring-[#603085] transition-all resize-none placeholder-gray-400"
-                    />
-                  </div>
-
-                  {/* Submit Button: Compact & Bold */}
-                  <button
-                    type="submit"
-                    className="w-full py-3 sm:py-3.5 px-6 rounded-lg font-bold text-white bg-[#603085] hover:bg-[#4E276D] active:scale-[0.99] shadow-sm hover:shadow-md text-xs sm:text-sm flex items-center justify-center gap-2 transition-all cursor-pointer uppercase tracking-wider"
-                  >
-                    <span>Request Free Consultation</span>
-                    <svg viewBox="0 0 24 24" className="w-4 h-4 sm:w-4.5 sm:h-4.5" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </button>
-
-                  {/* Privacy note */}
-                  <p className="text-center text-[11px] text-[#777777] pt-0.5">
-                    Your information is 100% confidential and never shared.
-                  </p>
-                </form>
-              )}
+            <div className="w-full max-w-2xl lg:max-w-[650px] xl:max-w-[680px]">
+              <ConsultationForm />
             </div>
           </div>
 

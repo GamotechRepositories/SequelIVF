@@ -15,6 +15,10 @@ import ServiceDetailPage from './pages/ServiceDetailPage.jsx'
 import AboutInfertilityPage from './pages/AboutInfertilityPage.jsx'
 import FemaleInfertilityPage from './pages/FemaleInfertilityPage.jsx'
 import MaleInfertilityPage from './pages/MaleInfertilityPage.jsx'
+import ContactPage from './pages/ContactPage.jsx'
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage.jsx'
+import ArtCompliancePage from './pages/ArtCompliancePage.jsx'
+import PcpndtDisclaimerPage from './pages/PcpndtDisclaimerPage.jsx'
 
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
@@ -139,6 +143,62 @@ function App() {
               }
             />
             <Route
+              path="/contact"
+              element={
+                <ContactPage
+                  onBookClick={(name) => handleOpenBooking(name)}
+                />
+              }
+            />
+            <Route
+              path="/contact-us"
+              element={
+                <ContactPage
+                  onBookClick={(name) => handleOpenBooking(name)}
+                />
+              }
+            />
+            <Route
+              path="/privacy-policy"
+              element={
+                <PrivacyPolicyPage
+                  onBookClick={(name) => handleOpenBooking(name)}
+                />
+              }
+            />
+            <Route
+              path="/art-act-compliance"
+              element={
+                <ArtCompliancePage
+                  onBookClick={(name) => handleOpenBooking(name)}
+                />
+              }
+            />
+            <Route
+              path="/art-compliance"
+              element={
+                <ArtCompliancePage
+                  onBookClick={(name) => handleOpenBooking(name)}
+                />
+              }
+            />
+            <Route
+              path="/pcpndt-disclaimer"
+              element={
+                <PcpndtDisclaimerPage
+                  onBookClick={(name) => handleOpenBooking(name)}
+                />
+              }
+            />
+            <Route
+              path="/pcpndt"
+              element={
+                <PcpndtDisclaimerPage
+                  onBookClick={(name) => handleOpenBooking(name)}
+                />
+              }
+            />
+            <Route
               path="*"
               element={
                 <HomePage
@@ -148,7 +208,7 @@ function App() {
             />
           </Routes>
         </main>
-        <ContactNowNotch onBookClick={() => handleOpenBooking()} />
+        <ContactNowNotch />
         <BookingModal
           isOpen={isBookingOpen}
           onClose={() => setIsBookingOpen(false)}

@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FERTILITY_SERVICES } from '../data/fertilityServices.js'
 
 export default function Header({ onBookClick }) {
+  const location = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false)
@@ -172,7 +173,12 @@ export default function Header({ onBookClick }) {
 
                     <span className="w-1.5 h-1.5 rounded-full bg-[#603085] shrink-0" />
 
-                    <Link to="/#contact" className="hover:text-[#603085] transition-colors whitespace-nowrap">
+                    <Link
+                      to="/contact"
+                      className={`hover:text-[#603085] transition-colors whitespace-nowrap ${
+                        location.pathname === '/contact' ? 'text-[#603085] font-extrabold' : ''
+                      }`}
+                    >
                       CONTACT US
                     </Link>
                   </nav>
@@ -312,6 +318,18 @@ export default function Header({ onBookClick }) {
                 </div>
               )}
             </div>
+
+            {/* OUR TEAM Link (matching desktop view) */}
+            <Link
+              to="/our-team"
+              onClick={() => setMenuOpen(false)}
+              className={`block py-3 border-b border-gray-100 hover:text-[#603085] transition-colors ${
+                location.pathname === '/our-team' ? 'text-[#603085] font-bold' : ''
+              }`}
+            >
+              OUR TEAM
+            </Link>
+
             <div className="border-b border-gray-100">
               <button
                 type="button"
@@ -349,7 +367,15 @@ export default function Header({ onBookClick }) {
                 </div>
               )}
             </div>
-            <Link to="/#contact" onClick={() => setMenuOpen(false)} className="block py-3 border-b border-gray-100 hover:text-[#603085]">CONTACT US</Link>
+            <Link
+              to="/contact"
+              onClick={() => setMenuOpen(false)}
+              className={`block py-3 border-b border-gray-100 hover:text-[#603085] ${
+                location.pathname === '/contact' ? 'text-[#603085] font-bold' : ''
+              }`}
+            >
+              CONTACT US
+            </Link>
             <button
               onClick={() => { setMenuOpen(false); onBookClick(); }}
               className="w-full mt-4 py-3.5 rounded-lg flex items-center justify-center gap-2 font-bold text-white bg-[#603085] shadow-lg shadow-fuchsia-900/20"

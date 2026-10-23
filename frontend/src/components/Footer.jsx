@@ -4,15 +4,54 @@ import { Link } from 'react-router-dom'
 export default function Footer({ onBookClick }) {
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
+  const [subscribing, setSubscribing] = useState(false)
+  const [subscribeError, setSubscribeError] = useState('')
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault()
-    if (!email) return
-    setSubscribed(true)
-    setTimeout(() => {
-      setEmail('')
-      setSubscribed(false)
-    }, 4000)
+    if (!email || subscribing) return
+    setSubscribing(true)
+    setSubscribeError('')
+
+    const accessKey =
+      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
+      'c297e01a-bd84-49a2-a932-f4fab76a1e7a'
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `New Newsletter Subscriber: ${email}`,
+          from_name: 'Sequeli IVF Website',
+          name: 'Newsletter Subscriber',
+          email: email,
+          subscriber_email: email,
+          form_type: 'Newsletter & Event Subscription',
+          message: `A new visitor subscribed to the Sequeli IVF newsletter: ${email}`,
+        }),
+      })
+
+      const data = await response.json()
+      if (data.success) {
+        setSubscribed(true)
+        setEmail('')
+        setTimeout(() => {
+          setSubscribed(false)
+        }, 6000)
+      } else {
+        setSubscribeError(data.message || 'Subscription failed. Please try again.')
+      }
+    } catch (err) {
+      console.error('Newsletter subscription error:', err)
+      setSubscribeError('Unable to connect. Please try again.')
+    } finally {
+      setSubscribing(false)
+    }
   }
 
   const USEFUL_LINKS = [
@@ -24,7 +63,7 @@ export default function Footer({ onBookClick }) {
     { label: 'Female Infertility', href: '/female-infertility' },
     { label: 'Fertility Services', href: '/services' },
     { label: 'Gallery', href: '/gallery' },
-    { label: 'Contact Us', href: '/#contact' },
+    { label: 'Contact Us', href: '/contact' },
   ]
 
   return (
@@ -173,25 +212,69 @@ export default function Footer({ onBookClick }) {
 
               {/* Newsletter Form */}
               <form onSubmit={handleSubscribe} className="space-y-2 mb-4">
+                {/* Honeypot spam protection */}
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="hidden"
+                  style={{ display: 'none' }}
+                  tabIndex="-1"
+                  autoComplete="off"
+                />
+
                 <input
                   type="email"
                   required
+                  disabled={subscribing || subscribed}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Email"
-                  className="w-full bg-white text-gray-900 px-4 py-2.5 sm:py-3 italic text-xs sm:text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#603085]"
+                  placeholder="Enter your email"
+                  className="w-full bg-white text-gray-900 px-4 py-2.5 sm:py-3 italic text-xs sm:text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#603085] disabled:opacity-75"
                 />
 
                 <button
                   type="submit"
-                  className="w-full py-2.5 sm:py-3 px-4 bg-[#603085] hover:bg-[#4E276D] active:scale-98 text-white font-extrabold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm"
+                  disabled={subscribing || subscribed}
+                  className="w-full py-2.5 sm:py-3 px-4 bg-[#603085] hover:bg-[#4E276D] active:scale-98 text-white font-extrabold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm disabled:opacity-80"
                 >
-                  <svg viewBox="0 0 24 24" className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M8.5 12.5l2.5 2.5 5-5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>{subscribed ? 'SUBSCRIBED!' : 'SUBSCRIBE'}</span>
+                  {subscribing ? (
+                    <>
+                      <svg className="animate-spin w-4 h-4 text-white" viewBox="0 0 24 24" fill="none">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                      </svg>
+                      <span>SUBSCRIBING...</span>
+                    </>
+                  ) : subscribed ? (
+                    <>
+                      <svg viewBox="0 0 24 24" className="w-4 h-4 text-green-300" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M8.5 12.5l2.5 2.5 5-5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span className="text-green-300">SUBSCRIBED!</span>
+                    </>
+                  ) : (
+                    <>
+                      <svg viewBox="0 0 24 24" className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M8.5 12.5l2.5 2.5 5-5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span>SUBSCRIBE</span>
+                    </>
+                  )}
                 </button>
+
+                {subscribed && (
+                  <p className="text-[11.5px] text-green-300 font-medium pt-1">
+                    ✓ Thank you! You have been added to our updates list.
+                  </p>
+                )}
+
+                {subscribeError && (
+                  <p className="text-[11.5px] text-rose-300 pt-1">
+                    {subscribeError}
+                  </p>
+                )}
               </form>
 
               {/* Timings */}
@@ -213,9 +296,9 @@ export default function Footer({ onBookClick }) {
           <div className="pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/50 text-xs">
             <p>© {new Date().getFullYear()} Sequel IVF Centre, Hadapsar, Pune. All rights reserved.</p>
             <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
-              <a href="#about" className="hover:text-white/80 transition-colors">Privacy Policy</a>
-              <a href="#regulated" className="hover:text-white/80 transition-colors">ART Act Compliance</a>
-              <a href="#regulated" className="hover:text-white/80 transition-colors">PCPNDT Disclaimer</a>
+              <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/art-act-compliance" className="hover:text-white transition-colors">ART Act Compliance</Link>
+              <Link to="/pcpndt-disclaimer" className="hover:text-white transition-colors">PCPNDT Disclaimer</Link>
             </div>
           </div>
 

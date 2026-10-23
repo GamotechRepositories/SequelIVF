@@ -22,6 +22,10 @@ export const SOCIAL_LINKS = {
   maps: 'https://maps.google.com/?q=Sequel+IVF+Hadapsar+Pune',
 }
 
+export const SOCIAL_PROFILES = [
+  SOCIAL_LINKS.maps,
+]
+
 export function formatPhone(phone = CONTACT_PHONES[0]) {
   return `+91 ${phone.slice(0, 4)} ${phone.slice(4, 7)} ${phone.slice(7)}`
 }
