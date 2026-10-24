@@ -48,9 +48,9 @@ export const FERTILITY_SERVICES = [
   },
   {
     slug: 'ivf',
-    title: 'In-Vitro Fertilization (IVF)',
+    title: 'In-Vitro Fertilization (IVF) — Embrace Hope',
     shortTitle: 'IVF',
-    tagline: 'Embrace hope. Embracing your hope, shielding your future.',
+    tagline: 'Embracing your hope, shielding your future..',
     excerpt:
       'Personalized IVF care with advanced embryology—every step handled with scientific devotion and a safe harbor for your next chapter.',
     image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655017/024cc721-d945-4dd0-bd03-0df90c20a63e.png',
@@ -171,7 +171,7 @@ export const FERTILITY_SERVICES = [
   },
   {
     slug: 'cryopreservation',
-    title: 'Securing Your Tomorrow — Cryopreservation',
+    title: 'Securing Your Tomorrow — Cryopreservation (Embryo, Egg & Sperm Freezing)',
     shortTitle: 'Cryopreservation',
     tagline: 'Time stands still, safeguarding your dreams for tomorrow.',
     excerpt:

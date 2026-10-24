@@ -7,13 +7,43 @@ export default function FertilityServices({ onBookClick }) {
 
   const SERVICES = [
     {
+      id: 'evaluation',
+      slug: 'fertility-evaluation',
+      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792589225/83bef9f7-efbf-47e1-b2a1-8e581657afdc.png',
+      title: 'Comprehensive Fertility Evaluation',
+      desc: 'Seeking clarity, illuminating your path forward.',
+      icon: (
+        /* 1. Evaluation: Clinical Checklist Diagnostic Evaluation */
+        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+          <path d="m9 14 2 2 4-4" />
+        </svg>
+      ),
+    },
+    {
+      id: 'icsi',
+      slug: 'icsi',
+      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792589308/8f5c3c36-d8ee-42bc-a41d-061ab2ad4746.png',
+      title: 'ICSI — Advanced and Specialised Fertilization',
+      desc: 'Precision at the cellular level, micro-engineered with love.',
+      icon: (
+        /* 2. ICSI: Precision Micromanipulator */
+        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="14" cy="12" r="7" />
+          <path d="m4 12 5-2v4Z" fill="currentColor" fillOpacity="0.2" />
+          <path d="M2 12h7" />
+        </svg>
+      ),
+    },
+    {
       id: 'ivf',
       slug: 'ivf',
       image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655017/024cc721-d945-4dd0-bd03-0df90c20a63e.png',
       title: 'In-Vitro Fertilization (IVF) — Embrace Hope',
       desc: 'Embracing your hope, shielding your future..',
       icon: (
-        /* 1. IVF: Clinical Embryology Microscope */
+        /* 3. IVF: Clinical Embryology Microscope */
         <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M6 18h8" />
           <path d="M3 22h18" />
@@ -25,17 +55,92 @@ export default function FertilityServices({ onBookClick }) {
       ),
     },
     {
+      id: 'surgeries',
+      slug: 'fertility-enhancing-surgeries',
+      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792654234/e876ba22-7f6a-41e5-834d-d84f97c4d7ed.png',
+      title: 'Fertility Enhancing Surgeries',
+      desc: 'Restoring harmony, clearing the way for life to bloom.',
+      icon: (
+        /* 4. Surgeries: Surgical Precision Laparoscopy */
+        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M14.5 4.5 19.5 9.5" />
+          <path d="m6 18 8.5-8.5" />
+          <circle cx="5" cy="19" r="2" />
+          <path d="m18 6 3-3" />
+        </svg>
+      ),
+    },
+    {
+      id: 'pgt',
+      slug: 'pgt',
+      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655478/7cad0e96-55ef-4208-a692-3fcf2d36b0cd.png',
+      title: 'Preimplantation Genetic Testing (PGT)',
+      desc: 'Protecting your lineage, anchoring your hope in certainty.',
+      icon: (
+        /* 5. PGT: DNA Genetic Assessment */
+        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M2 15c6.667-6 13.333 0 20-6" />
+          <path d="M2 9c6.667 6 13.333 0 20 6" />
+          <path d="M5 10.5v3" />
+          <path d="M9 13v-2" />
+          <path d="M15 13v-2" />
+          <path d="M19 10.5v3" />
+        </svg>
+      ),
+    },
+    {
+      id: 'cryopreservation',
+      slug: 'cryopreservation',
+      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655778/45cdf191-e190-413a-98e4-654c44ad5136.png',
+      title: 'Cryopreservation (Embryo, Egg & Sperm Freezing)',
+      desc: 'Time stands still, safeguarding your dreams for tomorrow.',
+      icon: (
+        /* 6. Cryopreservation: Cold Vitrification Snowflake */
+        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07 19.07 4.93" />
+        </svg>
+      ),
+    },
+    {
+      id: 'iui',
+      slug: 'iui',
+      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655834/59f41f88-18e4-4f88-98e0-7742870cc730.png',
+      title: 'Intrauterine Insemination (IUI)',
+      desc: 'A gentle, natural step closer to your miracle.',
+      icon: (
+        /* 7. IUI: Gentle Direct Conception Pathway */
+        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7Z" />
+        </svg>
+      ),
+    },
+    {
       id: 'andrology',
       slug: 'andrology',
       image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792656176/2fb64835-3b24-460f-9bdb-0541ca7dfced.png',
       title: 'Semen Analysis & Advanced Andrology',
       desc: 'Understanding the foundation, empowering the journey together.',
       icon: (
-        /* 2. Andrology: Diagnostic Laboratory Conical Flask */
+        /* 8. Andrology: Diagnostic Laboratory Conical Flask */
         <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M10 2v7.31L4.15 19.3A2 2 0 0 0 5.86 22h12.28a2 2 0 0 0 1.71-2.7L14 9.31V2" />
           <path d="M8.5 2h7" />
           <path d="M6.5 16h11" />
+        </svg>
+      ),
+    },
+    {
+      id: 'counseling',
+      slug: 'counseling',
+      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792656342/93c654cd-8f74-4000-954d-5557ad3b11b9.png',
+      title: 'Psychological & Emotional Counseling',
+      desc: 'A safe space for your heart, walking beside you at every step.',
+      icon: (
+        /* 9. Counseling: Heart Handshake Compassionate Support */
+        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+          <path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.86.86 2.22.86 3.08 0L15 8" />
+          <path d="m14 10 1.5 1.5a2.17 2.17 0 0 0 3.08 0c.86-.86.86-2.22 0-3.08L17 7" />
         </svg>
       ),
     },
@@ -46,7 +151,7 @@ export default function FertilityServices({ onBookClick }) {
       title: 'Laser-Assisted Hatching (LAH)',
       desc: 'Assisting the embryo to hatch, opening the door to implantation.',
       icon: (
-        /* 3. LAH: Precision Optical Laser Target Focus */
+        /* 10. LAH: Precision Optical Laser Target Focus */
         <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="10" />
           <line x1="22" x2="18" y1="12" y2="12" />
@@ -64,7 +169,7 @@ export default function FertilityServices({ onBookClick }) {
       title: 'Endometrial Receptivity Assay (ERA)',
       desc: 'Finding the perfect window, preparing a welcoming home.',
       icon: (
-        /* 4. ERA: Implantation Window Timing Calendar Clock */
+        /* 11. ERA: Implantation Window Timing Calendar Clock */
         <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" />
           <path d="M16 2v4" />
@@ -72,111 +177,6 @@ export default function FertilityServices({ onBookClick }) {
           <path d="M3 10h18" />
           <circle cx="16" cy="16" r="6" />
           <path d="M16 14v2l1.5 1" />
-        </svg>
-      ),
-    },
-    {
-      id: 'counseling',
-      slug: 'counseling',
-      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792656342/93c654cd-8f74-4000-954d-5557ad3b11b9.png',
-      title: 'Psychological & Emotional Counseling',
-      desc: 'A safe space for your heart, walking beside you at every step.',
-      icon: (
-        /* 5. Counseling: Heart Handshake Compassionate Support */
-        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-          <path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.86.86 2.22.86 3.08 0L15 8" />
-          <path d="m14 10 1.5 1.5a2.17 2.17 0 0 0 3.08 0c.86-.86.86-2.22 0-3.08L17 7" />
-        </svg>
-      ),
-    },
-    {
-      id: 'evaluation',
-      slug: 'fertility-evaluation',
-      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792589225/83bef9f7-efbf-47e1-b2a1-8e581657afdc.png',
-      title: 'Comprehensive Fertility Evaluation',
-      desc: 'Seeking clarity, illuminating your path forward.',
-      icon: (
-        /* 6. Evaluation: Clinical Checklist Diagnostic Evaluation */
-        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-          <path d="m9 14 2 2 4-4" />
-        </svg>
-      ),
-    },
-    {
-      id: 'icsi',
-      slug: 'icsi',
-      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792589308/8f5c3c36-d8ee-42bc-a41d-061ab2ad4746.png',
-      title: 'ICSI — Advanced Fertilization',
-      desc: 'Precision at the cellular level, micro-engineered with love.',
-      icon: (
-        /* 7. ICSI: Precision Micromanipulator */
-        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="14" cy="12" r="7" />
-          <path d="m4 12 5-2v4Z" fill="currentColor" fillOpacity="0.2" />
-          <path d="M2 12h7" />
-        </svg>
-      ),
-    },
-    {
-      id: 'surgeries',
-      slug: 'fertility-enhancing-surgeries',
-      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792654234/e876ba22-7f6a-41e5-834d-d84f97c4d7ed.png',
-      title: 'Fertility Enhancing Surgeries',
-      desc: 'Restoring harmony, clearing the way for life to bloom.',
-      icon: (
-        /* 8. Surgeries: Surgical Precision Laparoscopy */
-        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M14.5 4.5 19.5 9.5" />
-          <path d="m6 18 8.5-8.5" />
-          <circle cx="5" cy="19" r="2" />
-          <path d="m18 6 3-3" />
-        </svg>
-      ),
-    },
-    {
-      id: 'pgt',
-      slug: 'pgt',
-      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655478/7cad0e96-55ef-4208-a692-3fcf2d36b0cd.png',
-      title: 'Preimplantation Genetic Testing (PGT)',
-      desc: 'Protecting your lineage, anchoring your hope in certainty.',
-      icon: (
-        /* 9. PGT: DNA Genetic Assessment */
-        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M2 15c6.667-6 13.333 0 20-6" />
-          <path d="M2 9c6.667 6 13.333 0 20 6" />
-          <path d="M5 10.5v3" />
-          <path d="M9 13v-2" />
-          <path d="M15 13v-2" />
-          <path d="M19 10.5v3" />
-        </svg>
-      ),
-    },
-    {
-      id: 'cryopreservation',
-      slug: 'cryopreservation',
-      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655778/45cdf191-e190-413a-98e4-654c44ad5136.png',
-      title: 'Cryopreservation & Freezing',
-      desc: 'Time stands still, safeguarding your dreams for tomorrow.',
-      icon: (
-        /* 10. Cryopreservation: Cold Vitrification Snowflake */
-        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07 19.07 4.93" />
-        </svg>
-      ),
-    },
-    {
-      id: 'iui',
-      slug: 'iui',
-      image: 'https://res.cloudinary.com/exmvyjeq/image/upload/v1792655834/59f41f88-18e4-4f88-98e0-7742870cc730.png',
-      title: 'Intrauterine Insemination (IUI)',
-      desc: 'A gentle, natural step closer to your miracle.',
-      icon: (
-        /* 11. IUI: Gentle Direct Conception Pathway */
-        <svg viewBox="0 0 24 24" className="w-8 h-8 sm:w-9 sm:h-9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7Z" />
         </svg>
       ),
     },

@@ -15,7 +15,7 @@ export default function HomePage({ onBookClick }) {
       <WelcomeSection onBookClick={onBookClick} />
       <DoctorsSection />
       <FertilityServices onBookClick={onBookClick} />
-      <WhyChooseUs />
+      <WhyChooseUs onBookClick={onBookClick} />
       <FAQSection onBookClick={onBookClick} />
       <Contact />
       <Footer onBookClick={onBookClick} />
