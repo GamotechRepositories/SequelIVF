@@ -93,7 +93,7 @@ export default function ContactPage({ onBookClick }) {
     {
       question: 'Do you provide second opinions on previous IVF failures?',
       answer:
-        'Yes. Sequel IVF frequently evaluates recurrent IVF failure, recurrent implantation failure, poor ovarian reserve, and complex male factor infertility cases. Dr. Patankar brings over 25 years of specialized expertise in reproductive medicine and clinical embryology to identify factors that may have been previously overlooked.',
+        'Yes. Sequel IVF frequently evaluates recurrent IVF failure, recurrent implantation failure, poor ovarian reserve, and complex male factor infertility cases. Dr. Patankar brings over 30 years of specialized expertise in reproductive medicine and clinical embryology to identify factors that may have been previously overlooked.',
     },
   ]
 
@@ -143,7 +143,7 @@ export default function ContactPage({ onBookClick }) {
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-1">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-[#F0D5E6] text-[11px] font-semibold text-[#3C2048] shadow-xs">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#603085]" />
-                Dr. Leena Patankar (25+ Yrs Exp)
+                Dr. Leena Patankar (30 Yrs Exp)
               </div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-[#F0D5E6] text-[11px] font-semibold text-[#3C2048] shadow-xs">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C49F64]" />

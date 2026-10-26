@@ -2,6 +2,22 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer.jsx'
 
+const teamPhoto = (url) =>
+  url.replace(
+    '/image/upload/',
+    '/image/upload/e_trim,c_fit,h_560,f_png,fl_preserve_transparency/'
+  )
+
+const GIRL_IMAGES = [
+  teamPhoto('https://res.cloudinary.com/exmvyjeq/image/upload/v1793007478/01bb9ff0-7d96-4ed6-956d-7a522287c557.png'),
+  teamPhoto('https://res.cloudinary.com/exmvyjeq/image/upload/v1793007351/a421d143-d3fd-4515-8590-c64f03e4ecb9.png'),
+  teamPhoto('https://res.cloudinary.com/exmvyjeq/image/upload/v1793007065/67d4ee46-3a0e-4419-977b-0dbf80dbe7e8.png'),
+]
+const MALE_IMAGES = [
+  teamPhoto('https://res.cloudinary.com/exmvyjeq/image/upload/v1793007859/4cea3650-1a3c-4b06-a71f-2b0058898fbe.png'),
+  teamPhoto('https://res.cloudinary.com/exmvyjeq/image/upload/v1793007952/069a7f1e-4479-4dad-801b-f0917ef5a712.png'),
+]
+
 export default function OurTeamPage({ onBookClick }) {
   const [activeFilter, setActiveFilter] = useState('all')
   const [selectedMember, setSelectedMember] = useState(null)
@@ -35,14 +51,14 @@ export default function OurTeamPage({ onBookClick }) {
       phoneHref: 'tel:+919665279369',
       email: 'info@sequelivf.com',
       emailHref: 'mailto:info@sequelivf.com',
-      experience: '25+ Years Experience',
+      experience: '30 Years Experience',
       location: '103, 104, First Floor, Yash Complex, Survey No. 161/7, Bhosale Garden, Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/285b926543910d790975aa5d1826a1c0-removebg-preview.png',
-      imageHover: '/images/dr_leena_patankar.jpg',
+      image: GIRL_IMAGES[0],
+      imageHover: GIRL_IMAGES[1],
       category: 'doctor',
       tag: 'Clinical Director',
       bioIntro:
-        "With over 25 years of dedicated experience in reproductive medicine, Dr. Leena Patankar is one of India's most respected fertility specialists, combining expertise in clinical infertility, advanced gynaecological endoscopy, and clinical embryology. Since beginning her medical practice in 1998, she has devoted her career to helping couples achieve parenthood through ethical, evidence-based, and personalized fertility treatment. As the Clinical & Managing Director of Sequel IVF, Dr. Patankar leads a multidisciplinary team committed to delivering world-class fertility care with compassion, transparency, and scientific excellence.",
+        "With over 30 years of dedicated experience in reproductive medicine, Dr. Leena Patankar is one of India's most respected fertility specialists, combining expertise in clinical infertility, advanced gynaecological endoscopy, and clinical embryology. Since beginning her medical practice in 1998, she has devoted her career to helping couples achieve parenthood through ethical, evidence-based, and personalized fertility treatment. As the Clinical & Managing Director of Sequel IVF, Dr. Patankar leads a multidisciplinary team committed to delivering world-class fertility care with compassion, transparency, and scientific excellence.",
       highlights: [
         {
           title: 'International Education & Advanced Training',
@@ -89,7 +105,45 @@ export default function OurTeamPage({ onBookClick }) {
         'State Board Authority for Assisted Reproductive Technology – Appointed Member'
       ],
       closingQuote:
-        'Today, Dr. Leena Patankar continues her mission through Sequel IVF, Hadapsar, Pune, bringing together more than two decades of experience, internationally trained expertise, state-of-the-art embryology, and compassionate patient care. Her vision is to provide every couple with ethical, transparent, scientifically advanced fertility treatment while offering unwavering emotional support throughout their journey to parenthood.'
+        'Today, Dr. Leena Patankar continues her mission through Sequel IVF, Hadapsar, Pune, bringing together 30 years of experience, internationally trained expertise, state-of-the-art embryology, and compassionate patient care. Her vision is to provide every couple with ethical, transparent, scientifically advanced fertility treatment while offering unwavering emotional support throughout their journey to parenthood.'
+    },
+    {
+      name: 'Dr. Monika Thavare',
+      role: 'Fertility Consultant & Specialist | MD (OBGY), Fellowship in Reproductive Medicine',
+      displayPosition: 'Fertility Consultant & Specialist at Sequel IVF',
+      qualifications: 'MD (OBGY), Fellowship in Reproductive Medicine',
+      phone: '+91 9763 845 143',
+      phoneHref: 'tel:+919763845143',
+      email: 'info@sequelivf.com',
+      emailHref: 'mailto:info@sequelivf.com',
+      experience: '10+ Years Experience',
+      location: 'Hadapsar, Pune, Maharashtra – 411028',
+      image: GIRL_IMAGES[1],
+      imageHover: GIRL_IMAGES[2],
+      category: 'doctor',
+      tag: 'Fertility Consultant',
+      bioIntro:
+        'Dr. Monika Thavare, MD (OBGY), Fellowship in Reproductive Medicine, is a Fertility Consultant & Specialist at Sequel IVF. With over 10 years of experience in obstetrics, gynaecology, and reproductive medicine, she provides personalized fertility care with a focus on accurate diagnosis, evidence-based treatment, and compassionate support for individuals and couples on their journey to parenthood.',
+      highlights: [
+        {
+          title: 'Expertise in Reproductive Medicine',
+          text: 'Dr. Thavare brings specialist training in obstetrics, gynaecology, and reproductive medicine, offering comprehensive evaluation and treatment for a wide range of fertility concerns.'
+        },
+        {
+          title: 'Personalized Fertility Care',
+          text: 'She works closely with each couple to understand their unique medical history and goals, creating treatment plans that are ethical, transparent, and tailored to their needs.'
+        },
+        {
+          title: 'A Trusted Clinical Partner',
+          text: 'As part of the Sequel IVF medical team, Dr. Thavare supports patients through consultation, treatment, and follow-up with clear communication and dedicated clinical guidance.'
+        }
+      ],
+      institutionsTitle: 'Dr. Monika Thavare serves in trusted clinical roles:',
+      institutions: [
+        'Sequel IVF – Fertility Consultant & Specialist'
+      ],
+      closingQuote:
+        'Dr. Monika Thavare is committed to helping every couple feel informed, supported, and confident as they take the next step toward parenthood at Sequel IVF.'
     },
     {
       name: 'Dr. Chirag Sharma',
@@ -102,8 +156,8 @@ export default function OurTeamPage({ onBookClick }) {
       emailHref: 'mailto:info@sequelivf.com',
       experience: '3 Years of Dedicated Expertise',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/ee463ed89c8028009bb195f9798676ec-removebg-preview.png',
-      imageHover: '/images/dr_chirag_sharma.jpg',
+      image: MALE_IMAGES[0],
+      imageHover: MALE_IMAGES[1],
       category: 'doctor',
       tag: 'IVF Specialist',
       bioIntro:
@@ -141,7 +195,8 @@ export default function OurTeamPage({ onBookClick }) {
       emailHref: 'mailto:sushil1june@gmail.com',
       experience: '16 Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/dr_chirag_sharma.jpg',
+      image: MALE_IMAGES[1],
+      imageHover: MALE_IMAGES[0],
       category: 'embryologist',
       tag: 'Founder & Lab Director',
       bioIntro:
@@ -183,7 +238,8 @@ export default function OurTeamPage({ onBookClick }) {
       emailHref: 'mailto:bharat.harpudeg@gmail.com',
       experience: '16+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/dr_chirag_sharma.jpg',
+      image: MALE_IMAGES[0],
+      imageHover: MALE_IMAGES[1],
       category: 'embryologist',
       tag: 'Founder & Lab Director',
       bioIntro:
@@ -225,7 +281,8 @@ export default function OurTeamPage({ onBookClick }) {
       emailHref: 'mailto:info@sequelivf.com',
       experience: 'Over 12 Years of Expertise',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
+      image: GIRL_IMAGES[2],
+      imageHover: GIRL_IMAGES[0],
       category: 'embryologist',
       tag: 'Coordinator & Senior Embryologist',
       bioIntro:
@@ -263,7 +320,8 @@ export default function OurTeamPage({ onBookClick }) {
       emailHref: 'mailto:info@sequelivf.com',
       experience: 'Over 6 Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/ee463ed89c8028009bb195f9798676ec-removebg-preview.png',
+      image: MALE_IMAGES[1],
+      imageHover: MALE_IMAGES[0],
       category: 'embryologist',
       tag: 'Coordinator & Senior Embryologist',
       bioIntro:
@@ -301,7 +359,8 @@ export default function OurTeamPage({ onBookClick }) {
       emailHref: 'mailto:info@sequelivf.com',
       experience: 'Over 5 Years of Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/285b926543910d790975aa5d1826a1c0-removebg-preview.png',
+      image: GIRL_IMAGES[0],
+      imageHover: GIRL_IMAGES[2],
       category: 'embryologist',
       tag: 'Coordinator & Senior Embryologist',
       bioIntro:
@@ -339,7 +398,8 @@ export default function OurTeamPage({ onBookClick }) {
       emailHref: 'mailto:info@sequelivf.com',
       experience: 'Over 3 Years of Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
+      image: GIRL_IMAGES[1],
+      imageHover: GIRL_IMAGES[0],
       category: 'embryologist',
       tag: 'Programs Coordinator',
       bioIntro:
@@ -377,7 +437,8 @@ export default function OurTeamPage({ onBookClick }) {
       emailHref: 'mailto:info@sequelivf.com',
       experience: '3 Years of Dedicated Expertise',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/285b926543910d790975aa5d1826a1c0-removebg-preview.png',
+      image: GIRL_IMAGES[2],
+      imageHover: GIRL_IMAGES[1],
       category: 'embryologist',
       tag: 'Programs Coordinator',
       bioIntro:
@@ -415,7 +476,8 @@ export default function OurTeamPage({ onBookClick }) {
       emailHref: 'mailto:info@sequelivf.com',
       experience: '1 Year of Dedicated Expertise',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
+      image: GIRL_IMAGES[1],
+      imageHover: GIRL_IMAGES[2],
       category: 'embryologist',
       tag: 'Programs Coordinator',
       bioIntro:
@@ -552,11 +614,11 @@ export default function OurTeamPage({ onBookClick }) {
               <div
                 key={doc.name}
                 onClick={() => setSelectedMember(doc)}
-                className="w-full bg-[#F5F2F8] rounded-2xl p-4.5 sm:p-5 lg:p-4.5 xl:p-5 border border-[#F0D5E6] hover:border-[#C49F64] shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-4 sm:gap-4.5 items-start group cursor-pointer hover:-translate-y-1"
+                className="w-full bg-[#F5F2F8] rounded-2xl pt-1.5 px-3.5 pb-2.5 sm:pt-2 sm:px-4 sm:pb-3 border border-[#F0D5E6] hover:border-[#C49F64] shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 group cursor-pointer hover:-translate-y-1"
                 title={`Click to view full biography of ${doc.name}`}
               >
                 {/* Doctor photos: cutout by default, clinic photo on hover */}
-                <div className="relative w-full sm:w-36 md:w-40 lg:w-36 xl:w-40 h-52 sm:h-56 lg:h-52 xl:h-56 shrink-0 overflow-hidden rounded-xl bg-white/70 img-shine-effect">
+                <div className="relative w-full h-48 sm:w-36 sm:h-44 lg:w-40 lg:h-48 shrink-0 overflow-hidden bg-transparent img-shine-effect">
                   <img
                     src={doc.image}
                     alt={doc.name}
@@ -567,7 +629,7 @@ export default function OurTeamPage({ onBookClick }) {
                     <img
                       src={doc.imageHover}
                       alt=""
-                      className="absolute inset-0 w-full h-full object-cover object-[center_18%] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      className="absolute inset-0 w-full h-full object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                       loading="lazy"
                     />
                   )}
@@ -580,64 +642,33 @@ export default function OurTeamPage({ onBookClick }) {
                 </div>
 
                 {/* Doctor Details on right */}
-                <div className="flex-1 min-w-0 flex flex-col justify-between h-full w-full">
-                  <div>
-                    {/* Role Tag */}
-                    {doc.tag && (
-                      <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-[#603085] bg-white px-2 py-0.5 rounded-md border border-[#F0D5E6] mb-1.5">
+                <div className="flex-1 min-w-0 flex flex-col justify-center pb-3.5 sm:pb-0">
+                  {/* Role Tag */}
+                  {doc.tag && (
+                    <span className="inline-flex items-center gap-1.5 mb-1.5">
+                      <span className="w-4 h-px bg-[#C49F64]" />
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#C49F64]">
                         {doc.tag}
                       </span>
-                    )}
+                    </span>
+                  )}
 
-                    {/* Name: Purple by default, Gold on hover */}
-                    <h3 className="font-serif text-[#603085] text-base sm:text-lg font-medium leading-snug mb-1 group-hover:text-[#C49F64] transition-colors duration-300">
-                      {doc.name}
-                    </h3>
+                  {/* Name: Purple by default, Gold on hover */}
+                  <h3 className="font-serif text-[#603085] text-base sm:text-lg font-medium leading-snug mb-1 group-hover:text-[#C49F64] transition-colors duration-300">
+                    {doc.name}
+                  </h3>
 
-                    {/* Role / Qualifications */}
-                    <p className="text-[#6B7280] text-[11.5px] leading-relaxed mb-3 line-clamp-3">
-                      {doc.role}
-                    </p>
-                  </div>
+                  {/* Role / Qualifications */}
+                  <p className="text-[#6B7280] text-[11.5px] leading-relaxed mb-2 line-clamp-3">
+                    {doc.role}
+                  </p>
 
-                  <div>
-                    {/* Subtle Divider Line */}
-                    <div className="border-b border-[#F5E6F0] mb-2.5" />
-
-                    {/* Contact Info */}
-                    <div className="space-y-1.5 text-xs text-[#4B5563]">
-                      {/* Phone */}
-                      <div className="flex items-center gap-2 truncate">
-                        <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
-                          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                        <span className="truncate">{doc.phone}</span>
-                      </div>
-
-                      {/* Email */}
-                      <div className="flex items-center gap-2 truncate">
-                        <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
-                          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        <span className="truncate">{doc.email}</span>
-                      </div>
-
-                      {/* Experience */}
-                      <div className="flex items-center justify-between pt-1">
-                        <div className="flex items-center gap-2 text-[#4B5563]">
-                          <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M12 6v6l4 2" strokeLinecap="round" />
-                          </svg>
-                          <span className="font-medium">{doc.experience}</span>
-                        </div>
-
-                        {/* Interactive Click Indicator */}
-                        <span className="text-[11px] font-bold text-[#603085] group-hover:text-[#C49F64] flex items-center gap-0.5">
-                          View Details &rarr;
-                        </span>
-                      </div>
-                    </div>
+                  <div className="flex items-center gap-2 text-xs text-[#4B5563]">
+                    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 6v6l4 2" strokeLinecap="round" />
+                    </svg>
+                    <span className="font-medium">{doc.experience}</span>
                   </div>
                 </div>
               </div>
@@ -704,25 +735,29 @@ export default function OurTeamPage({ onBookClick }) {
                 {/* LEFT COLUMN: Photo, Name in gold, Position, Experience, Location, Contact */}
                 <div className="lg:col-span-5 flex flex-col">
                   {/* Photo Frame */}
-                  <div className="w-full aspect-[4/5] sm:max-h-[380px] rounded-2xl overflow-hidden bg-[#F5F2F8] border border-[#F0D5E6] shadow-md mb-6 relative group/photo img-shine-effect">
+                  <div className="w-full aspect-[4/5] sm:max-h-[380px] overflow-hidden bg-transparent mb-6 relative group/photo img-shine-effect">
                     <img
                       src={selectedMember.image}
                       alt={selectedMember.name}
-                      className="absolute inset-0 w-full h-full object-contain object-bottom"
+                      className="absolute inset-0 w-full h-full object-contain object-center"
                     />
                     {selectedMember.imageHover && (
                       <img
                         src={selectedMember.imageHover}
                         alt=""
-                        className="absolute inset-0 w-full h-full object-cover object-[center_18%] opacity-0 group-hover/photo:opacity-100 transition-opacity duration-500"
+                        className="absolute inset-0 w-full h-full object-contain object-center opacity-0 group-hover/photo:opacity-100 transition-opacity duration-500"
                       />
                     )}
-                    {selectedMember.tag && (
-                      <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm border border-[#F0D5E6] text-[#603085] font-bold text-[11px] px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+                  </div>
+
+                  {selectedMember.tag && (
+                    <span className="inline-flex items-center gap-1.5 mb-2">
+                      <span className="w-5 h-px bg-[#C49F64]" />
+                      <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#C49F64]">
                         {selectedMember.tag}
                       </span>
-                    )}
-                  </div>
+                    </span>
+                  )}
 
                   {/* Name in Signature Gold */}
                   <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#C49F64] mb-4">
@@ -751,26 +786,6 @@ export default function OurTeamPage({ onBookClick }) {
                     <div>
                       <span className="font-semibold text-[#241132]">Location:</span>{' '}
                       <span className="text-[#555555]">{selectedMember.location}</span>
-                    </div>
-
-                    <div>
-                      <span className="font-semibold text-[#241132]">Email:</span>{' '}
-                      <a
-                        href={selectedMember.emailHref}
-                        className="text-[#603085] hover:underline"
-                      >
-                        {selectedMember.email}
-                      </a>
-                    </div>
-
-                    <div>
-                      <span className="font-semibold text-[#241132]">Phone:</span>{' '}
-                      <a
-                        href={selectedMember.phoneHref}
-                        className="text-[#603085] hover:underline font-medium"
-                      >
-                        {selectedMember.phone}
-                      </a>
                     </div>
                   </div>
 

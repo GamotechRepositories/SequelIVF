@@ -1,5 +1,21 @@
 import React, { useRef, useState } from 'react'
 
+const teamPhoto = (url) =>
+  url.replace(
+    '/image/upload/',
+    '/image/upload/e_trim,c_fit,h_560,f_png,fl_preserve_transparency/'
+  )
+
+const GIRL_IMAGES = [
+  teamPhoto('https://res.cloudinary.com/exmvyjeq/image/upload/v1793007478/01bb9ff0-7d96-4ed6-956d-7a522287c557.png'),
+  teamPhoto('https://res.cloudinary.com/exmvyjeq/image/upload/v1793007351/a421d143-d3fd-4515-8590-c64f03e4ecb9.png'),
+  teamPhoto('https://res.cloudinary.com/exmvyjeq/image/upload/v1793007065/67d4ee46-3a0e-4419-977b-0dbf80dbe7e8.png'),
+]
+const MALE_IMAGES = [
+  teamPhoto('https://res.cloudinary.com/exmvyjeq/image/upload/v1793007859/4cea3650-1a3c-4b06-a71f-2b0058898fbe.png'),
+  teamPhoto('https://res.cloudinary.com/exmvyjeq/image/upload/v1793007952/069a7f1e-4479-4dad-801b-f0917ef5a712.png'),
+]
+
 export default function DoctorsSection() {
   const scrollRef = useRef(null)
   const [activeSlide, setActiveSlide] = useState(0)
@@ -39,9 +55,9 @@ export default function DoctorsSection() {
       phoneHref: 'tel:+919665279369',
       email: 'info@sequelivf.com',
       emailHref: 'mailto:info@sequelivf.com',
-      experience: '24 Years Experience',
-      image: '/images/285b926543910d790975aa5d1826a1c0-removebg-preview.png',
-      imageHover: '/images/dr_leena_patankar.jpg',
+      experience: '30 Years Experience',
+      image: GIRL_IMAGES[0],
+      imageHover: GIRL_IMAGES[1],
     },
     {
       name: 'Dr. Monika Thavare',
@@ -51,8 +67,8 @@ export default function DoctorsSection() {
       email: 'info@sequelivf.com',
       emailHref: 'mailto:info@sequelivf.com',
       experience: '10+ Years Experience',
-      image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
-      imageHover: '/images/dr_monika_thavare.jpg',
+      image: GIRL_IMAGES[1],
+      imageHover: GIRL_IMAGES[2],
     },
     {
       name: 'Dr. Chirag Sharma',
@@ -62,8 +78,8 @@ export default function DoctorsSection() {
       email: 'info@sequelivf.com',
       emailHref: 'mailto:info@sequelivf.com',
       experience: '3+ Years Experience',
-      image: '/images/ee463ed89c8028009bb195f9798676ec-removebg-preview.png',
-      imageHover: '/images/dr_chirag_sharma.jpg',
+      image: MALE_IMAGES[0],
+      imageHover: MALE_IMAGES[1],
     },
     {
       name: 'Emb. Sushil Waghmare',
@@ -73,7 +89,8 @@ export default function DoctorsSection() {
       email: 'sushil1june@gmail.com',
       emailHref: 'mailto:sushil1june@gmail.com',
       experience: '16 Years Experience',
-      image: '/images/dr_chirag_sharma.jpg',
+      image: MALE_IMAGES[1],
+      imageHover: MALE_IMAGES[0],
     },
     {
       name: 'Emb. Bharat Harpude',
@@ -83,7 +100,8 @@ export default function DoctorsSection() {
       email: 'bharat.harpudeg@gmail.com',
       emailHref: 'mailto:bharat.harpudeg@gmail.com',
       experience: '16+ Years Experience',
-      image: '/images/dr_chirag_sharma.jpg',
+      image: MALE_IMAGES[0],
+      imageHover: MALE_IMAGES[1],
     },
   ]
 
@@ -123,10 +141,10 @@ export default function DoctorsSection() {
           {DOCTORS.map((doc) => (
             <div
               key={doc.name}
-              className="w-[84vw] max-w-[340px] sm:w-[380px] md:w-[410px] lg:w-[calc((100%-3rem)/3)] lg:max-w-none shrink-0 snap-start bg-[#F5F2F8] rounded-2xl p-4.5 sm:p-5 lg:p-4.5 xl:p-5 border border-[#F0D5E6] hover:border-[#C49F64]/70 shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-4 sm:gap-4.5 items-start group"
+              className="w-[84vw] max-w-[340px] sm:w-[380px] md:w-[410px] lg:w-[calc((100%-3rem)/3)] lg:max-w-none shrink-0 snap-start bg-[#F5F2F8] rounded-2xl pt-1.5 px-3.5 pb-2.5 sm:pt-2 sm:px-4 sm:pb-3 border border-[#F0D5E6] hover:border-[#C49F64]/70 shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 group"
             >
               {/* Doctor photos: cutout by default, clinic photo on hover */}
-              <div className="relative w-full sm:w-36 md:w-40 lg:w-36 xl:w-40 h-52 sm:h-56 lg:h-52 xl:h-56 shrink-0 overflow-hidden rounded-xl bg-white/70 img-shine-effect">
+              <div className="relative w-full h-48 sm:w-36 sm:h-44 lg:w-40 lg:h-48 shrink-0 overflow-hidden bg-transparent img-shine-effect">
                 <img
                   src={doc.image}
                   alt={doc.name}
@@ -137,63 +155,30 @@ export default function DoctorsSection() {
                   <img
                     src={doc.imageHover}
                     alt=""
-                    className="absolute inset-0 w-full h-full object-cover object-[center_18%] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    className="absolute inset-0 w-full h-full object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     loading="lazy"
                   />
                 )}
               </div>
 
               {/* Doctor Details on right */}
-              <div className="flex-1 min-w-0 flex flex-col justify-between h-full w-full">
-                <div>
-                  {/* Name: Purple by default, Gold on hover */}
-                  <h3 className="font-serif text-[#603085] text-lg sm:text-xl font-medium leading-snug mb-1.5 group-hover:text-[#C49F64] transition-colors duration-300">
-                    {doc.name}
-                  </h3>
+              <div className="flex-1 min-w-0 flex flex-col justify-center pb-3.5 sm:pb-0">
+                {/* Name: Purple by default, Gold on hover */}
+                <h3 className="font-serif text-[#603085] text-lg sm:text-xl font-medium leading-snug mb-1.5 group-hover:text-[#C49F64] transition-colors duration-300">
+                  {doc.name}
+                </h3>
 
-                  {/* Role / Qualifications */}
-                  <p className="text-[#6B7280] text-xs leading-relaxed mb-3">
-                    {doc.role}
-                  </p>
-                </div>
+                {/* Role / Qualifications */}
+                <p className="text-[#6B7280] text-xs leading-relaxed mb-2">
+                  {doc.role}
+                </p>
 
-                <div>
-                  {/* Subtle Divider Line */}
-                  <div className="border-b border-[#F5E6F0] mb-3" />
-
-                  {/* Contact Info (Icons: Purple by default, Gold on hover) */}
-                  <div className="space-y-2 text-xs text-[#4B5563]">
-                    {/* Phone */}
-                    <a
-                      href={doc.phoneHref}
-                      className="flex items-center gap-2 hover:text-[#603085] transition-colors truncate"
-                    >
-                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                      </svg>
-                      <span className="truncate">{doc.phone}</span>
-                    </a>
-
-                    {/* Email */}
-                    <a
-                      href={doc.emailHref}
-                      className="flex items-center gap-2 hover:text-[#603085] transition-colors truncate"
-                    >
-                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="currentColor">
-                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                      </svg>
-                      <span className="truncate">{doc.email}</span>
-                    </a>
-
-                    {/* Experience */}
-                    <div className="flex items-center gap-2 text-[#4B5563]">
-                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 6v6l4 2" strokeLinecap="round" />
-                      </svg>
-                      <span>{doc.experience}</span>
-                    </div>
-                  </div>
+                <div className="flex items-center gap-2 text-xs text-[#4B5563]">
+                  <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#603085] group-hover:text-[#C49F64] transition-colors duration-300 shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" strokeLinecap="round" />
+                  </svg>
+                  <span>{doc.experience}</span>
                 </div>
               </div>
             </div>
