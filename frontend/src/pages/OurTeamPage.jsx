@@ -216,6 +216,44 @@ export default function OurTeamPage({ onBookClick }) {
         'For Bharat, embryology is more than a medical discipline. It is a meaningful mission centered on scientific excellence, safe laboratory practice, compassionate care, and the creation of new possibilities for families.'
     },
     {
+      name: 'Emb. Bhagyashree Uttekar',
+      role: 'Coordinator & Senior Embryologist',
+      displayPosition: 'Coordinator and Senior Embryologist at Sequel IVF',
+      phone: '+91 9763 845 143',
+      phoneHref: 'tel:+919763845143',
+      email: 'info@sequelivf.com',
+      emailHref: 'mailto:info@sequelivf.com',
+      experience: 'Over 12 Years of Expertise',
+      location: 'Hadapsar, Pune, Maharashtra – 411028',
+      image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
+      category: 'embryologist',
+      tag: 'Coordinator & Senior Embryologist',
+      bioIntro:
+        'Emb. Bhagyashree Uttekar is a highly experienced Clinical Embryologist and reproductive healthcare professional with over 12 years of expertise in assisted reproductive technology (ART) and fertility care. Throughout her career, she has remained committed to clinical excellence, scientific precision, and compassionate patient support, playing an integral role in helping individuals and couples navigate their fertility journey with confidence.',
+      highlights: [
+        {
+          title: 'Over 12 Years of Clinical Expertise',
+          text: 'With extensive experience spanning embryology, laboratory management, and patient program coordination, Bhagyashree combines advanced technical expertise with a patient-centered approach.'
+        },
+        {
+          title: 'Advanced Embryological Procedures & Quality Standards',
+          text: 'Her proficiency includes key embryological procedures, laboratory quality standards, and the coordination of multidisciplinary fertility programs, ensuring seamless clinical workflows and exceptional standards of care.'
+        },
+        {
+          title: 'Patient Pathways & Supportive Experience',
+          text: 'As Coordinator and Senior Embryologist at Sequel IVF, she oversees patient pathways, facilitating effective communication between clinical teams and patients while ensuring a smooth and supportive treatment experience.'
+        }
+      ],
+      institutionsTitle: 'Key Roles & Institutional Affiliations:',
+      institutions: [
+        'Sequel IVF – Coordinator and Senior Embryologist',
+        'Genesis ART Services – Freelance Embryologist',
+        'Patankar Fertility Solutions – Senior Embryologist'
+      ],
+      closingQuote:
+        'Driven by a passion for reproductive medicine and continuous professional growth, Bhagyashree is dedicated to maintaining the highest standards of embryology practice and contributing to successful fertility outcomes. She believes that every patient deserves compassionate care, scientific excellence, and personalized support throughout their journey toward parenthood.'
+    },
+    {
       name: 'Emb. Rajwardhan Jagtap',
       role: 'Coordinator & Senior Embryologist | Postgraduate Senior Embryologist & ART Specialist',
       displayPosition: 'Coordinator and Senior Embryologist at Sequel IVF',
@@ -254,47 +292,9 @@ export default function OurTeamPage({ onBookClick }) {
         'Passionate about scientific innovation and clinical excellence, he remains dedicated to optimizing fertilization and embryo development outcomes while helping individuals and couples achieve their dream of parenthood through evidence-based assisted reproductive technologies.'
     },
     {
-      name: 'Emb. Bhagyashree Uttekar',
-      role: 'Programs Coordinator & Clinical Embryologist',
-      displayPosition: 'Programs Coordinator & Clinical Embryologist at Sequel IVF',
-      phone: '+91 9763 845 143',
-      phoneHref: 'tel:+919763845143',
-      email: 'info@sequelivf.com',
-      emailHref: 'mailto:info@sequelivf.com',
-      experience: 'Over 12 Years of Expertise',
-      location: 'Hadapsar, Pune, Maharashtra – 411028',
-      image: '/images/9bc0ceb83d86f8767d2f02151de1ee7c-removebg-preview.png',
-      category: 'embryologist',
-      tag: 'Programs Coordinator',
-      bioIntro:
-        'Emb. Bhagyashree Uttekar is a highly experienced Clinical Embryologist and reproductive healthcare professional with over 12 years of expertise in assisted reproductive technology (ART) and fertility care. Throughout her career, she has remained committed to clinical excellence, scientific precision, and compassionate patient support, playing an integral role in helping individuals and couples navigate their fertility journey with confidence.',
-      highlights: [
-        {
-          title: 'Over 12 Years of Clinical Expertise',
-          text: 'With extensive experience spanning embryology, laboratory management, and patient program coordination, Bhagyashree combines advanced technical expertise with a patient-centered approach.'
-        },
-        {
-          title: 'Advanced Embryological Procedures & Quality Standards',
-          text: 'Her proficiency includes key embryological procedures, laboratory quality standards, and the coordination of multidisciplinary fertility programs, ensuring seamless clinical workflows and exceptional standards of care.'
-        },
-        {
-          title: 'Patient Pathways & Supportive Experience',
-          text: 'As the Programs Coordinator at Sequel IVF, she oversees patient pathways, facilitating effective communication between clinical teams and patients while ensuring a smooth and supportive treatment experience.'
-        }
-      ],
-      institutionsTitle: 'Key Roles & Institutional Affiliations:',
-      institutions: [
-        'Sequel IVF – Programs Coordinator',
-        'Genesis ART Services – Freelance Embryologist',
-        'Patankar Fertility Solutions – Senior Embryologist'
-      ],
-      closingQuote:
-        'Driven by a passion for reproductive medicine and continuous professional growth, Bhagyashree is dedicated to maintaining the highest standards of embryology practice and contributing to successful fertility outcomes. She believes that every patient deserves compassionate care, scientific excellence, and personalized support throughout their journey toward parenthood.'
-    },
-    {
       name: 'Emb. Madhu Kale',
-      role: 'Programs Coordinator & Clinical Embryologist',
-      displayPosition: 'Programs Coordinator & Clinical Embryologist at Sequel IVF',
+      role: 'Coordinator & Senior Embryologist',
+      displayPosition: 'Coordinator and Senior Embryologist at Sequel IVF',
       phone: '+91 9763 845 143',
       phoneHref: 'tel:+919763845143',
       email: 'info@sequelivf.com',
@@ -303,7 +303,7 @@ export default function OurTeamPage({ onBookClick }) {
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: '/images/285b926543910d790975aa5d1826a1c0-removebg-preview.png',
       category: 'embryologist',
-      tag: 'Programs Coordinator',
+      tag: 'Coordinator & Senior Embryologist',
       bioIntro:
         'Emb. Madhu Kale is a dedicated Clinical Embryologist and reproductive healthcare professional with over 5 years of experience in assisted reproductive technology (ART) and fertility care. Throughout her career, she has remained committed to delivering clinical excellence, scientific precision, and compassionate patient support, helping individuals and couples navigate their fertility journey with confidence and care.',
       highlights: [
@@ -317,12 +317,12 @@ export default function OurTeamPage({ onBookClick }) {
         },
         {
           title: 'Patient Care Pathways & Multidisciplinary Communication',
-          text: 'As the Programs Coordinator at Sequel IVF, Madhu oversees patient care pathways, facilitating seamless communication between patients and clinical teams while ensuring a supportive and well-coordinated treatment experience.'
+          text: 'As Coordinator and Senior Embryologist at Sequel IVF, Madhu oversees patient care pathways, facilitating seamless communication between patients and clinical teams while ensuring a supportive and well-coordinated treatment experience.'
         }
       ],
       institutionsTitle: 'Key Roles & Institutional Affiliations:',
       institutions: [
-        'Sequel IVF – Programs Coordinator',
+        'Sequel IVF – Coordinator and Senior Embryologist',
         'Genesis ART Services – Freelance Embryologist',
         'Patankar Fertility Solutions – Senior Embryologist'
       ],
@@ -672,7 +672,7 @@ export default function OurTeamPage({ onBookClick }) {
       {/* DETAILED TEAM MEMBER MODAL (Matching https://sequelivf.com/team/... design) */}
       {selectedMember && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto bg-black/60 backdrop-blur-sm animate-fadeIn"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto popup-scroll no-scrollbar bg-black/60 backdrop-blur-sm animate-fadeIn"
           onClick={() => setSelectedMember(null)}
         >
           <div
@@ -698,7 +698,7 @@ export default function OurTeamPage({ onBookClick }) {
             </div>
 
             {/* Modal Scrollable Body: 2-Column Layout matching sequelivf.com */}
-            <div className="overflow-y-auto p-6 sm:p-8 lg:p-10 flex-1">
+            <div className="overflow-y-auto popup-scroll no-scrollbar p-6 sm:p-8 lg:p-10 flex-1">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
 
                 {/* LEFT COLUMN: Photo, Name in gold, Position, Experience, Location, Contact */}

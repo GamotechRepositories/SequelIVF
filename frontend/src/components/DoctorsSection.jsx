@@ -65,6 +65,26 @@ export default function DoctorsSection() {
       image: '/images/ee463ed89c8028009bb195f9798676ec-removebg-preview.png',
       imageHover: '/images/dr_chirag_sharma.jpg',
     },
+    {
+      name: 'Emb. Sushil Waghmare',
+      role: 'Founder & Lab Director | ESHRE-Certified Senior Clinical Embryologist',
+      phone: '+91 9763 845 143',
+      phoneHref: 'tel:+919763845143',
+      email: 'sushil1june@gmail.com',
+      emailHref: 'mailto:sushil1june@gmail.com',
+      experience: '16 Years Experience',
+      image: '/images/dr_chirag_sharma.jpg',
+    },
+    {
+      name: 'Emb. Bharat Harpude',
+      role: 'Founder & Lab Director | ESHRE-Certified Senior Clinical Embryologist',
+      phone: '+91 9011 920 589',
+      phoneHref: 'tel:+919011920589',
+      email: 'bharat.harpudeg@gmail.com',
+      emailHref: 'mailto:bharat.harpudeg@gmail.com',
+      experience: '16+ Years Experience',
+      image: '/images/dr_chirag_sharma.jpg',
+    },
   ]
 
   return (
@@ -94,19 +114,19 @@ export default function DoctorsSection() {
           </div>
         </div>
 
-        {/* 3 Doctors: Horizontal scroll on Mobile & Tablet (Tab view), Compact 3-Column Grid on Desktop */}
+        {/* Specialists: one horizontal row on every screen size */}
         <div
           ref={scrollRef}
           onScroll={handleScrollTrack}
-          className="flex flex-nowrap overflow-x-auto pb-4 pt-1 gap-4.5 sm:gap-6 lg:gap-5 xl:gap-6 snap-x snap-mandatory scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0"
+          className="flex flex-nowrap overflow-x-auto pb-4 pt-1 gap-4.5 sm:gap-6 scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {DOCTORS.map((doc) => (
             <div
               key={doc.name}
-              className="w-[84vw] max-w-[340px] sm:w-[380px] md:w-[410px] shrink-0 snap-start lg:w-auto lg:max-w-none lg:shrink bg-[#F5F2F8] rounded-2xl p-4.5 sm:p-5 lg:p-4 xl:p-5 border border-[#F0D5E6] hover:border-[#C49F64]/70 shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-4 sm:gap-4.5 items-start group"
+              className="w-[84vw] max-w-[340px] sm:w-[380px] md:w-[410px] lg:w-[calc((100%-3rem)/3)] lg:max-w-none shrink-0 snap-start bg-[#F5F2F8] rounded-2xl p-4.5 sm:p-5 lg:p-4.5 xl:p-5 border border-[#F0D5E6] hover:border-[#C49F64]/70 shadow-[0_4px_16px_-4px_rgba(36,17,50,0.05)] hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-4 sm:gap-4.5 items-start group"
             >
               {/* Doctor photos: cutout by default, clinic photo on hover */}
-              <div className="relative w-full sm:w-36 md:w-40 lg:w-32 xl:w-36 h-52 sm:h-56 lg:h-52 xl:h-56 shrink-0 overflow-hidden rounded-xl bg-white/70 img-shine-effect">
+              <div className="relative w-full sm:w-36 md:w-40 lg:w-36 xl:w-40 h-52 sm:h-56 lg:h-52 xl:h-56 shrink-0 overflow-hidden rounded-xl bg-white/70 img-shine-effect">
                 <img
                   src={doc.image}
                   alt={doc.name}
@@ -180,8 +200,8 @@ export default function DoctorsSection() {
           ))}
         </div>
 
-        {/* Navigation Controls: Arrows + Dots on Mobile & Tablet (Tab view), Hidden on Desktop */}
-        <div className="flex lg:hidden flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
+        {/* Navigation Controls: Arrows + Dots on every screen size */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
           <div className="flex items-center gap-3">
             {/* Prev Button */}
             <button
@@ -195,7 +215,7 @@ export default function DoctorsSection() {
               </svg>
             </button>
 
-            {/* Pagination Dots for all 3 Doctors */}
+            {/* Pagination Dots */}
             <div className="flex items-center gap-2 px-3 py-2 bg-[#F5F2F8] rounded-full border border-[#F0D5E6]">
               {DOCTORS.map((doc, idx) => (
                 <button
@@ -226,7 +246,7 @@ export default function DoctorsSection() {
           </div>
 
           <span className="text-[11px] sm:text-xs font-semibold text-[#7C6285]">
-            Scroll or use arrows to view all 3 specialists
+            Scroll or use arrows to view all {DOCTORS.length} specialists
           </span>
         </div>
 

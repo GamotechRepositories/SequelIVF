@@ -252,7 +252,7 @@ export default function Header({ onBookClick }) {
               </svg>
             </button>
           </div>
-          <div className="p-6 space-y-3 font-bold text-xs uppercase tracking-wider text-[#241132] overflow-y-auto">
+          <div className="p-6 space-y-3 font-bold text-xs uppercase tracking-wider text-[#241132] overflow-y-auto popup-scroll no-scrollbar">
             {/* ABOUT US Accordion */}
             <div className="border-b border-gray-100">
               <button

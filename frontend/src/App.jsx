@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import ContactNowNotch from './components/ContactNowNotch.jsx'
@@ -20,14 +20,70 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage.jsx'
 import ArtCompliancePage from './pages/ArtCompliancePage.jsx'
 import PcpndtDisclaimerPage from './pages/PcpndtDisclaimerPage.jsx'
 
+const CONSULT_POPUP_KEY = 'sequel-consult-popup-shown'
+
+function markConsultPopupShown() {
+  try {
+    sessionStorage.setItem(CONSULT_POPUP_KEY, '1')
+  } catch {
+    /* ignore private-mode storage errors */
+  }
+}
+
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false)
   const [selectedScan, setSelectedScan] = useState('')
+  const scrollPopupArmed = useRef(false)
 
   const handleOpenBooking = (serviceName = '') => {
     setSelectedScan(serviceName || 'Doctor Consultation & Guidance')
     setIsBookingOpen(true)
+    markConsultPopupShown()
   }
+
+  const handleCloseBooking = () => {
+    setIsBookingOpen(false)
+    markConsultPopupShown()
+  }
+
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem(CONSULT_POPUP_KEY) === '1') return
+    } catch {
+      /* continue without persistence */
+    }
+
+    const armTimer = window.setTimeout(() => {
+      scrollPopupArmed.current = true
+    }, 1800)
+
+    const openOnFirstScroll = () => {
+      if (!scrollPopupArmed.current) return
+      if (document.documentElement.classList.contains('page-loading')) return
+      try {
+        if (sessionStorage.getItem(CONSULT_POPUP_KEY) === '1') return
+      } catch {
+        /* ignore */
+      }
+      markConsultPopupShown()
+      setSelectedScan('Initial Fertility Consultation & Assessment')
+      setIsBookingOpen(true)
+      window.removeEventListener('scroll', openOnFirstScroll)
+      window.removeEventListener('wheel', openOnFirstScroll)
+      window.removeEventListener('touchmove', openOnFirstScroll)
+    }
+
+    window.addEventListener('scroll', openOnFirstScroll, { passive: true })
+    window.addEventListener('wheel', openOnFirstScroll, { passive: true })
+    window.addEventListener('touchmove', openOnFirstScroll, { passive: true })
+
+    return () => {
+      window.clearTimeout(armTimer)
+      window.removeEventListener('scroll', openOnFirstScroll)
+      window.removeEventListener('wheel', openOnFirstScroll)
+      window.removeEventListener('touchmove', openOnFirstScroll)
+    }
+  }, [])
 
   return (
     <BrowserRouter>
@@ -211,7 +267,7 @@ function App() {
         <ContactNowNotch />
         <BookingModal
           isOpen={isBookingOpen}
-          onClose={() => setIsBookingOpen(false)}
+          onClose={handleCloseBooking}
           defaultService={selectedScan}
         />
       </div>

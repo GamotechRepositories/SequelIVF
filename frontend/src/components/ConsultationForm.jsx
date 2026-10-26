@@ -100,10 +100,9 @@ export default function ConsultationForm({
 
   return (
     <div
-      className={`w-full bg-[#FAF8FC] rounded-3xl border border-[#F0D5E6] shadow-sm relative no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden ${
+      className={`w-full bg-[#FAF8FC] rounded-3xl border border-[#F0D5E6] shadow-sm relative popup-scroll no-scrollbar ${
         isModal ? 'p-5 sm:p-7' : 'p-6 sm:p-8 lg:p-9'
       }`}
-      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
     >
       {/* Close button if inside modal */}
       {isModal && onClose && (
@@ -368,8 +367,7 @@ export default function ConsultationForm({
               value={form.message}
               onChange={handleChange}
               placeholder="Briefly mention any previous treatments or questions you'd like the doctor to review..."
-              className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#F0D5E6] text-[#241132] text-sm placeholder-gray-400 focus:outline-none focus:border-[#603085] focus:ring-2 focus:ring-[#603085]/15 transition-all resize-none no-scrollbar"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#F0D5E6] text-[#241132] text-sm placeholder-gray-400 focus:outline-none focus:border-[#603085] focus:ring-2 focus:ring-[#603085]/15 transition-all resize-none popup-scroll no-scrollbar"
             />
           </div>
 
