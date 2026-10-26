@@ -46,7 +46,7 @@ export default function ContactNowNotch() {
       </div>
 
       {/* Right Corner: Floating WhatsApp & Call Buttons */}
-      <div className="fixed bottom-4 sm:bottom-6 right-3 sm:right-6 z-50 flex flex-col items-end gap-2.5 sm:gap-3">
+      <div className="fixed bottom-[4.4rem] right-3 z-50 flex flex-col items-end gap-2.5 sm:bottom-6 sm:right-6 sm:gap-3">
         {/* WhatsApp */}
         <a
           href="https://wa.me/919665279369?text=Hello%20Sequel%20IVF%20Clinic,%20I%20would%20like%20to%20book%20a%20consultation"

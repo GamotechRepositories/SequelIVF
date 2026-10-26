@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import ContactNowNotch from './components/ContactNowNotch.jsx'
+import CareChat from './components/CareChat.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import ScrollShineObserver from './components/ScrollShineObserver.jsx'
 import PageLoader from './components/PageLoader.jsx'
@@ -265,6 +266,10 @@ function App() {
           </Routes>
         </main>
         <ContactNowNotch />
+        <CareChat
+          onBookClick={() => handleOpenBooking('Doctor Consultation & Guidance')}
+          bookingOpen={isBookingOpen}
+        />
         <BookingModal
           isOpen={isBookingOpen}
           onClose={handleCloseBooking}
