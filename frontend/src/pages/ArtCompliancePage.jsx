@@ -177,7 +177,7 @@ export default function ArtCompliancePage({ onBookClick }) {
             <p><strong>Clinical Direction & Compliance Oversight:</strong></p>
             <p>Dr. Leena Patankar (Chief Infertility Specialist & Medical Director)</p>
             <p>Sequel IVF Fertility Centre, 103–104, 1st Floor, Yash Complex, Near Bhosale Garden, Hadapsar, Pune – 411028</p>
-            <p>Helpline: <a href="tel:+919665279369" className="text-[#603085] font-bold hover:underline">+91 9665 279 369</a> · Email: <a href="mailto:info@sequelivf.com" className="text-[#603085] font-bold hover:underline">info@sequelivf.com</a></p>
+            <p>Helpline: <a href="tel:+919665279369" className="text-[#603085] font-bold hover:underline">+91 9665 279 369</a> · Email: <a href="mailto:sequelivf@gmail.com" className="text-[#603085] font-bold hover:underline">sequelivf@gmail.com</a></p>
           </div>
 
           {/* Bottom Actions */}

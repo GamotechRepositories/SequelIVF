@@ -40,16 +40,23 @@
   </head>
   <body>
     <!-- Stays outside #root so React cannot flash the site before the loader covers it -->
-    <div id="initial-preloader" style="position:fixed;inset:0;background:#ffffff;display:flex;align-items:center;justify-content:center;z-index:99999;user-select:none;">
-      <div style="position:relative;width:60px;height:60px;display:flex;align-items:center;justify-content:center;">
-        <div style="position:absolute;inset:0;border:2.5px solid #F0D5E6;border-top-color:#603085;border-right-color:#C49F64;border-radius:50%;animation:initSpin 1.1s linear infinite;"></div>
-        <div style="position:absolute;inset:9px;border:2px solid #F0D5E6;border-bottom-color:#C49F64;border-left-color:#8B5AA8;border-radius:50%;animation:initSpinRev 0.85s linear infinite;"></div>
-        <div style="width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#603085,#C49F64);box-shadow:0 0 8px rgba(196,159,100,0.8);"></div>
+    <div id="initial-preloader" style="position:fixed;inset:0;background:#FBF8FC;display:flex;align-items:center;justify-content:center;z-index:99999;user-select:none;">
+      <div style="display:flex;flex-direction:column;align-items:center;padding:0 32px;">
+        <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:500;letter-spacing:0.06em;color:#603085;">Sequel IVF</p>
+        <div style="position:relative;margin-top:32px;width:72px;height:72px;display:flex;align-items:center;justify-content:center;">
+          <div style="position:absolute;inset:0;border:1.5px solid #EDE0E8;border-top-color:#603085;border-right-color:#C49F64;border-radius:50%;animation:initSpin 0.9s linear infinite;"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#603085" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/>
+            <path d="M15 12h.01"/>
+            <path d="M19.38 6.813A9 9 0 0 1 20.8 10.2a2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/>
+            <path d="M9 12h.01"/>
+          </svg>
+        </div>
+        <p style="margin:24px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:9px;font-weight:500;letter-spacing:0.42em;text-transform:uppercase;color:#8A6B93;">Taking Generations Ahead</p>
       </div>
     </div>
     <style>
       @keyframes initSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-      @keyframes initSpinRev { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
       html.page-loading, html.page-loading body { overflow: hidden; }
     </style>
     <div id="root"></div>

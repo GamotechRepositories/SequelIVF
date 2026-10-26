@@ -88,27 +88,21 @@ export default function Footer({ onBookClick }) {
               </div>
 
               {/* Mission Statement */}
-              <p className="text-white/70 text-xs sm:text-[13.5px] leading-relaxed mb-6">
+              <p className="text-white/70 text-xs sm:text-[13.5px] leading-relaxed mb-5">
                 At <strong>Sequel IVF</strong>, we believe that every journey to parenthood is unique. Our mission is to provide compassionate, ethical, and personalized fertility care to individuals and couples at every stage of their reproductive journey.
               </p>
 
-              {/* Talk To Our Support Box */}
-              <div className="mt-auto bg-[#3A1F4E] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3.5 max-w-[280px]">
-                <div className="w-11 h-11 rounded-full bg-[#C49F64] flex items-center justify-center text-white shrink-0 shadow-sm relative">
-                  <div className="flex flex-col items-center justify-center leading-none">
-                    <svg viewBox="0 0 24 24" className="w-4 h-4 mb-0.5" fill="currentColor">
-                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                    </svg>
-                    <span className="text-[9px] font-extrabold tracking-tighter">24</span>
-                  </div>
-                </div>
+              <div className="flex items-start gap-3">
+                <svg viewBox="0 0 24 24" className="w-4 h-4 text-[#C49F64] shrink-0 mt-1" fill="currentColor">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                </svg>
                 <div>
-                  <span className="block text-white/70 text-[11px] font-semibold uppercase tracking-wider">
+                  <span className="block text-white/55 text-[11px] font-medium uppercase tracking-wider">
                     Talk To Our Support
                   </span>
                   <a
                     href="tel:+919665278369"
-                    className="block text-white font-extrabold text-sm sm:text-[15px] hover:text-[#C49F64] transition-colors leading-tight mt-0.5"
+                    className="block text-white font-bold hover:text-[#C49F64] transition-colors mt-0.5"
                   >
                     +91-9665278369
                   </a>
@@ -189,10 +183,10 @@ export default function Footer({ onBookClick }) {
                   <div>
                     <span className="block text-white/55 text-[11px] font-medium">Mail Us</span>
                     <a
-                      href="mailto:info@sequelivf.com"
+                      href="mailto:sequelivf@gmail.com"
                       className="block text-white font-bold hover:text-[#C49F64] transition-colors mt-0.5"
                     >
-                      info@sequelivf.com
+                      sequelivf@gmail.com
                     </a>
                   </div>
                 </div>

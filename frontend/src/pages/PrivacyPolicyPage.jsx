@@ -121,7 +121,7 @@ export default function PrivacyPolicyPage({ onBookClick }) {
               When you submit your mobile number through our appointment forms or initiate a WhatsApp consultation, you grant consent for Sequel IVF patient coordinators to contact you regarding your appointment details, clinical guidelines, and clinic directions.
             </p>
             <p className="text-[#555555]">
-              You may withdraw communication consent or request to switch communication channels at any time by replying &quot;STOP&quot; on WhatsApp or emailing our desk at <a href="mailto:info@sequelivf.com" className="text-[#603085] font-semibold underline">info@sequelivf.com</a>.
+              You may withdraw communication consent or request to switch communication channels at any time by replying &quot;STOP&quot; on WhatsApp or emailing our desk at <a href="mailto:sequelivf@gmail.com" className="text-[#603085] font-semibold underline">sequelivf@gmail.com</a>.
             </p>
           </div>
 
@@ -168,7 +168,7 @@ export default function PrivacyPolicyPage({ onBookClick }) {
               <p>Attn: Patient Privacy & Compliance Coordinator</p>
               <p>103–104, 1st Floor, Yash Complex, Near Bhosale Garden, Hadapsar, Pune – 411028, Maharashtra, India</p>
               <p>Helpline: <a href="tel:+919665279369" className="text-[#603085] font-bold hover:underline">+91 9665 279 369</a> / <a href="tel:+919665278369" className="text-[#603085] font-bold hover:underline">+91 9665 278 369</a></p>
-              <p>Email: <a href="mailto:info@sequelivf.com" className="text-[#603085] font-bold hover:underline">info@sequelivf.com</a> / <a href="mailto:sequelivf@gmail.com" className="text-[#603085] font-bold hover:underline">sequelivf@gmail.com</a></p>
+              <p>Email: <a href="mailto:sequelivf@gmail.com" className="text-[#603085] font-bold hover:underline">sequelivf@gmail.com</a></p>
             </div>
           </div>
 

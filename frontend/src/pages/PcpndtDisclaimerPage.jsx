@@ -151,7 +151,7 @@ export default function PcpndtDisclaimerPage({ onBookClick }) {
             <p>Sequel IVF Fertility Centre (Under Medical Direction of Dr. Leena Patankar)</p>
             <p>103–104, 1st Floor, Yash Complex, Near Bhosale Garden, Hadapsar, Pune – 411028, Maharashtra</p>
             <p>Supervising Authority: Appropriate Authority PC-PNDT, Hadapsar Ward / Pune Municipal Corporation (PMC)</p>
-            <p>Helpline: <a href="tel:+919665279369" className="text-[#603085] font-bold hover:underline">+91 9665 279 369</a> · Email: <a href="mailto:info@sequelivf.com" className="text-[#603085] font-bold hover:underline">info@sequelivf.com</a></p>
+            <p>Helpline: <a href="tel:+919665279369" className="text-[#603085] font-bold hover:underline">+91 9665 279 369</a> · Email: <a href="mailto:sequelivf@gmail.com" className="text-[#603085] font-bold hover:underline">sequelivf@gmail.com</a></p>
           </div>
 
           {/* Bottom Actions */}

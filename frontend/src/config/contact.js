@@ -2,7 +2,7 @@ export const CLINIC_NAME = 'Sequel IVF'
 export const CLINIC_TAGLINE = 'Taking Generations Ahead'
 
 export const CONTACT_PHONES = ['9665279369', '9665278369']
-export const CONTACT_EMAIL = 'info@sequelivf.com'
+export const CONTACT_EMAIL = 'sequelivf@gmail.com'
 
 export const CLINIC_ADDRESS = {
   line1: '103, 104, First Floor, Yash Complex, Survey No. 161/7',
