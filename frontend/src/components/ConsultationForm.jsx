@@ -35,9 +35,14 @@ export default function ConsultationForm({
     setSubmitting(true)
     setErrorMessage('')
 
-    const accessKey =
-      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
-      'c297e01a-bd84-49a2-a932-f4fab76a1e7a'
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+    if (!accessKey) {
+      setSubmitting(false)
+      setErrorMessage(
+        'Submission was not completed. Please try again or reach us on WhatsApp.'
+      )
+      return
+    }
 
     try {
       const payload = {

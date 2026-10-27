@@ -13,9 +13,12 @@ export default function Footer({ onBookClick }) {
     setSubscribing(true)
     setSubscribeError('')
 
-    const accessKey =
-      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
-      'c297e01a-bd84-49a2-a932-f4fab76a1e7a'
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+    if (!accessKey) {
+      setSubscribing(false)
+      setSubscribeError('Subscription failed. Please try again.')
+      return
+    }
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -190,6 +193,18 @@ export default function Footer({ onBookClick }) {
                     </a>
                   </div>
                 </div>
+
+                {/* Timings */}
+                <div className="flex items-start gap-3">
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 text-[#C49F64] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="9" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 3" />
+                  </svg>
+                  <div>
+                    <span className="block text-white/55 text-[11px] font-medium">Timings</span>
+                    <span className="block text-white/70 mt-0.5">10:00 AM to 7:00 PM (Mon - Sat)</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -270,18 +285,6 @@ export default function Footer({ onBookClick }) {
                   </p>
                 )}
               </form>
-
-              {/* Timings */}
-              <div className="flex items-start gap-2.5 pt-1 text-xs text-white/80">
-                <svg viewBox="0 0 24 24" className="w-4 h-4 text-[#C49F64] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="12" cy="12" r="9" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 3" />
-                </svg>
-                <div>
-                  <span className="block font-semibold text-white/95">Timings</span>
-                  <span className="block text-white/70 mt-0.5">10:00 AM to 7:00 PM (Mon - Sat)</span>
-                </div>
-              </div>
             </div>
 
           </div>

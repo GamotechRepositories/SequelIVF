@@ -11,12 +11,26 @@ import {
 
 const OPENING = [
   { id: 'namaste', role: 'bot', key: 'namaste' },
-  { id: 'help', role: 'bot', key: 'help' },
+  { id: 'safe', role: 'bot', key: 'safe' },
   { id: 'looking', role: 'bot', key: 'looking' },
 ]
 
 function labelOf(id, lang) {
   return findService(id)?.[lang] || ''
+}
+
+function TypingDots({ label }) {
+  return (
+    <div className="flex justify-start">
+      <p className="rounded-2xl rounded-bl-md border border-[#F0D5E6] bg-white px-3.5 py-3" aria-label={label}>
+        <span className="flex items-center gap-[5px]" aria-hidden="true">
+          <span className="care-typing-dot h-[7px] w-[7px] rounded-full bg-[#603085]" />
+          <span className="care-typing-dot h-[7px] w-[7px] rounded-full bg-[#603085]" />
+          <span className="care-typing-dot h-[7px] w-[7px] rounded-full bg-[#C49F64]" />
+        </span>
+      </p>
+    </div>
+  )
 }
 
 export default function CareChat({ onBookClick, bookingOpen = false }) {
@@ -29,11 +43,16 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
   const [draft, setDraft] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [leadFailed, setLeadFailed] = useState(false)
+  const [typing, setTyping] = useState(false)
   const scrollerRef = useRef(null)
   const inputRef = useRef(null)
   const stepRef = useRef(step)
   const guideRef = useRef('')
   const requestRef = useRef(0)
+  const leadCollectedRef = useRef(false)
+  const busyRef = useRef(false)
+  const speakSeqRef = useRef(0)
+  const timersRef = useRef([])
   stepRef.current = step
 
   const t = copy(lang)
@@ -43,7 +62,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
     const el = scrollerRef.current
     if (el) el.scrollTop = el.scrollHeight
     return undefined
-  }, [open, messages, step, submitting, guideId, leadFailed])
+  }, [open, messages, step, submitting, guideId, leadFailed, typing])
 
   useEffect(() => {
     if (!open || bookingOpen) return undefined
@@ -60,6 +79,21 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
     return undefined
   }, [open, step])
 
+  useEffect(() => {
+    if (!open) return undefined
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [open])
+
+  useEffect(() => {
+    return () => {
+      timersRef.current.forEach((id) => window.clearTimeout(id))
+    }
+  }, [])
+
   const append = (items) => {
     setMessages((prev) => [
       ...prev,
@@ -70,11 +104,21 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
     ])
   }
 
+  const clearSpeak = () => {
+    speakSeqRef.current += 1
+    timersRef.current.forEach((id) => window.clearTimeout(id))
+    timersRef.current = []
+    busyRef.current = false
+    setTyping(false)
+  }
+
   const resetChat = () => {
+    clearSpeak()
     stepRef.current = 'service'
     setStep('service')
     setMessages(OPENING)
     guideRef.current = ''
+    leadCollectedRef.current = false
     requestRef.current += 1
     setGuideId('')
     setProfile({ service: '', name: '', phone: '' })
@@ -85,10 +129,11 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
 
   const textFor = (message) => {
     if (message.key === 'namaste') return t.namaste
-    if (message.key === 'help') return t.help
+    if (message.key === 'safe') return t.safe
     if (message.key === 'looking') return t.looking
     if (message.key === 'service') return labelOf(message.value, lang)
     if (message.key === 'askName') return t.askName
+    if (message.key === 'askNameBefore') return t.askNameBefore
     if (message.key === 'askPhone') return t.askPhone(message.name)
     if (message.key === 'badName') return t.badName
     if (message.key === 'badPhone') return t.badPhone
@@ -102,26 +147,47 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
     return ''
   }
 
+  const speak = (userItems, botItems, after) => {
+    if (userItems.length) append(userItems)
+    timersRef.current.forEach((id) => window.clearTimeout(id))
+    timersRef.current = []
+    const seq = speakSeqRef.current + 1
+    speakSeqRef.current = seq
+    busyRef.current = true
+    setTyping(true)
+
+    const queue = botItems.length ? botItems : [null]
+    let wait = 0
+    queue.forEach((item, index) => {
+      const length = item ? textFor(item).length || 40 : 24
+      wait += Math.min(900, 420 + Math.round(Math.min(length, 140) * 5))
+      const timer = window.setTimeout(() => {
+        if (speakSeqRef.current !== seq) return
+        if (item) append([item])
+        if (index !== queue.length - 1) return
+        setTyping(false)
+        busyRef.current = false
+        if (typeof after === 'function') after()
+      }, wait)
+      timersRef.current.push(timer)
+    })
+  }
+
   const chooseService = (serviceId) => {
-    if (stepRef.current !== 'service') return
+    if (stepRef.current !== 'service' || busyRef.current) return
     setProfile((prev) => ({ ...prev, service: serviceId }))
 
     if (serviceId === 'appointment') {
       stepRef.current = 'appointment'
-      append([
-        { role: 'user', key: 'service', value: serviceId },
-        { role: 'bot', key: 'appointmentNote' },
-      ])
       setStep('appointment')
+      speak(
+        [{ role: 'user', key: 'service', value: serviceId }],
+        [{ role: 'bot', key: 'appointmentNote' }],
+      )
       return
     }
 
-    stepRef.current = 'name'
-    append([
-      { role: 'user', key: 'service', value: serviceId },
-      { role: 'bot', key: 'askName' },
-    ])
-    setStep('name')
+    beginGuide(serviceId, [{ role: 'user', key: 'service', value: serviceId }])
   }
 
   const submitRequest = async (nextProfile) => {
@@ -131,9 +197,12 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
     setSubmitting(true)
     setLeadFailed(false)
     const chosen = findService(nextProfile.service)
-    const accessKey =
-      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
-      'c297e01a-bd84-49a2-a932-f4fab76a1e7a'
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+    if (!accessKey) {
+      setLeadFailed(true)
+      setSubmitting(false)
+      return
+    }
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -174,7 +243,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
     }
   }
 
-  const beginGuide = (serviceId) => {
+  const beginGuide = (serviceId, extraItems = []) => {
     const startId = FLOW_START[serviceId]
     const start = getNode(startId)
     if (!start) return
@@ -182,62 +251,72 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
     stepRef.current = 'guide'
     setGuideId(startId)
     setStep('guide')
-    append([{ role: 'bot', key: 'node', nodeId: startId }])
+    const userItems = extraItems.filter((item) => item.role === 'user')
+    speak(userItems, [{ role: 'bot', key: 'node', nodeId: startId }])
   }
 
   const chooseOption = (optionId) => {
-    if (stepRef.current !== 'guide') return
+    if (stepRef.current !== 'guide' || busyRef.current) return
     const currentId = guideRef.current
     const node = getNode(currentId)
     const option = node?.options.find((item) => item.id === optionId)
     if (!node || !option || !getNode(option.next)) return
     guideRef.current = option.next
     setGuideId(option.next)
-    append([
-      { role: 'user', key: 'choice', nodeId: currentId, optionId: option.id },
-      { role: 'bot', key: 'node', nodeId: option.next },
-    ])
+    const botItems = [{ role: 'bot', key: 'node', nodeId: option.next }]
+    const askName = !leadCollectedRef.current
+    if (askName) {
+      stepRef.current = 'name'
+      botItems.push({ role: 'bot', key: 'askNameBefore' })
+    }
+    speak(
+      [{ role: 'user', key: 'choice', nodeId: currentId, optionId: option.id }],
+      botItems,
+      () => {
+        if (askName) setStep('name')
+      },
+    )
   }
 
   const sendDraft = (event) => {
     event.preventDefault()
     const value = draft.trim()
-    if (!value || submitting) return
+    if (!value || submitting || busyRef.current) return
 
     if (stepRef.current === 'name') {
       if (!isValidName(value)) {
-        append([
-          { role: 'user', key: 'text', text: value },
-          { role: 'bot', key: 'badName' },
-        ])
         setDraft('')
+        speak([{ role: 'user', key: 'text', text: value }], [{ role: 'bot', key: 'badName' }])
         return
       }
       const name = value.replace(/\s+/g, ' ')
       stepRef.current = 'phone'
       setProfile((prev) => ({ ...prev, name }))
-      append([
-        { role: 'user', key: 'text', text: name },
-        { role: 'bot', key: 'askPhone', name },
-      ])
       setDraft('')
-      setStep('phone')
+      speak(
+        [{ role: 'user', key: 'text', text: name }],
+        [{ role: 'bot', key: 'askPhone', name }],
+        () => setStep('phone'),
+      )
       return
     }
 
     if (stepRef.current !== 'phone') return
     const phone = normalizePhone(value)
-    append([{ role: 'user', key: 'text', text: value }])
     setDraft('')
     if (!phone) {
-      append([{ role: 'bot', key: 'badPhone' }])
+      speak([{ role: 'user', key: 'text', text: value }], [{ role: 'bot', key: 'badPhone' }])
       return
     }
 
     const nextProfile = { ...profile, phone }
+    leadCollectedRef.current = true
+    stepRef.current = 'guide'
     setProfile(nextProfile)
-    beginGuide(nextProfile.service)
-    submitRequest(nextProfile)
+    speak([{ role: 'user', key: 'text', text: value }], [], () => {
+      setStep('guide')
+      submitRequest(nextProfile)
+    })
   }
 
   const openConsultationForm = () => {
@@ -252,11 +331,12 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
       {open && (
         <section
           role="dialog"
+          aria-modal="true"
           aria-labelledby="care-chat-title"
-          className="fixed z-[60] bottom-16 left-3 right-3 flex h-[min(620px,calc(100dvh-7.5rem))] w-auto flex-col overflow-hidden rounded-3xl border border-[#F0D5E6] bg-[#FAF8FC] shadow-[0_18px_50px_rgba(36,17,50,0.22)] sm:left-5 sm:right-auto sm:w-[400px]"
+          className="fixed z-[60] inset-0 flex h-dvh w-full flex-col overflow-hidden bg-[#FAF8FC] sm:inset-auto sm:bottom-16 sm:left-5 sm:right-auto sm:h-[min(620px,calc(100dvh-7.5rem))] sm:w-[400px] sm:rounded-3xl sm:border sm:border-[#F0D5E6] sm:shadow-[0_18px_50px_rgba(36,17,50,0.22)]"
           style={lang === 'mr' ? { fontFamily: "'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif" } : undefined}
         >
-          <header className="shrink-0 bg-gradient-to-br from-[#2A1137] to-[#603085] px-4 py-3 text-white">
+          <header className="shrink-0 bg-gradient-to-br from-[#2A1137] to-[#603085] px-4 py-3 pt-[max(0.75rem,env(safe-area-inset-top))] text-white">
             <div className="flex items-center gap-2">
               <h2
                 id="care-chat-title"
@@ -280,6 +360,22 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
                   मराठी
                 </button>
               </div>
+              {step !== 'service' && (
+                <button
+                  type="button"
+                  onClick={resetChat}
+                  aria-label={t.newChat}
+                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
+                >
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182"
+                    />
+                  </svg>
+                </button>
+              )}
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -295,7 +391,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
 
           <div ref={scrollerRef} className="popup-scroll min-h-0 flex-1 space-y-2.5 overflow-y-auto px-3.5 py-3">
             <div className="sr-only" aria-live="polite">
-              {messages.length ? textFor(messages[messages.length - 1]) : ''}
+              {typing ? t.typing : messages.length ? textFor(messages[messages.length - 1]) : ''}
             </div>
             {messages.map((message) => {
               const mine = message.role === 'user'
@@ -313,10 +409,11 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
                 </div>
               )
             })}
+            {typing ? <TypingDots label={t.typing} /> : null}
           </div>
 
-          <div className="shrink-0 border-t border-[#F0D5E6] bg-white px-3.5 py-3">
-            {step === 'service' && (
+          <div className="shrink-0 border-t border-[#F0D5E6] bg-white px-3.5 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+            {step === 'service' && !typing && (
               <div className="grid grid-cols-2 gap-2">
                 {LOOKING_FOR.map((option) => (
                   <button
@@ -331,7 +428,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
               </div>
             )}
 
-            {showInput && (
+            {showInput && !typing && (
               <form onSubmit={sendDraft} className="flex items-center gap-2">
                 <input
                   ref={inputRef}
@@ -351,7 +448,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
               </form>
             )}
 
-            {step === 'appointment' && (
+            {step === 'appointment' && !typing && (
               <button
                 type="button"
                 onClick={openConsultationForm}
@@ -361,7 +458,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
               </button>
             )}
 
-            {step === 'guide' && guideNode && (
+            {step === 'guide' && guideNode && !typing && (
               <div className="flex flex-col gap-2">
                 {guideNode.options.map((option) => (
                   <button
@@ -393,15 +490,6 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
               </div>
             )}
 
-            {step !== 'service' && (
-              <button
-                type="button"
-                onClick={resetChat}
-                className="mt-2 w-full text-center text-[11px] font-semibold text-[#7C6285] hover:text-[#603085]"
-              >
-                {t.newChat}
-              </button>
-            )}
           </div>
         </section>
       )}
