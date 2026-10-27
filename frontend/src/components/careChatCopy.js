@@ -1380,6 +1380,9 @@ export function copy(lang) {
       mr
         ? `धन्यवाद, ${name}. पुढे जाण्यासाठी संपर्क क्रमांक द्याल का?`
         : `Thank you, ${name}. Please share your contact number so we can continue.`,
+    thanksContinue: mr
+      ? 'ही छोटी माहिती दिल्याबद्दल धन्यवाद. पुढे जाण्यासाठी खालीलपैकी एक निवडा.'
+      : 'Thank you for sharing your details. Please choose one option below to continue.',
     badName: mr ? 'कृपया पूर्ण नाव लिहा.' : 'Please share your full name.',
     badPhone: mr
       ? 'कृपया 10 अंकी मोबाइल नंबर लिहा.'
@@ -1395,5 +1398,6 @@ export function copy(lang) {
     namePh: mr ? 'तुमचे नाव' : 'Your name',
     phonePh: mr ? 'संपर्क क्रमांक' : 'Contact number',
     send: mr ? 'पाठवा' : 'Send',
+    pickHint: mr ? 'एक निवडा — टॅप करा' : 'Tap one to reply',
   }
 }

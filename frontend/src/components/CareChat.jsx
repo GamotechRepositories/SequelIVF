@@ -33,6 +33,21 @@ function TypingDots({ label }) {
   )
 }
 
+function ChoiceButton({ children, onClick, className }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`inline-flex max-w-[88%] items-center gap-2 rounded-2xl rounded-br-md border-2 border-[#C49F64] bg-[#FFF8EE] px-3.5 py-2.5 text-left text-[13px] font-semibold leading-snug text-[#603085] shadow-[0_4px_12px_rgba(196,159,100,0.22)] hover:bg-[#C49F64] hover:text-white ${className || ''}`}
+    >
+      <span className="min-w-0 flex-1">{children}</span>
+      <svg className="h-3.5 w-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.4" viewBox="0 0 24 24" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </button>
+  )
+}
+
 export default function CareChat({ onBookClick, bookingOpen = false }) {
   const [open, setOpen] = useState(false)
   const [lang, setLang] = useState('en')
@@ -135,6 +150,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
     if (message.key === 'askName') return t.askName
     if (message.key === 'askNameBefore') return t.askNameBefore
     if (message.key === 'askPhone') return t.askPhone(message.name)
+    if (message.key === 'thanksContinue') return t.thanksContinue
     if (message.key === 'badName') return t.badName
     if (message.key === 'badPhone') return t.badPhone
     if (message.key === 'appointmentNote') return t.appointmentNote
@@ -313,10 +329,14 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
     leadCollectedRef.current = true
     stepRef.current = 'guide'
     setProfile(nextProfile)
-    speak([{ role: 'user', key: 'text', text: value }], [], () => {
-      setStep('guide')
-      submitRequest(nextProfile)
-    })
+    speak(
+      [{ role: 'user', key: 'text', text: value }],
+      [{ role: 'bot', key: 'thanksContinue' }],
+      () => {
+        setStep('guide')
+        submitRequest(nextProfile)
+      },
+    )
   }
 
   const openConsultationForm = () => {
@@ -325,6 +345,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
 
   const guideNode = step === 'guide' ? getNode(guideId) : null
   const showInput = step === 'name' || step === 'phone'
+  const showComposer = leadFailed && step === 'guide'
 
   return (
     <>
@@ -333,7 +354,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
           role="dialog"
           aria-modal="true"
           aria-labelledby="care-chat-title"
-          className="fixed z-[60] inset-0 flex h-dvh w-full flex-col overflow-hidden bg-[#FAF8FC] sm:inset-auto sm:bottom-16 sm:left-5 sm:right-auto sm:h-[min(620px,calc(100dvh-7.5rem))] sm:w-[400px] sm:rounded-3xl sm:border sm:border-[#F0D5E6] sm:shadow-[0_18px_50px_rgba(36,17,50,0.22)]"
+          className="fixed z-[60] inset-0 flex h-dvh w-full flex-col overflow-hidden bg-[#FAF8FC] sm:inset-auto sm:bottom-16 sm:left-auto sm:right-[max(1.25rem,calc((100vw-1400px)/2+1.25rem))] sm:h-[min(620px,calc(100dvh-7.5rem))] sm:w-[400px] sm:rounded-3xl sm:border sm:border-[#F0D5E6] sm:shadow-[0_18px_50px_rgba(36,17,50,0.22)]"
           style={lang === 'mr' ? { fontFamily: "'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif" } : undefined}
         >
           <header className="shrink-0 bg-gradient-to-br from-[#2A1137] to-[#603085] px-4 py-3 pt-[max(0.75rem,env(safe-area-inset-top))] text-white">
@@ -410,69 +431,61 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
               )
             })}
             {typing ? <TypingDots label={t.typing} /> : null}
-          </div>
-
-          <div className="shrink-0 border-t border-[#F0D5E6] bg-white px-3.5 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
             {step === 'service' && !typing && (
-              <div className="grid grid-cols-2 gap-2">
+              <div className="flex flex-col items-end gap-2 pt-0.5">
+                <p className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-wide text-[#C49F64]">
+                  {t.pickHint}
+                </p>
                 {LOOKING_FOR.map((option) => (
-                  <button
-                    key={option.id}
-                    type="button"
-                    onClick={() => chooseService(option.id)}
-                    className="rounded-xl border border-[#E4D4EE] bg-[#FAF8FC] px-2.5 py-2.5 text-[12px] font-semibold text-[#3C2048] hover:border-[#603085] hover:bg-[#F5F2F8]"
-                  >
+                  <ChoiceButton key={option.id} onClick={() => chooseService(option.id)}>
                     {option[lang]}
-                  </button>
+                  </ChoiceButton>
                 ))}
               </div>
             )}
-
             {showInput && !typing && (
-              <form onSubmit={sendDraft} className="flex items-center gap-2">
-                <input
-                  ref={inputRef}
-                  value={draft}
-                  onChange={(event) => setDraft(event.target.value)}
-                  placeholder={step === 'name' ? t.namePh : t.phonePh}
-                  inputMode={step === 'phone' ? 'tel' : 'text'}
-                  autoComplete={step === 'name' ? 'name' : 'tel'}
-                  className="min-w-0 flex-1 rounded-xl border border-[#F0D5E6] bg-[#FAF8FC] px-3 py-2.5 text-sm text-[#241132] outline-none focus:border-[#603085] focus:ring-2 focus:ring-[#603085]/15"
-                />
-                <button
-                  type="submit"
-                  className="shrink-0 rounded-xl bg-[#603085] px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#4E276D]"
-                >
-                  {t.send}
-                </button>
+              <form onSubmit={sendDraft} className="flex justify-end">
+                <div className="flex w-full max-w-[88%] items-center gap-1.5 rounded-2xl rounded-br-md border border-[#C49F64] bg-white px-2 py-1.5 shadow-[0_4px_12px_rgba(196,159,100,0.18)]">
+                  <input
+                    ref={inputRef}
+                    value={draft}
+                    onChange={(event) => setDraft(event.target.value)}
+                    placeholder={step === 'name' ? t.namePh : t.phonePh}
+                    inputMode={step === 'phone' ? 'tel' : 'text'}
+                    autoComplete={step === 'name' ? 'name' : 'tel'}
+                    className="min-w-0 flex-1 bg-transparent px-2 py-1.5 text-sm text-[#241132] outline-none placeholder:text-[#9A7FA6]"
+                  />
+                  <button
+                    type="submit"
+                    className="shrink-0 rounded-xl bg-[#C49F64] px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-white hover:bg-[#B38E54]"
+                  >
+                    {t.send}
+                  </button>
+                </div>
               </form>
             )}
-
-            {step === 'appointment' && !typing && (
-              <button
-                type="button"
-                onClick={openConsultationForm}
-                className="w-full rounded-xl bg-[#603085] py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#4E276D]"
-              >
-                {t.appointmentButton}
-              </button>
-            )}
-
             {step === 'guide' && guideNode && !typing && (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col items-end gap-2 pt-0.5">
+                <p className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-wide text-[#C49F64]">
+                  {t.pickHint}
+                </p>
                 {guideNode.options.map((option) => (
-                  <button
-                    key={option.id}
-                    type="button"
-                    onClick={() => chooseOption(option.id)}
-                    className="rounded-xl border border-[#E4D4EE] bg-[#FAF8FC] px-3 py-2.5 text-left text-[12.5px] font-semibold leading-snug text-[#3C2048] hover:border-[#603085] hover:bg-[#F5F2F8]"
-                  >
+                  <ChoiceButton key={option.id} onClick={() => chooseOption(option.id)}>
                     {option[lang]}
-                  </button>
+                  </ChoiceButton>
                 ))}
               </div>
             )}
+            {step === 'appointment' && !typing && (
+              <div className="flex flex-col items-end gap-2">
+                <p className="text-[11px] font-bold uppercase tracking-wide text-[#C49F64]">{t.pickHint}</p>
+                <ChoiceButton onClick={openConsultationForm}>{t.appointmentButton}</ChoiceButton>
+              </div>
+            )}
+          </div>
 
+          {showComposer && (
+          <div className="shrink-0 border-t border-[#F0D5E6] bg-white px-3.5 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
             {leadFailed && step === 'guide' && (
               <div className="mt-2">
                 <p className="mb-2 text-center text-[11px] leading-relaxed text-[#7C6285]">{t.failed}</p>
@@ -491,6 +504,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
             )}
 
           </div>
+          )}
         </section>
       )}
 
@@ -499,12 +513,9 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
           type="button"
           onClick={() => setOpen(true)}
           aria-label={t.open}
-          className="fixed z-[60] bottom-4 right-3 flex items-center gap-2 sm:bottom-6 sm:left-6 sm:right-auto sm:gap-3"
+          className="fixed z-[60] bottom-4 right-3 flex items-center gap-2 sm:bottom-6 sm:right-[max(1.5rem,calc((100vw-1400px)/2+1.5rem))] sm:left-auto sm:gap-3"
           style={lang === 'mr' ? { fontFamily: "'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif" } : undefined}
         >
-          <span className="hidden items-center rounded-full border border-[#F0D5E6] bg-white px-4 py-2.5 text-sm font-bold text-[#603085] shadow-lg sm:inline-flex">
-            {t.launcher}
-          </span>
           <span className="relative h-11 w-11 shrink-0 drop-shadow-[0_10px_18px_rgba(96,48,133,0.38)] sm:h-20 sm:w-20 sm:drop-shadow-[0_14px_24px_rgba(96,48,133,0.4)]">
             <svg viewBox="0 0 56 56" className="h-11 w-11 sm:h-20 sm:w-20" aria-hidden="true">
               <path
