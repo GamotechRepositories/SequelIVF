@@ -69,7 +69,7 @@ export default function Hero({ onBookClick }) {
               : 'absolute top-0 left-0 opacity-0 pointer-events-none -translate-x-full'
           }`}
         >
-          <div className="mx-auto max-w-[1400px] px-3.5 sm:px-6 lg:px-10">
+          <div className="mx-auto max-w-[1400px] px-3.5 sm:px-6 lg:pl-10 lg:pr-6">
             <div className="grid lg:grid-cols-12 lg:gap-x-8 items-center">
               
               {/* 1. Headline */}
@@ -88,12 +88,12 @@ export default function Hero({ onBookClick }) {
               </div>
 
               {/* 2. Fertility Puzzle Family Portrait */}
-              <div className="order-2 lg:col-span-6 lg:col-start-7 xl:col-span-7 xl:col-start-6 lg:row-start-1 lg:row-span-2 lg:self-center relative flex justify-center lg:justify-end xl:justify-center my-2 sm:my-3.5 lg:my-0 lg:pr-3 xl:pr-0">
+              <div className="order-2 lg:col-span-6 lg:col-start-7 xl:col-span-7 xl:col-start-6 lg:row-start-1 lg:row-span-2 lg:self-center relative flex justify-center lg:justify-end my-2 sm:my-3.5 lg:my-0 lg:pr-0">
                 <div className="relative w-full max-w-[360px] min-[360px]:max-w-[440px] min-[400px]:max-w-[490px] min-[480px]:max-w-[560px] sm:max-w-[680px] md:max-w-[800px] lg:max-w-[620px] xl:max-w-[710px]">
                   <div className="absolute inset-0 m-auto w-[92%] h-[92%] rounded-full bg-gradient-to-tr from-[#FCE4F2]/80 to-[#F5F2F8]/50 -z-10 scale-105 blur-md" />
                   <div className="relative flex justify-center lg:justify-end items-end p-0.5 sm:p-2 img-shine-effect group cursor-pointer">
                     <img
-                      src="/images/Purple and Gold Fertility Family Puzzle.png"
+                      src="/images/a35dbdae-f3df-4d68-9c42-06ceca8e6a59-Photoroom.png"
                       alt="Sequeli IVF fertility puzzle family portrait - joyful couple with IVF journey pieces and baby"
                       className="w-full h-auto object-contain drop-shadow-[0_20px_30px_rgba(80,20,65,0.14)] transition-transform duration-500 group-hover:scale-[1.02]"
                       style={{
@@ -109,7 +109,7 @@ export default function Hero({ onBookClick }) {
               </div>
 
               {/* 3. Subtext & CTAs */}
-              <div className="order-3 lg:col-span-6 xl:col-span-5 lg:col-start-1 lg:row-start-2 lg:self-start text-center lg:text-left">
+              <div className="order-3 lg:col-span-6 xl:col-span-5 lg:col-start-1 lg:row-start-2 lg:self-start text-center lg:text-left lg:overflow-visible lg:relative lg:z-20">
                 <div className="space-y-1.5 sm:space-y-2.5 max-w-xl mx-auto lg:mx-0 text-[#53385E] text-[12.5px] sm:text-[15.5px] leading-snug sm:leading-relaxed mb-3 sm:mb-4">
                   <p>
                     Every parenthood journey is unique. We bring together advanced fertility technology, personalized treatment plans, and compassionate care to help you take the next step with confidence.
@@ -119,21 +119,21 @@ export default function Hero({ onBookClick }) {
                   </p>
                 </div>
 
-                <div className="mt-3.5 sm:mt-5 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-4">
+                <div className="mt-3.5 sm:mt-5 flex flex-col sm:flex-row sm:flex-nowrap sm:items-center justify-center lg:justify-start gap-2.5 sm:gap-4">
                   {/* Primary CTA Button on its own line in mobile view */}
                   <button
                     type="button"
                     onClick={onBookClick}
-                    className="w-full min-[420px]:w-auto inline-flex items-center justify-center gap-1.5 sm:gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg text-xs sm:text-sm font-bold text-white bg-[#603085] hover:bg-[#4E276D] active:scale-95 shadow-md shadow-fuchsia-900/15 transition-all duration-200 cursor-pointer"
+                    className="w-auto shrink-0 inline-flex items-center justify-center gap-1.5 sm:gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg text-xs sm:text-sm font-bold text-white bg-[#603085] hover:bg-[#4E276D] active:scale-95 shadow-md shadow-fuchsia-900/15 transition-all duration-200 cursor-pointer whitespace-nowrap"
                   >
-                    <span>Begin Your Journey</span>
+                    <span className="whitespace-nowrap">Begin Your Journey</span>
                     <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                     </svg>
                   </button>
 
                   {/* Number and Location together on one line */}
-                  <div className="flex items-center justify-center flex-wrap gap-x-2.5 sm:gap-x-3 gap-y-1">
+                  <div className="flex items-center justify-center flex-nowrap shrink-0 gap-x-2.5 sm:gap-x-3 whitespace-nowrap">
                     <a
                       href="tel:+919665279369"
                       className="inline-flex items-center gap-1.5 text-[11px] min-[360px]:text-xs sm:text-sm font-bold text-[#3C2048] hover:text-[#603085] transition-colors py-1 whitespace-nowrap"
