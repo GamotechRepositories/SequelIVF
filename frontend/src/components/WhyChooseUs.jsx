@@ -103,10 +103,6 @@ export default function WhyChooseUs({ onBookClick }) {
                 />
                 <div className="absolute inset-x-0 bottom-0 h-10 sm:h-12 bg-gradient-to-t from-[#F5F2F8] to-transparent pointer-events-none" />
               </div>
-              <div className="flex items-center gap-2 mt-3 px-1 text-[#603085] text-xs sm:text-sm font-semibold tracking-wide">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C49F64] shrink-0" />
-                <span>ICMR registered · NABH accredited</span>
-              </div>
             </div>
           </div>
 

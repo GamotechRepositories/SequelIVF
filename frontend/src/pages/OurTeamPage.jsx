@@ -18,6 +18,21 @@ const MALE_IMAGES = [
   teamPhoto('https://res.cloudinary.com/exmvyjeq/image/upload/v1793007952/069a7f1e-4479-4dad-801b-f0917ef5a712.png'),
 ]
 
+const ALLOWED_CONSULTATION_MEMBERS = [
+  'Dr. Leena Patankar',
+  'Dr. Monika Thavare',
+  'Dr. Chirag Sharma',
+  'Emb. Sushil Waghmare',
+  'Emb. Bharat Harpude',
+]
+
+const canBookConsultation = (member) => {
+  if (!member || !member.name) return false
+  return ALLOWED_CONSULTATION_MEMBERS.some((name) =>
+    member.name.toLowerCase().includes(name.toLowerCase())
+  )
+}
+
 export default function OurTeamPage({ onBookClick }) {
   const [activeFilter, setActiveFilter] = useState('all')
   const [selectedMember, setSelectedMember] = useState(null)
@@ -789,20 +804,22 @@ export default function OurTeamPage({ onBookClick }) {
                     </div>
                   </div>
 
-                  {/* Action Button */}
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSelectedMember(null)
-                      if (onBookClick) onBookClick()
-                    }}
-                    className="w-full py-3.5 px-5 bg-[#603085] hover:bg-[#4E276D] active:scale-[0.98] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
-                  >
-                    <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-                      <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
-                    </svg>
-                    Book Consultation With {selectedMember.name.split(' ')[0]} {selectedMember.name.split(' ')[1]}
-                  </button>
+                  {/* Action Button - Only for 3 Doctors and Emb. Sushil & Emb. Bharat */}
+                  {canBookConsultation(selectedMember) && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSelectedMember(null)
+                        if (onBookClick) onBookClick()
+                      }}
+                      className="w-full py-3.5 px-5 bg-[#603085] hover:bg-[#4E276D] active:scale-[0.98] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
+                    >
+                      <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+                        <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                      </svg>
+                      Book Consultation With {selectedMember.name.split(' ')[0]} {selectedMember.name.split(' ')[1]}
+                    </button>
+                  )}
                 </div>
 
                 {/* RIGHT COLUMN: Personal Experience & Biography */}

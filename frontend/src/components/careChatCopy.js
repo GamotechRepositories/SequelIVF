@@ -1371,6 +1371,9 @@ export function copy(lang) {
     safe: mr
       ? 'तुमची चॅट सुरक्षित आहे. तुम्ही सांगितलेली माहिती आमच्या क्लिनिक टीमकडे गोपनीय राहते.'
       : 'Your chat is private and safe. What you share stays confidential with our clinic team.',
+    privacyNote: mr
+      ? 'तुमची गोपनीयता आमचे सर्वोच्च प्राधान्य आहे. आम्ही तुमची माहिती पूर्णपणे गोपनीय ठेवतो आणि कधीही कोणाशीही शेअर करत नाही. आम्ही तुमच्या माहितीचा वापर केवळ तुमचे उपचार अधिक योग्य पद्धतीने ठरवण्यासाठी आणि तुमच्या गरजेनुसार वैयक्तिक आरोग्य सेवा देण्यासाठी करतो.'
+      : 'Your privacy is our top priority. We keep your information strictly confidential and never share it. We only use your data to tailor your treatment and deliver a healthcare experience personalized just for you.',
     looking: mr ? 'तुम्ही काय शोधत आहात?' : 'What are you looking for?',
     askName: mr ? 'तुमचे नाव सांगाल का?' : 'May I have your name?',
     askNameBefore: mr

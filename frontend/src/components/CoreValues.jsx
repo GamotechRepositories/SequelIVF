@@ -44,7 +44,7 @@ const GROUPS = [
       { icon: ShieldCheck, text: 'Uncompromising safety protocols.' },
       { icon: BadgeCheck, text: 'Continuous Quality Assurance.' },
       { icon: Cog, text: 'Precision Technology.' },
-      { icon: TrendingUp, text: 'Strict daily KPI monitoring.' },
+      { icon: TrendingUp, text: 'Strict KPI monitoring.' },
     ],
   },
   {

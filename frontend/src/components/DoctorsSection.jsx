@@ -60,28 +60,6 @@ export default function DoctorsSection() {
       imageHover: GIRL_IMAGES[1],
     },
     {
-      name: 'Dr. Monika Thavare',
-      role: 'Fertility Consultant & Specialist | MD (OBGY), Fellowship in Reproductive Medicine',
-      phone: '+91 9763 845 143',
-      phoneHref: 'tel:+919763845143',
-      email: 'sequelivf@gmail.com',
-      emailHref: 'mailto:sequelivf@gmail.com',
-      experience: '10+ Years Experience',
-      image: GIRL_IMAGES[1],
-      imageHover: GIRL_IMAGES[2],
-    },
-    {
-      name: 'Dr. Chirag Sharma',
-      role: 'Reproductive Medicine Specialist | M.B.B.S, M.S. OBGY, Fellowship Reproductive Medicine',
-      phone: '+91-9665 279 369',
-      phoneHref: 'tel:+919665279369',
-      email: 'sequelivf@gmail.com',
-      emailHref: 'mailto:sequelivf@gmail.com',
-      experience: '3+ Years Experience',
-      image: MALE_IMAGES[0],
-      imageHover: MALE_IMAGES[1],
-    },
-    {
       name: 'Emb. Sushil Waghmare',
       role: 'Founder & Lab Director | ESHRE-Certified Senior Clinical Embryologist',
       phone: '+91 9763 845 143',
@@ -103,6 +81,28 @@ export default function DoctorsSection() {
       image: MALE_IMAGES[0],
       imageHover: MALE_IMAGES[1],
     },
+    {
+      name: 'Dr. Monika Thavare',
+      role: 'Fertility Consultant & Specialist | MD (OBGY), Fellowship in Reproductive Medicine',
+      phone: '+91 9763 845 143',
+      phoneHref: 'tel:+919763845143',
+      email: 'sequelivf@gmail.com',
+      emailHref: 'mailto:sequelivf@gmail.com',
+      experience: '10+ Years Experience',
+      image: GIRL_IMAGES[1],
+      imageHover: GIRL_IMAGES[2],
+    },
+    {
+      name: 'Dr. Chirag Sharma',
+      role: 'Reproductive Medicine Specialist | M.B.B.S, M.S. OBGY, Fellowship Reproductive Medicine',
+      phone: '+91-9665 279 369',
+      phoneHref: 'tel:+919665279369',
+      email: 'sequelivf@gmail.com',
+      emailHref: 'mailto:sequelivf@gmail.com',
+      experience: '3+ Years Experience',
+      image: MALE_IMAGES[0],
+      imageHover: MALE_IMAGES[1],
+    },
   ]
 
   return (
@@ -119,7 +119,7 @@ export default function DoctorsSection() {
             {/* Dual-tone Heading: Web Purple + Gold/Silver Combo */}
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] leading-tight font-medium tracking-tight">
               <span className="text-[#603085]">Meet Our</span>{' '}
-              <span className="text-[#C49F64]">Doctors</span>
+              <span className="text-[#C49F64]">Experts</span>
             </h2>
             <div className="w-20 h-0.5 bg-gradient-to-r from-[#603085] to-[#C49F64] mt-3" />
           </div>

@@ -147,6 +147,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
     if (message.key === 'safe') return t.safe
     if (message.key === 'looking') return t.looking
     if (message.key === 'service') return labelOf(message.value, lang)
+    if (message.key === 'privacyNote') return t.privacyNote
     if (message.key === 'askName') return t.askName
     if (message.key === 'askNameBefore') return t.askNameBefore
     if (message.key === 'askPhone') return t.askPhone(message.name)
@@ -284,6 +285,7 @@ export default function CareChat({ onBookClick, bookingOpen = false }) {
     if (askName) {
       stepRef.current = 'name'
       botItems.push({ role: 'bot', key: 'askNameBefore' })
+      botItems.push({ role: 'bot', key: 'privacyNote' })
     }
     speak(
       [{ role: 'user', key: 'choice', nodeId: currentId, optionId: option.id }],
