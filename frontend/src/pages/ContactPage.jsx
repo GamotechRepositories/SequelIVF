@@ -253,7 +253,14 @@ export default function ContactPage({ onBookClick }) {
                 <div className="text-xs leading-relaxed">
                   <p className="font-medium text-[#241132]">
                     This website is developed by{' '}
-                    <span className="font-bold text-[#603085]">Gamotech Solutions Pvt. Ltd</span>
+                    <a
+                      href="https://www.gamotechsolutions.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-[#603085] hover:text-[#C49F64] hover:underline transition-colors"
+                    >
+                      Gamotech Solutions Pvt. Ltd
+                    </a>
                   </p>
                   <p className="text-[#666666] mt-0.5">
                     Contact Number:{' '}

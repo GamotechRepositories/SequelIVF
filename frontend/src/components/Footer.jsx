@@ -295,7 +295,14 @@ export default function Footer({ onBookClick }) {
               <p>© {new Date().getFullYear()} Sequel IVF Centre, Hadapsar, Pune. All rights reserved.</p>
               <p className="text-white/60 text-[11.5px]">
                 This website is developed by{' '}
-                <span className="font-semibold text-white/90">Gamotech Solutions Pvt. Ltd</span>
+                <a
+                  href="https://www.gamotechsolutions.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-white/90 hover:text-[#C49F64] transition-colors underline decoration-white/30 underline-offset-2"
+                >
+                  Gamotech Solutions Pvt. Ltd
+                </a>
                 {' · '}
                 Contact Number:{' '}
                 <a
