@@ -101,6 +101,32 @@ export default function Contact() {
                 </a>
               ))}
             </div>
+
+            {/* Website Developer Credit */}
+            <div className="mt-8 p-4 rounded-2xl bg-[#FAF8FC] border border-[#F0D5E6] flex items-center gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-white border border-[#F0D5E6] flex items-center justify-center shrink-0 text-[#603085] shadow-xs">
+                <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <div className="text-xs leading-relaxed">
+                <p className="font-medium text-[#241132]">
+                  This website is developed by{' '}
+                  <span className="font-bold text-[#603085]">Gamotech Solutions Pvt. Ltd</span>
+                </p>
+                <p className="text-[#666666] mt-0.5">
+                  Contact Number:{' '}
+                  <a
+                    href="tel:+919637319746"
+                    className="font-bold text-[#603085] hover:text-[#C49F64] hover:underline transition-colors"
+                  >
+                    +919637319746
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Right Column: Consultation Form (Matching Contact Us page) */}

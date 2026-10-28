@@ -289,9 +289,23 @@ export default function Footer({ onBookClick }) {
 
           </div>
 
-          {/* Bottom Bar: Copyright & Compliance */}
-          <div className="pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/50 text-xs">
-            <p>© {new Date().getFullYear()} Sequel IVF Centre, Hadapsar, Pune. All rights reserved.</p>
+          {/* Bottom Bar: Copyright, Developer Credits & Compliance */}
+          <div className="pt-6 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-4 text-white/50 text-xs text-center md:text-left">
+            <div className="space-y-1">
+              <p>© {new Date().getFullYear()} Sequel IVF Centre, Hadapsar, Pune. All rights reserved.</p>
+              <p className="text-white/60 text-[11.5px]">
+                This website is developed by{' '}
+                <span className="font-semibold text-white/90">Gamotech Solutions Pvt. Ltd</span>
+                {' · '}
+                Contact Number:{' '}
+                <a
+                  href="tel:+919637319746"
+                  className="text-white/90 font-medium hover:text-[#C49F64] transition-colors underline decoration-white/30 underline-offset-2"
+                >
+                  +919637319746
+                </a>
+              </p>
+            </div>
             <div className="flex flex-wrap gap-4 sm:gap-6 justify-center">
               <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
               <Link to="/art-act-compliance" className="hover:text-white transition-colors">ART Act Compliance</Link>
