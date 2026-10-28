@@ -41,15 +41,16 @@ jobs:
         run: |
           test -f dist/index.html
           test -f dist/.htaccess
+          cp -r dist ../dist
 
-      - name: Upload build using SSH/SCP
+      - name: Upload build using SSH key
         uses: appleboy/scp-action@v1
         with:
-          host: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          source: "frontend/dist/."
-          target: "."
+          source: "dist/."
+          target: "/home1/awjuvemy/public_html/"
           overwrite: true
-          strip_components: 2
+          strip_components: 1
