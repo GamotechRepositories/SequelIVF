@@ -66,7 +66,7 @@ export default function OurTeamPage({ onBookClick }) {
       phoneHref: 'tel:+919665279369',
       email: 'sequelivf@gmail.com',
       emailHref: 'mailto:sequelivf@gmail.com',
-      experience: '30 Years Experience',
+      experience: '30+ Years Experience',
       location: '103, 104, First Floor, Yash Complex, Survey No. 161/7, Bhosale Garden, Hadapsar, Pune, Maharashtra – 411028',
       image: GIRL_IMAGES[0],
       imageHover: GIRL_IMAGES[1],
@@ -169,7 +169,7 @@ export default function OurTeamPage({ onBookClick }) {
       phoneHref: 'tel:+919763845143',
       email: 'sequelivf@gmail.com',
       emailHref: 'mailto:sequelivf@gmail.com',
-      experience: '3 Years of Dedicated Expertise',
+      experience: '3+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: MALE_IMAGES[0],
       imageHover: MALE_IMAGES[1],
@@ -179,7 +179,7 @@ export default function OurTeamPage({ onBookClick }) {
         "Dr. Chirag Sharma (M.B.B.S, M.S. OBGY, Fellowship in Reproductive Medicine) is a dedicated specialist in women's health and fertility who has spent the last 3 years bringing advanced medical expertise and compassionate care to families across India. Guided by a profound commitment to clinical excellence and patient well-being, Chirag combines rigorous scientific training with deep empathy, ensuring that every patient feels supported, safe, and valued throughout their reproductive journey. Behind every successful pregnancy is a foundation of advanced clinical precision, and Chirag has built a promising career dedicated to navigating everything from routine wellness to complex fertility solutions.",
       highlights: [
         {
-          title: '3 Years of Dedicated Expertise',
+          title: '3+ Years of Dedicated Expertise',
           text: 'He brings focused, specialized experience in obstetrics, gynecology, and reproductive endocrinology, delivering high standards of care to every single cycle.'
         },
         {
@@ -208,7 +208,7 @@ export default function OurTeamPage({ onBookClick }) {
       phoneHref: 'tel:+919763845143',
       email: 'sushil1june@gmail.com',
       emailHref: 'mailto:sushil1june@gmail.com',
-      experience: '16 Years Experience',
+      experience: '16+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: MALE_IMAGES[1],
       imageHover: MALE_IMAGES[0],
@@ -294,7 +294,7 @@ export default function OurTeamPage({ onBookClick }) {
       phoneHref: 'tel:+919763845143',
       email: 'sequelivf@gmail.com',
       emailHref: 'mailto:sequelivf@gmail.com',
-      experience: 'Over 12 Years of Expertise',
+      experience: '12+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: GIRL_IMAGES[2],
       imageHover: GIRL_IMAGES[0],
@@ -304,7 +304,7 @@ export default function OurTeamPage({ onBookClick }) {
         'Emb. Bhagyashree Uttekar is a highly experienced Clinical Embryologist and reproductive healthcare professional with over 12 years of expertise in assisted reproductive technology (ART) and fertility care. Throughout her career, she has remained committed to clinical excellence, scientific precision, and compassionate patient support, playing an integral role in helping individuals and couples navigate their fertility journey with confidence.',
       highlights: [
         {
-          title: 'Over 12 Years of Clinical Expertise',
+          title: '12+ Years of Clinical Expertise',
           text: 'With extensive experience spanning embryology, laboratory management, and patient program coordination, Bhagyashree combines advanced technical expertise with a patient-centered approach.'
         },
         {
@@ -333,7 +333,7 @@ export default function OurTeamPage({ onBookClick }) {
       phoneHref: 'tel:+919011920589',
       email: 'sequelivf@gmail.com',
       emailHref: 'mailto:sequelivf@gmail.com',
-      experience: 'Over 6 Years Experience',
+      experience: '6+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: MALE_IMAGES[1],
       imageHover: MALE_IMAGES[0],
@@ -372,7 +372,7 @@ export default function OurTeamPage({ onBookClick }) {
       phoneHref: 'tel:+919763845143',
       email: 'sequelivf@gmail.com',
       emailHref: 'mailto:sequelivf@gmail.com',
-      experience: 'Over 5 Years of Experience',
+      experience: '5+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: GIRL_IMAGES[0],
       imageHover: GIRL_IMAGES[2],
@@ -382,7 +382,7 @@ export default function OurTeamPage({ onBookClick }) {
         'Emb. Madhu Kale is a dedicated Clinical Embryologist and reproductive healthcare professional with over 5 years of experience in assisted reproductive technology (ART) and fertility care. Throughout her career, she has remained committed to delivering clinical excellence, scientific precision, and compassionate patient support, helping individuals and couples navigate their fertility journey with confidence and care.',
       highlights: [
         {
-          title: 'Over 5 Years of Hands-on Experience',
+          title: '5+ Years of Hands-on Experience',
           text: 'With hands-on experience in embryology, laboratory operations, and patient program coordination, Madhu combines strong technical expertise with a patient-centered approach.'
         },
         {
@@ -411,7 +411,7 @@ export default function OurTeamPage({ onBookClick }) {
       phoneHref: 'tel:+919763845143',
       email: 'sequelivf@gmail.com',
       emailHref: 'mailto:sequelivf@gmail.com',
-      experience: 'Over 3 Years of Experience',
+      experience: '3+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: GIRL_IMAGES[1],
       imageHover: GIRL_IMAGES[0],
@@ -421,7 +421,7 @@ export default function OurTeamPage({ onBookClick }) {
         'Emb. Sanjana Chorage is a dedicated Clinical Embryologist and reproductive healthcare professional with over 3 years of experience in assisted reproductive technology (ART) and fertility care. She is committed to delivering clinical excellence, scientific precision, and compassionate patient support, helping individuals and couples navigate their fertility journey with confidence and care.',
       highlights: [
         {
-          title: 'Over 3 Years of Hands-on Experience',
+          title: '3+ Years of Hands-on Experience',
           text: 'With hands-on experience in embryology, laboratory operations, and patient program coordination, Sanjana combines technical expertise with a patient-focused approach.'
         },
         {
@@ -450,7 +450,7 @@ export default function OurTeamPage({ onBookClick }) {
       phoneHref: 'tel:+919763845143',
       email: 'sequelivf@gmail.com',
       emailHref: 'mailto:sequelivf@gmail.com',
-      experience: '3 Years of Dedicated Expertise',
+      experience: '3+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: GIRL_IMAGES[2],
       imageHover: GIRL_IMAGES[1],
@@ -460,7 +460,7 @@ export default function OurTeamPage({ onBookClick }) {
         "Emb. Shruti Mohite is a skilled clinical professional who has spent the last 3 years dedicating her career to reproductive medicine and patient care across India. Guided by a deep commitment to excellence, compassion, and precision, she plays a vital role in ensuring that every patient's fertility journey is handled with the highest standard of support and scientific expertise. Behind every successful clinical outcome is meticulous coordination and expert laboratory execution, and Shruti has built a promising career spanning multiple facets of assisted reproductive technology.",
       highlights: [
         {
-          title: '3 Years of Dedicated Expertise',
+          title: '3+ Years of Dedicated Expertise',
           text: 'She brings focused hands-on experience in the specialized field of fertility care, combining administrative leadership with clinical embryology.'
         },
         {
@@ -489,7 +489,7 @@ export default function OurTeamPage({ onBookClick }) {
       phoneHref: 'tel:+919763845143',
       email: 'sequelivf@gmail.com',
       emailHref: 'mailto:sequelivf@gmail.com',
-      experience: '1 Year of Dedicated Expertise',
+      experience: '1+ Years Experience',
       location: 'Hadapsar, Pune, Maharashtra – 411028',
       image: GIRL_IMAGES[1],
       imageHover: GIRL_IMAGES[2],
@@ -499,7 +499,7 @@ export default function OurTeamPage({ onBookClick }) {
         'Emb. Maithili Kadam is a dedicated clinical embryologist who has spent the last year contributing her expertise to reproductive medicine and patient care. Guided by a strong commitment to excellence, compassion, and precision, she plays an important role in ensuring that patients receive high standards of support throughout their fertility journey. Behind successful clinical outcomes is careful coordination and dedicated laboratory execution, and Maithili has started a promising career in assisted reproductive technology.',
       highlights: [
         {
-          title: '1 Year of Dedicated Expertise',
+          title: '1+ Years of Dedicated Expertise',
           text: 'She brings focused, hands-on experience in the specialized field of fertility care, combining administrative coordination with clinical embryology.'
         },
         {
